@@ -158,11 +158,10 @@ function bd() {
                            ', ' + histObj['WP'] + '-' + histObj['LP'] + '-' + histObj['TP']);
   }
 
-  teamA = stats[teams[0]]
   for (k=0; k<cats.length; k++) {
-    highs[cats[k]] = {teams: [teams[0]], val: teamA[cats[k]]};
+    highs[cats[k]] = {teams: [teams[0]], val: stats[teams[0]][cats[k]]};
   }
-  for (i=0; i<teams.length; i++) {
+  for (i=1; i<teams.length; i++) {
     for (k=0; k<cats.length; k++) {
       teamBVal = stats[teams[i]][cats[k]];
       if ((highs[cats[k]]['val'] < teamBVal && $.inArray(cats[k], neg_cats) == -1) ||
