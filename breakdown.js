@@ -11,18 +11,18 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
   var hist = {
-    "": {W: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
-    "": {W: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
-    "": {W: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
-    "": {W: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
-    "": {W: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
-    "": {W: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
-    "": {W: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
-    "": {W: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
-    "": {W: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
-    "": {W: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
-    "": {W: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
-    "": {W: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "}
+    "": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
+    "": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
+    "": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
+    "": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
+    "": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
+    "": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
+    "": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
+    "": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
+    "": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
+    "": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
+    "": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "},
+    "": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".. "}
   };
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site. 
   var cats = ['R', 'HR', 'RBI', 'SB', 'AVG', 
@@ -31,8 +31,8 @@ function bd() {
   var neg_cats = ['ERA', 'WHIP'];
   //how many hitting categories do you have?
   var num_hitting_cats = 5;
-  //for display purposes
-  var periods = ['.. ', '.. ', '.. ', '.. ', '.. ', '.. ', '.. ', '.. ', '.. ', '.. '];
+  //for display purposes when showing highs
+  var periods = ['...... ','..... ','.... ', '..... ','.... ','..... ', '...... ', '..... ', '.... ','... '];
 
 
 
@@ -45,7 +45,7 @@ function bd() {
     teamName = row.find('.teamName a').text();
     teams.push(teamName);
     statObj = stats[teamName] = {};
-    statObj['W']=statObj['L']=statObj['T']=statObj['WH']=statObj['LH']=statObj['TH']=statObj['WP']=statObj['LP']=statObj['TP']=0;
+    statObj['Wi']=statObj['L']=statObj['T']=statObj['WH']=statObj['LH']=statObj['TH']=statObj['WP']=statObj['LP']=statObj['TP']=0;
     row.find('.precise').each(function(index) {
       statObj[cats[index]] = parseFloat($(this).text());
     });
@@ -91,11 +91,11 @@ function bd() {
         }
       }
       if ((teamAWinsH + teamAWinsP) > (teamBWinsH + teamBWinsP)) {
-        teamA['W']++;
+        teamA['Wi']++;
         teamB['L']++;
       } else if ((teamAWinsH + teamAWinsP) < (teamBWinsH + teamBWinsP)) {
         teamA['L']++;
-        teamB['W']++;
+        teamB['Wi']++;
       } else {
         teamA['T']++;
         teamB['T']++;
@@ -125,13 +125,13 @@ function bd() {
   teams.sort(function(a,b){
     teamA = stats[a];
     teamB = stats[b];
-    return ((teamB['W'] + teamB['T']/2)/11) - ((teamA['W'] + teamA['T']/2)/11);
+    return ((teamB['Wi'] + teamB['T']/2)/11) - ((teamA['Wi'] + teamA['T']/2)/11);
   });
   console.log('[b][u]Week Breakdowns (Combined, Hitting, Pitching)[/u][/b]')
   for (i=0; i<teams.length; i++) {
     statObj = stats[teams[i]];
     histObj = hist[teams[i]]
-    histObj['W']  += statObj['W'];
+    histObj['Wi']  += statObj['Wi'];
     histObj['L']  += statObj['L'];
     histObj['T']  += statObj['T'];
     histObj['WH'] += statObj['WH'];
@@ -140,20 +140,20 @@ function bd() {
     histObj['WP'] += statObj['WP'];
     histObj['LP'] += statObj['LP'];
     histObj['TP'] += statObj['TP'];
-    console.log(teams[i] + histObj['p'] + '[b]' + statObj['W'] + '-' + statObj['L'] + '-' + statObj['T'] + '[/b]' + 
+    console.log(teams[i] + histObj['p'] + '[b]' + statObj['Wi'] + '-' + statObj['L'] + '-' + statObj['T'] + '[/b]' + 
                            ', ' + statObj['WH'] + '-' + statObj['LH'] + '-' + statObj['TH'] + 
                            ', ' + statObj['WP'] + '-' + statObj['LP'] + '-' + statObj['TP']);
   }
-  var totalGames = histObj['W'] + histObj['L'] + histObj['T'];
+  var totalGames = histObj['Wi'] + histObj['L'] + histObj['T'];
   teams.sort(function(a,b){
     teamA = hist[a];
     teamB = hist[b];
-    return ((teamB['W'] + teamB['T']/2)/totalGames) - ((teamA['W'] + teamA['T']/2)/totalGames);
+    return ((teamB['Wi'] + teamB['T']/2)/totalGames) - ((teamA['Wi'] + teamA['T']/2)/totalGames);
   });
   console.log('\n[b][u]Season Breakdowns (Combined, Hitting, Pitching)[/u][/b]')
   for (i=0; i<teams.length; i++) {
     histObj = hist[teams[i]]
-    console.log(teams[i] + histObj['p'] + '[b]' + histObj['W'] + '-' + histObj['L'] + '-' + histObj['T'] + '[/b]' +
+    console.log(teams[i] + histObj['p'] + '[b]' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'] + '[/b]' +
                            ', ' + histObj['WH'] + '-' + histObj['LH'] + '-' + histObj['TH'] +
                            ', ' + histObj['WP'] + '-' + histObj['LP'] + '-' + histObj['TP']);
   }
@@ -183,7 +183,7 @@ function bd() {
   console.log('\n\nvar hist = {')
   for (i=0; i<teams.length; i++) {
     histObj = hist[teams[i]];
-    console.log('\t\t"' + teams[i] + '": {W: ' + histObj['W'] + ', L: ' + histObj['L'] + ', T: ' + 
+    console.log('\t\t"' + teams[i] + '": {Wi: ' + histObj['Wi'] + ', L: ' + histObj['L'] + ', T: ' + 
       histObj['T'] + ', WH: ' + histObj['WH'] + ', LH: ' + histObj['LH'] + ', TH: ' + 
       histObj['TH'] + ', WP: ' + histObj['WP'] + ', LP: ' + histObj['LP'] + ', TP: ' + 
       histObj['TP'] + ', p: "' + histObj['p'] + '"}' + (i == teams.length-1 ? '' : ','));
