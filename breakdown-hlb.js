@@ -31,7 +31,7 @@ function bd() {
   //how many hitting categories do you have?
   var num_hitting_cats = 6;
   //for display purposes when showing highs
-  var periods = ['...... ','..... ','.... ', '..... ','.... ','.... ' ,'..... ', '...... ', '..... ', '.... ','... ','.... '];
+  var periods = ['....... ','..... ','.... ', '..... ','.... ','.... ' ,'...... ', '....... ', '...... ', '.... ','.. ','..... '];
 
 
 
