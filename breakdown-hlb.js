@@ -10,23 +10,23 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
   var hist = {
-    "Colt .45s": {Wi: 61, L: 13, T: 3, WH: 62, LH: 14, TH: 1, WP: 33, LP: 26, TP: 18, p: "...................... "},
-    "Assault Rifle Hunters": {Wi: 56, L: 16, T: 5, WH: 52, LH: 20, TH: 5, WP: 37, LP: 24, TP: 16, p: "..... "},
-    "Chicago Dawgs": {Wi: 39, L: 31, T: 7, WH: 31, LH: 37, TH: 9, WP: 50, LP: 16, TP: 11, p: "............. "},
-    "Irish Dawgs": {Wi: 36, L: 31, T: 10, WH: 35, LH: 31, TH: 11, WP: 42, LP: 32, TP: 3, p: ".................. "},
-    "Tropical Storm Braz": {Wi: 34, L: 38, T: 5, WH: 36, LH: 36, TH: 5, WP: 28, LP: 38, TP: 11, p: "...... "},
-    "Irish Guinness07": {Wi: 32, L: 36, T: 9, WH: 31, LH: 37, TH: 9, WP: 30, LP: 35, TP: 12, p: "........... "},
-    "I Punt Cats": {Wi: 33, L: 37, T: 7, WH: 48, LH: 23, TH: 6, WP: 17, LP: 39, TP: 21, p: "................... "},
-    "The Emperor's Club": {Wi: 35, L: 39, T: 3, WH: 34, LH: 35, TH: 8, WP: 27, LP: 33, TP: 17, p: "....... "},
-    "Don't Mess with Texas": {Wi: 29, L: 42, T: 6, WH: 17, LH: 44, TH: 16, WP: 29, LP: 33, TP: 15, p: "... "},
-    "The Brewsers": {Wi: 24, L: 42, T: 11, WH: 22, LH: 46, TH: 9, WP: 28, LP: 40, TP: 9, p: "............... "},
-    "Football Tailgater": {Wi: 28, L: 47, T: 2, WH: 25, LH: 46, TH: 6, WP: 42, LP: 25, TP: 10, p: ".......... "},
-    "Wilpon Still Sucks": {Wi: 19, L: 54, T: 4, WH: 24, LH: 48, TH: 5, WP: 21, LP: 43, TP: 13, p: "......... "}
+    "Colt .45s": {Wi: 71, L: 14, T: 3, WH: 73, LH: 14, TH: 1, WP: 34, LP: 36, TP: 18, p: "...................... "},
+    "Assault Rifle Hunters": {Wi: 65, L: 17, T: 6, WH: 62, LH: 21, TH: 5, WP: 38, LP: 33, TP: 17, p: "..... "},
+    "Chicago Dawgs": {Wi: 46, L: 35, T: 7, WH: 35, LH: 42, TH: 11, WP: 58, LP: 18, TP: 12, p: "............. "},
+    "Irish Dawgs": {Wi: 43, L: 34, T: 11, WH: 37, LH: 36, TH: 15, WP: 50, LP: 34, TP: 4, p: ".................. "},
+    "The Emperor's Club": {Wi: 39, L: 44, T: 5, WH: 40, LH: 38, TH: 10, WP: 32, LP: 38, TP: 18, p: "....... "},
+    "Irish Guinness07": {Wi: 36, L: 42, T: 10, WH: 34, LH: 44, TH: 10, WP: 35, LP: 39, TP: 14, p: "........... "},
+    "I Punt Cats": {Wi: 35, L: 44, T: 9, WH: 49, LH: 32, TH: 7, WP: 28, LP: 39, TP: 21, p: "................... "},
+    "Tropical Storm Braz": {Wi: 34, L: 49, T: 5, WH: 36, LH: 47, TH: 5, WP: 31, LP: 45, TP: 12, p: "...... "},
+    "Don't Mess with Texas": {Wi: 32, L: 48, T: 8, WH: 22, LH: 47, TH: 19, WP: 33, LP: 40, TP: 15, p: "... "},
+    "The Brewsers": {Wi: 27, L: 49, T: 12, WH: 28, LH: 50, TH: 10, WP: 28, LP: 50, TP: 10, p: "............... "},
+    "Wilpon Still Sucks": {Wi: 29, L: 55, T: 4, WH: 32, LH: 50, TH: 6, WP: 31, LP: 44, TP: 13, p: "......... "},
+    "Football Tailgater": {Wi: 29, L: 55, T: 4, WH: 26, LH: 53, TH: 9, WP: 47, LP: 29, TP: 12, p: ".......... "}
   };
-  //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site. 
-  var cats = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG', 
+  //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
+  var cats = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
               'QS', 'W', 'SV', 'ERA', 'WHIP', 'K/9'];
-  //list any categories where it's better to have a lower number here, in any order. They need to match the text in cats. 
+  //list any categories where it's better to have a lower number here, in any order. They need to match the text in cats.
   var neg_cats = ['ERA', 'WHIP'];
   //how many hitting categories do you have?
   var num_hitting_cats = 6;
@@ -50,7 +50,7 @@ function bd() {
     });
   });
   var teamAWinsH, teamBWinsH, teamAWinsP, teamBWinsP, i, j, k, teamAVal, teamBVal;
-  
+
   for (i=0; i<teams.length; i++) {
     for (j=i+1; j<teams.length; j++) {
       teamA = stats[teams[i]];
@@ -139,8 +139,8 @@ function bd() {
     histObj['WP'] += statObj['WP'];
     histObj['LP'] += statObj['LP'];
     histObj['TP'] += statObj['TP'];
-    console.log(teams[i] + histObj['p'] + '[b]' + statObj['Wi'] + '-' + statObj['L'] + '-' + statObj['T'] + '[/b]' + 
-                           ', ' + statObj['WH'] + '-' + statObj['LH'] + '-' + statObj['TH'] + 
+    console.log(teams[i] + histObj['p'] + '[b]' + statObj['Wi'] + '-' + statObj['L'] + '-' + statObj['T'] + '[/b]' +
+                           ', ' + statObj['WH'] + '-' + statObj['LH'] + '-' + statObj['TH'] +
                            ', ' + statObj['WP'] + '-' + statObj['LP'] + '-' + statObj['TP']);
   }
   var totalGames = histObj['Wi'] + histObj['L'] + histObj['T'];
@@ -182,9 +182,9 @@ function bd() {
   console.log('\n\nvar hist = {')
   for (i=0; i<teams.length; i++) {
     histObj = hist[teams[i]];
-    console.log('\t\t"' + teams[i] + '": {Wi: ' + histObj['Wi'] + ', L: ' + histObj['L'] + ', T: ' + 
-      histObj['T'] + ', WH: ' + histObj['WH'] + ', LH: ' + histObj['LH'] + ', TH: ' + 
-      histObj['TH'] + ', WP: ' + histObj['WP'] + ', LP: ' + histObj['LP'] + ', TP: ' + 
+    console.log('\t\t"' + teams[i] + '": {Wi: ' + histObj['Wi'] + ', L: ' + histObj['L'] + ', T: ' +
+      histObj['T'] + ', WH: ' + histObj['WH'] + ', LH: ' + histObj['LH'] + ', TH: ' +
+      histObj['TH'] + ', WP: ' + histObj['WP'] + ', LP: ' + histObj['LP'] + ', TP: ' +
       histObj['TP'] + ', p: "' + histObj['p'] + '"}' + (i == teams.length-1 ? '' : ','));
   }
   console.log('\t};');
