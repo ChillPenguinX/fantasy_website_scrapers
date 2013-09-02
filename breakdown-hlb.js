@@ -10,18 +10,18 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
   var hist = {
-    "Colt .45s": {Wi: 178, L: 25, T: 17, WH: 184, LH: 27, TH: 9, WP: 96, LP: 89, TP: 35, p: "...................... ", fam: "Brasuell"},
-    "Assault Rifle Hunters": {Wi: 150, L: 54, T: 16, WH: 149, LH: 53, TH: 18, WP: 89, LP: 81, TP: 50, p: "..... ", fam: "Loechel"},
-    "Irish Dawgs": {Wi: 106, L: 89, T: 25, WH: 104, LH: 93, TH: 23, WP: 109, LP: 91, TP: 20, p: ".................. ", fam: "Fleming"},
-    "Irish Guinness07": {Wi: 104, L: 94, T: 22, WH: 98, LH: 101, TH: 21, WP: 96, LP: 90, TP: 34, p: "........... ", fam: "Fleming"},
-    "The Emperor's Club": {Wi: 102, L: 94, T: 24, WH: 106, LH: 91, TH: 23, WP: 92, LP: 94, TP: 34, p: "....... ", fam: "Holmdopia"},
-    "The Brewsers": {Wi: 94, L: 103, T: 23, WH: 88, LH: 109, TH: 23, WP: 89, LP: 104, TP: 27, p: "............... ", fam: "Brasuell"},
-    "Don't Mess with Texas": {Wi: 89, L: 102, T: 29, WH: 79, LH: 107, TH: 34, WP: 91, LP: 97, TP: 32, p: "... ", fam: "Fleming"},
-    "I Punt Cats": {Wi: 91, L: 110, T: 19, WH: 104, LH: 101, TH: 15, WP: 90, LP: 86, TP: 44, p: "................... ", fam: "Loechel"},
-    "Chicago Dawgs": {Wi: 89, L: 117, T: 14, WH: 70, LH: 128, TH: 22, WP: 128, LP: 62, TP: 30, p: "............. ", fam: "Loechel"},
-    "Wilpon Still Sucks": {Wi: 85, L: 119, T: 16, WH: 82, LH: 120, TH: 18, WP: 96, LP: 94, TP: 30, p: "......... ", fam: "Holmdopia"},
-    "Tropical Storm Braz": {Wi: 59, L: 147, T: 14, WH: 75, LH: 124, TH: 21, WP: 55, LP: 137, TP: 28, p: "...... ", fam: "Brasuell"},
-    "Football Tailgater": {Wi: 57, L: 150, T: 13, WH: 59, LH: 144, TH: 17, WP: 94, LP: 100, TP: 26, p: ".......... ", fam: "Holmdopia"}
+    "Colt .45s": {Wi: 189, L: 25, T: 17, WH: 194, LH: 27, TH: 10, WP: 107, LP: 89, TP: 35, p: "...................... ", fam: "Brasuell"},
+    "Assault Rifle Hunters": {Wi: 152, L: 62, T: 17, WH: 150, LH: 60, TH: 21, WP: 91, LP: 89, TP: 51, p: "..... ", fam: "Loechel"},
+    "Irish Guinness07": {Wi: 114, L: 95, T: 22, WH: 107, LH: 101, TH: 23, WP: 105, LP: 91, TP: 35, p: "........... ", fam: "Fleming"},
+    "Irish Dawgs": {Wi: 111, L: 93, T: 27, WH: 107, LH: 98, TH: 26, WP: 114, LP: 94, TP: 23, p: ".................. ", fam: "Fleming"},
+    "The Emperor's Club": {Wi: 103, L: 103, T: 25, WH: 107, LH: 98, TH: 26, WP: 92, LP: 102, TP: 37, p: "....... ", fam: "Holmdopia"},
+    "The Brewsers": {Wi: 100, L: 105, T: 26, WH: 96, LH: 110, TH: 25, WP: 94, LP: 109, TP: 28, p: "............... ", fam: "Brasuell"},
+    "Don't Mess with Texas": {Wi: 94, L: 105, T: 32, WH: 85, LH: 112, TH: 34, WP: 97, LP: 101, TP: 33, p: "... ", fam: "Fleming"},
+    "Chicago Dawgs": {Wi: 96, L: 119, T: 16, WH: 77, LH: 132, TH: 22, WP: 137, LP: 63, TP: 31, p: "............. ", fam: "Loechel"},
+    "I Punt Cats": {Wi: 93, L: 119, T: 19, WH: 105, LH: 109, TH: 17, WP: 94, LP: 93, TP: 44, p: "................... ", fam: "Loechel"},
+    "Wilpon Still Sucks": {Wi: 89, L: 123, T: 19, WH: 83, LH: 127, TH: 21, WP: 103, LP: 97, TP: 31, p: "......... ", fam: "Holmdopia"},
+    "Tropical Storm Braz": {Wi: 62, L: 151, T: 18, WH: 83, LH: 127, TH: 21, WP: 55, LP: 146, TP: 30, p: "...... ", fam: "Brasuell"},
+    "Football Tailgater": {Wi: 57, L: 160, T: 14, WH: 59, LH: 152, TH: 20, WP: 94, LP: 109, TP: 28, p: ".......... ", fam: "Holmdopia"}
   };
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
