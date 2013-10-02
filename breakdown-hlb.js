@@ -10,18 +10,18 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
   var hist = {
-    "Chicago Dawgs": {Wi: 150, L: 57, T: 24, WH: 116, LH: 90, TH: 25, WP: 151, LP: 52, TP: 28, p: "............. ", fam: "Loechel"},
-    "Pennsylvania, The Idiot State": {Wi: 138, L: 73, T: 20, WH: 133, LH: 72, TH: 26, WP: 111, LP: 92, TP: 28, p: "..... ", fam: "Loechel"},
-    "I Punt Cats": {Wi: 130, L: 79, T: 22, WH: 144, LH: 61, TH: 26, WP: 90, LP: 115, TP: 26, p: "................... ", fam: "Loechel"},
-    "Tropical Storm Braz": {Wi: 126, L: 87, T: 18, WH: 111, LH: 88, TH: 32, WP: 110, LP: 94, TP: 27, p: "...... ", fam: "Brasuell"},
-    "Colt .45s": {Wi: 113, L: 97, T: 21, WH: 112, LH: 96, TH: 23, WP: 94, LP: 104, TP: 33, p: "...................... ", fam: "Brasuell"},
-    "The Brewsers": {Wi: 114, L: 105, T: 12, WH: 101, LH: 95, TH: 35, WP: 125, LP: 82, TP: 24, p: "............... ", fam: "Brasuell"},
-    "Irish Dawgs": {Wi: 99, L: 110, T: 22, WH: 87, LH: 113, TH: 31, WP: 110, LP: 91, TP: 30, p: ".................. ", fam: "Fleming"},
-    "Football Tailgater": {Wi: 95, L: 122, T: 14, WH: 96, LH: 110, TH: 25, WP: 91, LP: 116, TP: 24, p: ".......... ", fam: "Holmdopia"},
-    "Irish Guinness07": {Wi: 92, L: 124, T: 15, WH: 80, LH: 122, TH: 29, WP: 112, LP: 98, TP: 21, p: "........... ", fam: "Fleming"},
-    "Wilpon Sucks": {Wi: 77, L: 125, T: 29, WH: 84, LH: 115, TH: 32, WP: 84, LP: 113, TP: 34, p: ".......... ", fam: "Holmdopia"},
-    "Dont Mess with Texas": {Wi: 72, L: 144, T: 15, WH: 74, LH: 131, TH: 26, WP: 81, LP: 126, TP: 24, p: "... ", fam: "Fleming"},
-    "The Emperor's Club": {Wi: 62, L: 145, T: 24, WH: 77, LH: 122, TH: 32, WP: 64, LP: 140, TP: 27, p: "....... ", fam: "Holmdopia"}
+    "Dont Mess with Texas": {Wi: 141, L: 62, T: 28, WH: 121, LH: 83, TH: 27, WP: 129, LP: 72, TP: 30, p: "... ", fam: "undefined"},
+    "Football Tailgater": {Wi: 132, L: 80, T: 19, WH: 121, LH: 73, TH: 37, WP: 122, LP: 85, TP: 24, p: ".......... ", fam: "undefined"},
+    "I Punt Cats": {Wi: 120, L: 88, T: 23, WH: 145, LH: 65, TH: 21, WP: 76, LP: 124, TP: 31, p: "................... ", fam: "undefined"},
+    "The Emperor's Club": {Wi: 119, L: 88, T: 24, WH: 108, LH: 91, TH: 32, WP: 126, LP: 80, TP: 25, p: "....... ", fam: "undefined"},
+    "Tropical Storm Braz": {Wi: 116, L: 90, T: 25, WH: 133, LH: 70, TH: 28, WP: 90, LP: 111, TP: 30, p: "...... ", fam: "undefined"},
+    "The Brewsers": {Wi: 115, L: 90, T: 26, WH: 111, LH: 95, TH: 25, WP: 103, LP: 104, TP: 24, p: "............... ", fam: "undefined"},
+    "Colt .45s": {Wi: 109, L: 104, T: 18, WH: 113, LH: 86, TH: 32, WP: 83, LP: 108, TP: 40, p: "...................... ", fam: "undefined"},
+    "Irish Dawgs": {Wi: 101, L: 108, T: 22, WH: 74, LH: 124, TH: 33, WP: 122, LP: 89, TP: 20, p: ".................. ", fam: "undefined"},
+    "Irish Guinness07": {Wi: 95, L: 111, T: 25, WH: 120, LH: 79, TH: 32, WP: 80, LP: 122, TP: 29, p: "........... ", fam: "undefined"},
+    "Cy Youngs and Long Dongs": {Wi: 88, L: 122, T: 21, WH: 60, LH: 141, TH: 30, WP: 117, LP: 89, TP: 25, p: "..... ", fam: "undefined"},
+    "Trump for Prez (of the Mets)": {Wi: 59, L: 149, T: 23, WH: 49, LH: 153, TH: 29, WP: 104, LP: 93, TP: 34, p: ".......... ", fam: "undefined"},
+    "Chicago Dawgs": {Wi: 56, L: 159, T: 16, WH: 55, LH: 150, TH: 26, WP: 69, LP: 144, TP: 18, p: "............. ", fam: "undefined"}
   };
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
