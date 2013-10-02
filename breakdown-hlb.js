@@ -10,22 +10,22 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
   var hist = {
-    "Colt .45s": {Wi: 200, L: 25, T: 17, WH: 200, LH: 29, TH: 13, WP: 118, LP: 89, TP: 35, p: "...................... ", fam: "Brasuell"},
-    "Assault Rifle Hunters": {Wi: 156, L: 68, T: 18, WH: 156, LH: 63, TH: 23, WP: 94, LP: 95, TP: 53, p: "..... ", fam: "Loechel"},
-    "Irish Guinness07": {Wi: 118, L: 101, T: 23, WH: 111, LH: 105, TH: 26, WP: 111, LP: 96, TP: 35, p: "........... ", fam: "Fleming"},
-    "Irish Dawgs": {Wi: 114, L: 99, T: 29, WH: 113, LH: 100, TH: 29, WP: 114, LP: 104, TP: 24, p: ".................. ", fam: "Fleming"},
-    "The Emperor's Club": {Wi: 110, L: 106, T: 26, WH: 117, LH: 99, TH: 26, WP: 95, LP: 108, TP: 39, p: "....... ", fam: "Holmdopia"},
-    "The Brewsers": {Wi: 105, L: 110, T: 27, WH: 98, LH: 119, TH: 25, WP: 100, LP: 113, TP: 29, p: "............... ", fam: "Brasuell"},
-    "Don't Mess with Texas": {Wi: 95, L: 114, T: 33, WH: 88, LH: 116, TH: 38, WP: 97, LP: 111, TP: 34, p: "... ", fam: "Fleming"},
-    "I Punt Cats": {Wi: 100, L: 121, T: 21, WH: 108, LH: 115, TH: 19, WP: 101, LP: 94, TP: 47, p: "................... ", fam: "Loechel"},
-    "Wilpon Still Sucks": {Wi: 98, L: 124, T: 20, WH: 94, LH: 127, TH: 21, WP: 111, LP: 99, TP: 32, p: "......... ", fam: "Holmdopia"},
-    "Chicago Dawgs": {Wi: 98, L: 126, T: 18, WH: 82, LH: 137, TH: 23, WP: 139, LP: 72, TP: 31, p: "............. ", fam: "Loechel"},
-    "Tropical Storm Braz": {Wi: 63, L: 161, T: 18, WH: 83, LH: 138, TH: 21, WP: 60, LP: 151, TP: 31, p: "...... ", fam: "Brasuell"},
-    "Football Tailgater": {Wi: 62, L: 164, T: 16, WH: 60, LH: 162, TH: 20, WP: 102, LP: 110, TP: 30, p: ".......... ", fam: "Holmdopia"}
+    "Chicago Dawgs": {Wi: 150, L: 57, T: 24, WH: 116, LH: 90, TH: 25, WP: 151, LP: 52, TP: 28, p: "............. ", fam: "Loechel"},
+    "Pennsylvania, The Idiot State": {Wi: 138, L: 73, T: 20, WH: 133, LH: 72, TH: 26, WP: 111, LP: 92, TP: 28, p: "..... ", fam: "Loechel"},
+    "I Punt Cats": {Wi: 130, L: 79, T: 22, WH: 144, LH: 61, TH: 26, WP: 90, LP: 115, TP: 26, p: "................... ", fam: "Loechel"},
+    "Tropical Storm Braz": {Wi: 126, L: 87, T: 18, WH: 111, LH: 88, TH: 32, WP: 110, LP: 94, TP: 27, p: "...... ", fam: "Brasuell"},
+    "Colt .45s": {Wi: 113, L: 97, T: 21, WH: 112, LH: 96, TH: 23, WP: 94, LP: 104, TP: 33, p: "...................... ", fam: "Brasuell"},
+    "The Brewsers": {Wi: 114, L: 105, T: 12, WH: 101, LH: 95, TH: 35, WP: 125, LP: 82, TP: 24, p: "............... ", fam: "Brasuell"},
+    "Irish Dawgs": {Wi: 99, L: 110, T: 22, WH: 87, LH: 113, TH: 31, WP: 110, LP: 91, TP: 30, p: ".................. ", fam: "Fleming"},
+    "Football Tailgater": {Wi: 95, L: 122, T: 14, WH: 96, LH: 110, TH: 25, WP: 91, LP: 116, TP: 24, p: ".......... ", fam: "Holmdopia"},
+    "Irish Guinness07": {Wi: 92, L: 124, T: 15, WH: 80, LH: 122, TH: 29, WP: 112, LP: 98, TP: 21, p: "........... ", fam: "Fleming"},
+    "Wilpon Sucks": {Wi: 77, L: 125, T: 29, WH: 84, LH: 115, TH: 32, WP: 84, LP: 113, TP: 34, p: ".......... ", fam: "Holmdopia"},
+    "Dont Mess with Texas": {Wi: 72, L: 144, T: 15, WH: 74, LH: 131, TH: 26, WP: 81, LP: 126, TP: 24, p: "... ", fam: "Fleming"},
+    "The Emperor's Club": {Wi: 62, L: 145, T: 24, WH: 77, LH: 122, TH: 32, WP: 64, LP: 140, TP: 27, p: "....... ", fam: "Holmdopia"}
   };
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
-  var cats = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
+  var cats = ['R', 'HR', 'RBI', 'SB', 'AVG', 'OPS',
               'QS', 'W', 'SV', 'ERA', 'WHIP', 'K/9'];
   //list any categories where it's better to have a lower number here, in any order. They need to match the text in cats.
   var neg_cats = ['ERA', 'WHIP'];
@@ -150,10 +150,12 @@ function bd() {
     teamB = hist[b];
     return ((teamB['Wi'] + teamB['T']/2)/totalGames) - ((teamA['Wi'] + teamA['T']/2)/totalGames);
   });
-  console.log('\n[b][u]Season Breakdowns (Combined, Hitting, Pitching)[/u][/b]')
+  console.log('\n[b][u]Season Breakdowns (Combined, Hitting, Pitching)[/u][/b]');
+  var percentage;
   for (i=0; i<teams.length; i++) {
-    histObj = hist[teams[i]]
-    console.log(teams[i] + histObj['p'] + '[b]' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'] + '[/b]' +
+    histObj = hist[teams[i]];
+    percentage = (histObj['Wi'] + histObj['T']/2)/totalGames;
+    console.log(teams[i] + histObj['p'] + '(' + percentage + ')' + '[b]' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'] + '[/b]' +
                            ', ' + histObj['WH'] + '-' + histObj['LH'] + '-' + histObj['TH'] +
                            ', ' + histObj['WP'] + '-' + histObj['LP'] + '-' + histObj['TP']);
   }
