@@ -10,18 +10,18 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
   var hist = {
-    "Cleveland Steamers": {Wi: 151, L: 86, T: 5, WH: 153, LH: 83, TH: 6, WP: 135, LP: 87, TP: 20, p: "................... ", fam: "undefined"},
-    "Chicago Dawgs": {Wi: 143, L: 85, T: 14, WH: 112, LH: 119, TH: 11, WP: 133, LP: 80, TP: 29, p: "............. ", fam: "undefined"},
-    "Chilly P 'n The Amortized Loans": {Wi: 139, L: 88, T: 15, WH: 133, LH: 97, TH: 12, WP: 124, LP: 90, TP: 28, p: "...................... ", fam: "undefined"},
-    "Irish Guinness07": {Wi: 137, L: 91, T: 14, WH: 134, LH: 96, TH: 12, WP: 119, LP: 93, TP: 30, p: "........... ", fam: "undefined"},
-    "Dont Mess with Texas": {Wi: 124, L: 104, T: 14, WH: 122, LH: 109, TH: 11, WP: 116, LP: 103, TP: 23, p: "... ", fam: "undefined"},
-    "The Emperor's Club": {Wi: 120, L: 103, T: 19, WH: 103, LH: 123, TH: 16, WP: 131, LP: 96, TP: 15, p: "....... ", fam: "undefined"},
-    "Football Tailgater": {Wi: 116, L: 114, T: 12, WH: 124, LH: 109, TH: 9, WP: 91, LP: 124, TP: 27, p: ".......... ", fam: "undefined"},
-    "Irish Dawgs": {Wi: 101, L: 129, T: 12, WH: 106, LH: 122, TH: 14, WP: 113, LP: 109, TP: 20, p: ".................. ", fam: "undefined"},
-    "Steroid To Heaven": {Wi: 99, L: 129, T: 14, WH: 131, LH: 103, TH: 8, WP: 82, LP: 134, TP: 26, p: "..... ", fam: "undefined"},
-    "The Slackers": {Wi: 96, L: 132, T: 14, WH: 102, LH: 130, TH: 10, WP: 95, LP: 125, TP: 22, p: "............... ", fam: "undefined"},
-    "No tWietersing Between Innings": {Wi: 92, L: 135, T: 15, WH: 105, LH: 128, TH: 9, WP: 88, LP: 132, TP: 22, p: ".......... ", fam: "undefined"},
-    "Tropical Storm Braz": {Wi: 56, L: 178, T: 8, WH: 62, LH: 168, TH: 12, WP: 80, LP: 134, TP: 28, p: "...... ", fam: "undefined"}
+    "PeaceUp ATownDown": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............. "},
+    "Chris, Proven 2 Be A Troll": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "..... "},
+    "Colt .45s": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "...................... "},
+    "I Punt Cats": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................... "},
+    "Irish Dawgs": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".................. "},
+    "Irish Guinness07": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........... "},
+    "Tropical Storm Braz": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "...... "},
+    "The Mike Shitty All-Stars": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "....... "},
+    "Don't Mess with Texas": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "... "},
+    "Wilpon Still Sucks": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......... "},
+    "Football Tailgater": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......... "},
+    "The Brewsers": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............... "}
   };
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
@@ -191,40 +191,6 @@ function bd() {
       histObj['TP'] + ', p: "' + histObj['p'] + '", fam: "' + histObj['fam'] + '"}' + (i == teams.length-1 ? '' : ','));
   }
   console.log('\t};');
-
-  console.log('\n[b][u]Family Standings[/u][/b]');
-  var famStand = {};
-  var famObj;
-  var families = [];
-  for (i=0; i<teams.length; i++) {
-    histObj = hist[teams[i]];
-    if (famStand[histObj['fam']] == null) {
-      famStand[histObj['fam']] = {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0};
-      families.push(histObj['fam']);
-    }
-    famObj = famStand[histObj['fam']]
-    famObj['Wi'] += histObj['Wi'];
-    famObj['L']  += histObj['L'];
-    famObj['T']  += histObj['T'];
-    famObj['WH'] += histObj['WH'];
-    famObj['LH'] += histObj['LH'];
-    famObj['TH'] += histObj['TH'];
-    famObj['WP'] += histObj['WP'];
-    famObj['LP'] += histObj['LP'];
-    famObj['TP'] += histObj['TP'];
-  }
-  totalGames = famObj['Wi'] + famObj['L'] + famObj['T'];
-  families.sort(function(a,b){
-    teamA = famStand[a];
-    teamB = famStand[b];
-    return ((teamB['Wi'] + teamB['T']/2)/totalGames) - ((teamA['Wi'] + teamA['T']/2)/totalGames);
-  });
-  for (i=0; i<families.length; i++) {
-    famObj = famStand[families[i]]
-    console.log(families[i] + ': [b]' + famObj['Wi'] + '-' + famObj['L'] + '-' + famObj['T'] + '[/b]' +
-                           ', ' + famObj['WH'] + '-' + famObj['LH'] + '-' + famObj['TH'] +
-                           ', ' + famObj['WP'] + '-' + famObj['LP'] + '-' + famObj['TP']);
-  }
 }
 
 
