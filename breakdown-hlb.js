@@ -11,7 +11,7 @@ function bd() {
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
   var hist = {
     "PeaceUp ATownDown": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........... "},
-    "Chris, Proven 2 Be A Troll": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "..... "},
+    "Assault Rifle Hunters": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "..... "},
     "Colt .45s": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............................. "},
     "I Punt Cats": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......................... "},
     "Irish Dawgs": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........................ "},
