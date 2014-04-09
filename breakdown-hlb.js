@@ -10,25 +10,27 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
   var hist = {
-    "PeaceUp ATownDown": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........... "},
-    "Assault Rifle Hunters": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "..... "},
-    "Colt .45s": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............................. "},
-    "I Punt Cats": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......................... "},
-    "Irish Dawgs": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........................ "},
-    "Irish Guinness07": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................. "},
-    "Tropical Storm Braz": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............. "},
-    "The Mike Shitty All-Stars": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "...... "},
-    "Don't Mess with Texas": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......... "},
-    "Wilpon Still Sucks": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................ "},
-    "Football Tailgater": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................. "},
-    "The Brewsers": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "...................... "}
-  };
+    "Tropical Storm Braz": {Wi: 10, L: 0, T: 1, WH: 11, LH: 0, TH: 0, WP: 5, LP: 5, TP: 1, p: "............. "},
+    "I Punt Cats": {Wi: 10, L: 1, T: 0, WH: 10, LH: 1, TH: 0, WP: 9, LP: 2, TP: 0, p: ".......................... "},
+    "Colt .45s": {Wi: 9, L: 1, T: 1, WH: 9, LH: 2, TH: 0, WP: 9, LP: 1, TP: 1, p: "............................. "},
+    "Wilpon Still Sucks": {Wi: 7, L: 3, T: 1, WH: 8, LH: 3, TH: 0, WP: 6, LP: 4, TP: 1, p: "................ "},
+    "Irish Guinness07": {Wi: 7, L: 4, T: 0, WH: 4, LH: 6, TH: 1, WP: 11, LP: 0, TP: 0, p: "................. "},
+    "PeaceUp ATownDown": {Wi: 6, L: 4, T: 1, WH: 6, LH: 4, TH: 1, WP: 8, LP: 3, TP: 0, p: "........... "},
+    "Don't Mess with Texas": {Wi: 4, L: 6, T: 1, WH: 5, LH: 5, TH: 1, WP: 2, LP: 8, TP: 1, p: ".......... "},
+    "The Brewsers": {Wi: 4, L: 7, T: 0, WH: 4, LH: 5, TH: 2, WP: 1, LP: 10, TP: 0, p: "...................... "},
+    "The Mike Shitty All-Stars": {Wi: 3, L: 7, T: 1, WH: 0, LH: 11, TH: 0, WP: 5, LP: 6, TP: 0, p: "...... "},
+    "Football Tailgater": {Wi: 1, L: 9, T: 1, WH: 3, LH: 8, TH: 0, WP: 3, LP: 5, TP: 3, p: "................. "},
+    "Irish Dawgs": {Wi: 0, L: 9, T: 2, WH: 1, LH: 10, TH: 0, WP: 3, LP: 7, TP: 1, p: "........................ "},
+    "Assault Rifle Hunters": {Wi: 0, L: 10, T: 1, WH: 2, LH: 8, TH: 1, WP: 0, LP: 11, TP: 0, p: "............ "}
+  }; 
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
   var cats = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
               'QS', 'W', 'SV', 'ERA', 'WHIP', 'K/9'];
   //list any categories where it's better to have a lower number here, in any order. They need to match the text in cats.
   var neg_cats = ['ERA', 'WHIP'];
+  // list of categories where the team must qualify (currently assumes that if you fail one, you fail them all)
+  var qual_cats = ['ERA', 'WHIP'];
   //how many hitting categories do you have?
   var num_hitting_cats = 6;
   //for display purposes when showing highs
@@ -39,6 +41,7 @@ function bd() {
   var stats = {};
   var teams = [];
   var highs = {};
+  var disqualified = {};
   var row, statObj, teamName, histObj;
   $('.linescoreTeamRow').each(function() {
     row = $(this);
@@ -49,6 +52,7 @@ function bd() {
     row.find('.precise').each(function(index) {
       statObj[cats[index]] = parseFloat($(this).text());
     });
+    row.find('.belowMinimum').each(function(){disqualified[teamName] = true;});
   });
   var teamAWinsH, teamBWinsH, teamAWinsP, teamBWinsP, i, j, k, teamAVal, teamBVal;
 
@@ -58,6 +62,26 @@ function bd() {
       teamB = stats[teams[j]];
       teamAWinsH = teamBWinsH = teamAWinsP = teamBWinsP = 0;
       for (k=0; k<cats.length; k++) {
+        // first, check disqualifiers
+        if ($.inArray(cats[k], qual_cats) != -1) {
+          if (disqualified[teams[i]]) {
+            if (!disqualified[teams[j]]) {
+              if (k < num_hitting_cats) {
+                teamBWinsH++;
+              } else {
+                teamBWinsP++;
+              }
+            }
+            continue;
+          } else if (disqualified[teams[j]]) {
+            if (k < num_hitting_cats) {
+              teamAWinsH++;
+            } else {
+              teamAWinsP++;
+            }
+            continue;
+          }
+        } // end check disqualifiers
         teamAVal = teamA[cats[k]];
         teamBVal = teamB[cats[k]];
         if (teamAVal > teamBVal) {
@@ -154,7 +178,7 @@ function bd() {
   var percentage;
   for (i=0; i<teams.length; i++) {
     histObj = hist[teams[i]];
-    percentage = (histObj['Wi'] + histObj['T']/2)/totalGames;
+    percentage = ((histObj['Wi'] + histObj['T']/2)/totalGames).toFixed(3);
     console.log(teams[i] + histObj['p'] + '(' + percentage + ')' + '[b]' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'] + '[/b]' +
                            ', ' + histObj['WH'] + '-' + histObj['LH'] + '-' + histObj['TH'] +
                            ', ' + histObj['WP'] + '-' + histObj['LP'] + '-' + histObj['TP']);
