@@ -13,7 +13,7 @@ function bd() {
     "Tropical Storm Braz": {Wi: 10, L: 0, T: 1, WH: 11, LH: 0, TH: 0, WP: 5, LP: 5, TP: 1, p: "............. "},
     "I Punt Cats": {Wi: 10, L: 1, T: 0, WH: 10, LH: 1, TH: 0, WP: 9, LP: 2, TP: 0, p: ".......................... "},
     "Colt .45s": {Wi: 9, L: 1, T: 1, WH: 9, LH: 2, TH: 0, WP: 9, LP: 1, TP: 1, p: "............................. "},
-    "Wilpon Still Sucks": {Wi: 7, L: 3, T: 1, WH: 8, LH: 3, TH: 0, WP: 6, LP: 4, TP: 1, p: "................ "},
+    "New York Mehts :(": {Wi: 7, L: 3, T: 1, WH: 8, LH: 3, TH: 0, WP: 6, LP: 4, TP: 1, p: "................ "},
     "Irish Guinness07": {Wi: 7, L: 4, T: 0, WH: 4, LH: 6, TH: 1, WP: 11, LP: 0, TP: 0, p: "................. "},
     "PeaceUp ATownDown": {Wi: 6, L: 4, T: 1, WH: 6, LH: 4, TH: 1, WP: 8, LP: 3, TP: 0, p: "........... "},
     "Don't Mess with Texas": {Wi: 4, L: 6, T: 1, WH: 5, LH: 5, TH: 1, WP: 2, LP: 8, TP: 1, p: ".......... "},
