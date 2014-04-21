@@ -9,20 +9,20 @@ function bd() {
   //the periods are for display purposes. You can remove them, make them different lengths, and replace them.
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
-  var hist = { 
-    "Colt .45s": {Wi: 17, L: 2, T: 3, WH: 15, LH: 5, TH: 2, WP: 16, LP: 3, TP: 3, p: "............................. "},
-    "I Punt Cats": {Wi: 16, L: 4, T: 2, WH: 20, LH: 2, TH: 0, WP: 9, LP: 12, TP: 1, p: ".......................... "},
-    "Tropical Storm Braz": {Wi: 15, L: 3, T: 4, WH: 18, LH: 2, TH: 2, WP: 7, LP: 12, TP: 3, p: "............. "},
-    "Irish Guinness07": {Wi: 16, L: 5, T: 1, WH: 10, LH: 9, TH: 3, WP: 20, LP: 1, TP: 1, p: "................. "},
-    "The Mike Shitty All-Stars": {Wi: 10, L: 8, T: 4, WH: 11, LH: 11, TH: 0, WP: 7, LP: 14, TP: 1, p: "...... "},
-    "Don't Mess with Texas": {Wi: 8, L: 11, T: 3, WH: 11, LH: 8, TH: 3, WP: 4, LP: 15, TP: 3, p: ".......... "},
-    "New York Mehts :(": {Wi: 7, L: 14, T: 1, WH: 8, LH: 14, TH: 0, WP: 13, LP: 8, TP: 1, p: "................ "},
-    "PeaceUp ATownDown": {Wi: 7, L: 14, T: 1, WH: 7, LH: 14, TH: 1, WP: 12, LP: 9, TP: 1, p: "........... "},
-    "The Brewsers": {Wi: 7, L: 14, T: 1, WH: 6, LH: 14, TH: 2, WP: 9, LP: 11, TP: 2, p: "...................... "},
-    "Irish Dawgs": {Wi: 5, L: 13, T: 4, WH: 4, LH: 15, TH: 3, WP: 12, LP: 8, TP: 2, p: "........................ "},
-    "Assault Rifle Hunters": {Wi: 5, L: 14, T: 3, WH: 5, LH: 13, TH: 4, WP: 5, LP: 14, TP: 3, p: "............ "},
-    "Football Tailgater": {Wi: 4, L: 15, T: 3, WH: 6, LH: 14, TH: 2, WP: 4, LP: 11, TP: 7, p: "................. "}
-  }; 
+  var hist = {
+    "I Punt Cats": {Wi: 25, L: 4, T: 4, WH: 28, LH: 4, TH: 1, WP: 15, LP: 13, TP: 5, p: ".......................... "},
+    "Irish Guinness07": {Wi: 23, L: 7, T: 3, WH: 19, LH: 9, TH: 5, WP: 24, LP: 5, TP: 4, p: "................. "},
+    "Tropical Storm Braz": {Wi: 20, L: 6, T: 7, WH: 21, LH: 5, TH: 7, WP: 12, LP: 15, TP: 6, p: "............. "},
+    "Colt .45s": {Wi: 21, L: 7, T: 5, WH: 22, LH: 7, TH: 4, WP: 18, LP: 11, TP: 4, p: "............................. "},
+    "The Mike Shitty All-Stars": {Wi: 18, L: 9, T: 6, WH: 13, LH: 18, TH: 2, WP: 17, LP: 14, TP: 2, p: "...... "},
+    "Irish Dawgs": {Wi: 11, L: 14, T: 8, WH: 11, LH: 16, TH: 6, WP: 15, LP: 12, TP: 6, p: "........................ "},
+    "PeaceUp ATownDown": {Wi: 12, L: 18, T: 3, WH: 9, LH: 21, TH: 3, WP: 21, LP: 10, TP: 2, p: "........... "},
+    "New York Mehts :(": {Wi: 11, L: 18, T: 4, WH: 12, LH: 19, TH: 2, WP: 16, LP: 14, TP: 3, p: "................ "},
+    "Don't Mess with Texas": {Wi: 9, L: 21, T: 3, WH: 19, LH: 10, TH: 4, WP: 4, LP: 25, TP: 4, p: ".......... "},
+    "Football Tailgater": {Wi: 7, L: 20, T: 6, WH: 7, LH: 24, TH: 2, WP: 11, LP: 13, TP: 9, p: "................. "},
+    "The Brewsers": {Wi: 8, L: 23, T: 2, WH: 10, LH: 19, TH: 4, WP: 9, LP: 21, TP: 3, p: "...................... "},
+    "Assault Rifle Hunters": {Wi: 6, L: 24, T: 3, WH: 5, LH: 24, TH: 4, WP: 10, LP: 19, TP: 4, p: "............ "}
+  };  
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
   var cats = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
@@ -179,7 +179,7 @@ function bd() {
   for (i=0; i<teams.length; i++) {
     histObj = hist[teams[i]];
     percentage = ((histObj['Wi'] + histObj['T']/2)/totalGames).toFixed(3);
-    console.log(teams[i] + histObj['p'] + '(' + percentage + ')' + '[b]' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'] + '[/b]' +
+    console.log(teams[i] + histObj['p'] + '(' + percentage + ') [b]' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'] + '[/b]' +
                            ', ' + histObj['WH'] + '-' + histObj['LH'] + '-' + histObj['TH'] +
                            ', ' + histObj['WP'] + '-' + histObj['LP'] + '-' + histObj['TP']);
   }
