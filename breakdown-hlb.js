@@ -10,19 +10,19 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
   var hist = {
-    "I Punt Cats": {Wi: 25, L: 4, T: 4, WH: 28, LH: 4, TH: 1, WP: 15, LP: 13, TP: 5, p: ".......................... "},
-    "Irish Guinness07": {Wi: 23, L: 7, T: 3, WH: 19, LH: 9, TH: 5, WP: 24, LP: 5, TP: 4, p: "................. "},
-    "Tropical Storm Braz": {Wi: 20, L: 6, T: 7, WH: 21, LH: 5, TH: 7, WP: 12, LP: 15, TP: 6, p: "............. "},
-    "Colt .45s": {Wi: 21, L: 7, T: 5, WH: 22, LH: 7, TH: 4, WP: 18, LP: 11, TP: 4, p: "............................. "},
-    "The Mike Shitty All-Stars": {Wi: 18, L: 9, T: 6, WH: 13, LH: 18, TH: 2, WP: 17, LP: 14, TP: 2, p: "...... "},
-    "Irish Dawgs": {Wi: 11, L: 14, T: 8, WH: 11, LH: 16, TH: 6, WP: 15, LP: 12, TP: 6, p: "........................ "},
-    "PeaceUp ATownDown": {Wi: 12, L: 18, T: 3, WH: 9, LH: 21, TH: 3, WP: 21, LP: 10, TP: 2, p: "........... "},
-    "New York Mehts :(": {Wi: 11, L: 18, T: 4, WH: 12, LH: 19, TH: 2, WP: 16, LP: 14, TP: 3, p: "................ "},
-    "Don't Mess with Texas": {Wi: 9, L: 21, T: 3, WH: 19, LH: 10, TH: 4, WP: 4, LP: 25, TP: 4, p: ".......... "},
-    "Football Tailgater": {Wi: 7, L: 20, T: 6, WH: 7, LH: 24, TH: 2, WP: 11, LP: 13, TP: 9, p: "................. "},
-    "The Brewsers": {Wi: 8, L: 23, T: 2, WH: 10, LH: 19, TH: 4, WP: 9, LP: 21, TP: 3, p: "...................... "},
-    "Assault Rifle Hunters": {Wi: 6, L: 24, T: 3, WH: 5, LH: 24, TH: 4, WP: 10, LP: 19, TP: 4, p: "............ "}
-  };  
+		"I Punt Cats": {Wi: 31, L: 8, T: 5, WH: 33, LH: 9, TH: 2, WP: 21, LP: 17, TP: 6, p: ".......................... "},
+		"The Mike Shitty All-Stars": {Wi: 28, L: 10, T: 6, WH: 21, LH: 20, TH: 3, WP: 26, LP: 15, TP: 3, p: "...... "},
+		"Colt .45s": {Wi: 25, L: 13, T: 6, WH: 24, LH: 16, TH: 4, WP: 25, LP: 13, TP: 6, p: "............................. "},
+		"Irish Guinness07": {Wi: 23, L: 17, T: 4, WH: 19, LH: 20, TH: 5, WP: 29, LP: 10, TP: 5, p: "................. "},
+		"Tropical Storm Braz": {Wi: 20, L: 14, T: 10, WH: 23, LH: 10, TH: 11, WP: 12, LP: 22, TP: 10, p: "............. "},
+		"PeaceUp ATownDown": {Wi: 19, L: 20, T: 5, WH: 18, LH: 22, TH: 4, WP: 22, LP: 16, TP: 6, p: "........... "},
+		"Football Tailgater": {Wi: 18, L: 20, T: 6, WH: 18, LH: 24, TH: 2, WP: 20, LP: 14, TP: 10, p: "................. "},
+		"New York Mehts :(": {Wi: 15, L: 23, T: 6, WH: 18, LH: 21, TH: 5, WP: 17, LP: 21, TP: 6, p: "................ "},
+		"Irish Dawgs": {Wi: 12, L: 23, T: 9, WH: 13, LH: 23, TH: 8, WP: 16, LP: 21, TP: 7, p: "........................ "},
+		"The Brewsers": {Wi: 13, L: 27, T: 4, WH: 17, LH: 21, TH: 6, WP: 9, LP: 29, TP: 6, p: "...................... "},
+		"Don't Mess with Texas": {Wi: 13, L: 27, T: 4, WH: 21, LH: 16, TH: 7, WP: 11, LP: 29, TP: 4, p: ".......... "},
+		"Assault Rifle Hunters": {Wi: 12, L: 27, T: 5, WH: 8, LH: 31, TH: 5, WP: 18, LP: 19, TP: 7, p: "............ "}
+	}; 
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
   var cats = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
