@@ -10,6 +10,7 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
   var hist = {
+<<<<<<< HEAD
 		"I Punt Cats": {Wi: 59, L: 10, T: 8, WH: 61, LH: 13, TH: 3, WP: 33, LP: 34, TP: 10, p: ".......................... "},
 		"The Mike Shitty All-Stars": {Wi: 44, L: 22, T: 11, WH: 30, LH: 39, TH: 8, WP: 54, LP: 20, TP: 3, p: "...... "},
 		"Colt .45s": {Wi: 41, L: 27, T: 9, WH: 28, LH: 39, TH: 10, WP: 47, LP: 22, TP: 8, p: "............................. "},
@@ -23,6 +24,21 @@ function bd() {
 		"PeaceUp ATownDown": {Wi: 23, L: 48, T: 6, WH: 21, LH: 49, TH: 7, WP: 30, LP: 36, TP: 11, p: "........... "},
 		"Assault Rifle Hunters": {Wi: 22, L: 47, T: 8, WH: 17, LH: 47, TH: 13, WP: 34, LP: 33, TP: 10, p: "............ "}
 	}; 
+=======
+    "I Punt Cats": {Wi: 49, L: 10, T: 7, WH: 49, LH: 14, TH: 3, WP: 38, LP: 20, TP: 8, p: ".......................... "},
+    "Colt .45s": {Wi: 42, L: 18, T: 6, WH: 33, LH: 25, TH: 8, WP: 43, LP: 15, TP: 8, p: "............................. "},
+    "Irish Guinness07": {Wi: 39, L: 21, T: 6, WH: 29, LH: 27, TH: 10, WP: 45, LP: 13, TP: 8, p: "................. "},
+    "Tropical Storm Braz": {Wi: 33, L: 21, T: 12, WH: 30, LH: 18, TH: 18, WP: 21, LP: 30, TP: 15, p: "............. "},
+    "The Mike Shitty All-Stars": {Wi: 35, L: 23, T: 8, WH: 25, LH: 35, TH: 6, WP: 33, LP: 29, TP: 4, p: "...... "},
+    "Football Tailgater": {Wi: 29, L: 30, T: 7, WH: 34, LH: 26, TH: 6, WP: 25, LP: 30, TP: 11, p: "................. "},
+    "PeaceUp ATownDown": {Wi: 26, L: 33, T: 7, WH: 23, LH: 37, TH: 6, WP: 31, LP: 27, TP: 8, p: "........... "},
+    "Irish Dawgs": {Wi: 22, L: 32, T: 12, WH: 31, LH: 25, TH: 10, WP: 22, LP: 35, TP: 9, p: "........................ "},
+    "New York Mehts :(": {Wi: 23, L: 36, T: 7, WH: 27, LH: 30, TH: 9, WP: 25, LP: 33, TP: 8, p: "................ "},
+    "Don't Mess with Texas": {Wi: 22, L: 37, T: 7, WH: 26, LH: 30, TH: 10, WP: 23, LP: 34, TP: 9, p: ".......... "},
+    "Assault Rifle Hunters": {Wi: 18, L: 43, T: 5, WH: 12, LH: 44, TH: 10, WP: 27, LP: 25, TP: 14, p: "............ "},
+    "The Brewsers": {Wi: 14, L: 48, T: 4, WH: 23, LH: 31, TH: 12, WP: 9, LP: 51, TP: 6, p: "...................... "}
+  }; 
+>>>>>>> week 8
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
   var cats = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
