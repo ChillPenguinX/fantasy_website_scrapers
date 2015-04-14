@@ -10,18 +10,14 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
  var hist = {
-		"I Punt Cats": {Wi: 144, L: 35, T: 19, WH: 142, LH: 43, TH: 13, WP: 98, LP: 69, TP: 31, p: ".......................... "},
-		"Colt .45s": {Wi: 114, L: 65, T: 19, WH: 92, LH: 80, TH: 26, WP: 117, LP: 58, TP: 23, p: "............................. "},
-		"Irish Guinness07": {Wi: 104, L: 76, T: 18, WH: 84, LH: 91, TH: 23, WP: 106, LP: 64, TP: 28, p: "................. "},
-		"The Mike Shitty All-Stars": {Wi: 97, L: 81, T: 20, WH: 76, LH: 102, TH: 20, WP: 114, LP: 70, TP: 14, p: "...... "},
-		"Football Tailgater": {Wi: 94, L: 87, T: 17, WH: 90, LH: 89, TH: 19, WP: 90, LP: 79, TP: 29, p: "................. "},
-		"Don't Mess with Texas": {Wi: 89, L: 90, T: 19, WH: 101, LH: 76, TH: 21, WP: 84, LP: 84, TP: 30, p: ".......... "},
-		"Irish Dawgs": {Wi: 76, L: 93, T: 29, WH: 100, LH: 77, TH: 21, WP: 64, LP: 109, TP: 25, p: "........................ "},
-		"New York Mehts :(": {Wi: 79, L: 97, T: 22, WH: 88, LH: 87, TH: 23, WP: 80, LP: 99, TP: 19, p: "................ "},
-		"Assault Rifle Hunters": {Wi: 80, L: 101, T: 17, WH: 77, LH: 96, TH: 25, WP: 81, LP: 85, TP: 32, p: "............ "},
-		"PeaceUp ATownDown": {Wi: 73, L: 105, T: 20, WH: 72, LH: 101, TH: 25, WP: 74, LP: 93, TP: 31, p: "........... "},
-		"Tropical Storm Braz": {Wi: 61, L: 112, T: 25, WH: 67, LH: 97, TH: 34, WP: 60, LP: 110, TP: 28, p: "............. "},
-		"The Brewsers": {Wi: 56, L: 125, T: 17, WH: 57, LH: 107, TH: 34, WP: 60, LP: 108, TP: 30, p: "...................... "}
+		"I Punt Cats": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......................... "},
+		"Colt .45s": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............................. "},
+		"Irish Guinness07": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................. "},
+		"The Michael Wacha Wachas": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "...... "},
+		"Don't Mess with Texas": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......... "},
+		"Irish Dawgs": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........................ "},
+		"In Theo We Trust": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............ "},
+		"Tropical Storm Braz": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............. "},
 	}; 
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
