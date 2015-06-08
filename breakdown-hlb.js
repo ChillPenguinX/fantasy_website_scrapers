@@ -10,15 +10,15 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
  var hist = {
-		"I Punt Cats": {Wi: 48, L: 6, T: 2, WH: 47, LH: 7, TH: 2, WP: 25, LP: 24, TP: 7, p: ".......................... "},
-		"Tropical Storm Braz": {Wi: 35, L: 16, T: 5, WH: 36, LH: 13, TH: 7, WP: 20, LP: 24, TP: 12, p: "............. "},
-		"Colt .45s": {Wi: 27, L: 20, T: 9, WH: 29, LH: 21, TH: 6, WP: 21, LP: 24, TP: 11, p: "............................. "},
-		"Prospect Hoarders": {Wi: 27, L: 26, T: 3, WH: 24, LH: 20, TH: 12, WP: 28, LP: 21, TP: 7, p: "................ "},
-		"Irish Guinness07": {Wi: 21, L: 28, T: 7, WH: 16, LH: 34, TH: 6, WP: 29, LP: 18, TP: 9, p: "................. "},
-		"Don't Mess with Texas": {Wi: 17, L: 34, T: 5, WH: 21, LH: 30, TH: 5, WP: 17, LP: 30, TP: 9, p: ".......... "},
-		"The Mike Shitty All-Stars": {Wi: 15, L: 36, T: 5, WH: 7, LH: 42, TH: 7, WP: 33, LP: 14, TP: 9, p: "...... "},
-		"Irish Dawgs": {Wi: 13, L: 37, T: 6, WH: 18, LH: 31, TH: 7, WP: 13, LP: 31, TP: 12, p: "........................ "}
-	};
+    "I Punt Cats": {Wi: 55, L: 6, T: 2, WH: 54, LH: 7, TH: 2, WP: 30, LP: 25, TP: 8, p: ".......................... "},
+    "Tropical Storm Braz": {Wi: 39, L: 17, T: 7, WH: 37, LH: 18, TH: 8, WP: 25, LP: 25, TP: 13, p: "............. "},
+    "Colt .45s": {Wi: 28, L: 26, T: 9, WH: 33, LH: 24, TH: 6, WP: 21, LP: 31, TP: 11, p: "............................. "},
+    "Prospect Hoarders": {Wi: 30, L: 29, T: 4, WH: 25, LH: 24, TH: 14, WP: 32, LP: 24, TP: 7, p: "................ "},
+    "Irish Guinness07": {Wi: 21, L: 34, T: 8, WH: 18, LH: 38, TH: 7, WP: 32, LP: 22, TP: 9, p: "................. "},
+    "Don't Mess with Texas": {Wi: 19, L: 36, T: 8, WH: 27, LH: 31, TH: 5, WP: 18, LP: 36, TP: 9, p: ".......... "},
+    "Irish Dawgs": {Wi: 16, L: 38, T: 9, WH: 23, LH: 33, TH: 7, WP: 15, LP: 36, TP: 12, p: "........................ "},
+    "The Mike Shitty All-Stars": {Wi: 16, L: 38, T: 9, WH: 7, LH: 49, TH: 7, WP: 40, LP: 14, TP: 9, p: "...... "}
+  };
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
   var cats = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
