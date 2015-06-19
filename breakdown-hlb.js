@@ -50,7 +50,7 @@ function bd() {
     });
     row.find('.belowMinimum').each(function(){disqualified[teamName] = true;});
   });
-  var teamAWinsH, teamBWinsH, teamAWinsP, teamBWinsP, i, j, k, teamAVal, teamBVal;
+  var teamAWinsH, teamBWinsH, teamAWinsP, teamBWinsP, i, j, k, teamAVal, teamBVal, week;
 
   for (i=0; i<teams.length; i++) {
     for (j=i+1; j<teams.length; j++) {
@@ -147,7 +147,7 @@ function bd() {
     teamB = stats[b];
     return ((teamB['Wi'] + teamB['T']/2)/11) - ((teamA['Wi'] + teamA['T']/2)/11);
   });
-  console.log('[b][u]Week Breakdowns (Combined, Hitting, Pitching)[/u][/b]')
+
   for (i=0; i<teams.length; i++) {
     statObj = stats[teams[i]];
     histObj = hist[teams[i]]
@@ -160,6 +160,10 @@ function bd() {
     histObj['WP'] += statObj['WP'];
     histObj['LP'] += statObj['LP'];
     histObj['TP'] += statObj['TP'];
+    if (!i) {
+      week = (histObj['Wi'] + histObj['L'] + histObj['T']) / (teams.length - 1);
+      console.log('[b][u]Week ' + week + ' Breakdowns (Combined, Hitting, Pitching)[/u][/b]')
+    }
     console.log(teams[i] + histObj['p'] + '[b]' + statObj['Wi'] + '-' + statObj['L'] + '-' + statObj['T'] + '[/b]' +
                            ', ' + statObj['WH'] + '-' + statObj['LH'] + '-' + statObj['TH'] +
                            ', ' + statObj['WP'] + '-' + statObj['LP'] + '-' + statObj['TP']);
@@ -196,7 +200,7 @@ function bd() {
     }
   }
 
-  console.log('\n[b][u]Week Highs:[/u][/b]');
+  console.log('\n[b][u]Week ' + week + ' Highs:[/u][/b]');
   for (i=0; i<cats.length; i++) {
     if (i == 6) {console.log(' ');}
     console.log(cats[i] + periods[i] + highs[cats[i]]['val'] + ' - ' + highs[cats[i]]['teams'].join('; '));
