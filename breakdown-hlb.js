@@ -206,15 +206,7 @@ var hist = {
     console.log(cats[i] + periods[i] + highs[cats[i]]['val'] + ' - ' + highs[cats[i]]['teams'].join('; '));
   }
 
-  console.log('\n\nvar hist = {')
-  for (i=0; i<teams.length; i++) {
-    histObj = hist[teams[i]];
-    console.log('\t\t"' + teams[i] + '": {Wi: ' + histObj['Wi'] + ', L: ' + histObj['L'] + ', T: ' +
-      histObj['T'] + ', WH: ' + histObj['WH'] + ', LH: ' + histObj['LH'] + ', TH: ' +
-      histObj['TH'] + ', WP: ' + histObj['WP'] + ', LP: ' + histObj['LP'] + ', TP: ' +
-      histObj['TP'] + ', p: "' + histObj['p'] + '"}' + (i == teams.length-1 ? '' : ','));
-  }
-  console.log('\t};');
+  console.log('\n\nvar hist = ' + JSON.stringify(hist, null, 2));
 }
 
 
