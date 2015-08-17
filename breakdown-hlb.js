@@ -9,104 +9,16 @@ function bd() {
   //the periods are for display purposes. You can remove them, make them different lengths, and replace them.
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
-var hist = {
-  "I Punt Cats": {
-    "Wi": 89,
-    "L": 23,
-    "T": 7,
-    "WH": 90,
-    "LH": 19,
-    "TH": 10,
-    "WP": 51,
-    "LP": 53,
-    "TP": 15,
-    "p": ".......................... "
-  },
-  "Tropical Storm Braz": {
-    "Wi": 75,
-    "L": 33,
-    "T": 11,
-    "WH": 57,
-    "LH": 48,
-    "TH": 14,
-    "WP": 71,
-    "LP": 30,
-    "TP": 18,
-    "p": "............. "
-  },
-  "Colt .45s": {
-    "Wi": 56,
-    "L": 46,
-    "T": 17,
-    "WH": 77,
-    "LH": 32,
-    "TH": 10,
-    "WP": 36,
-    "LP": 64,
-    "TP": 19,
-    "p": "............................. "
-  },
-  "Prospect Hoarders": {
-    "Wi": 60,
-    "L": 51,
-    "T": 8,
-    "WH": 52,
-    "LH": 44,
-    "TH": 23,
-    "WP": 57,
-    "LP": 47,
-    "TP": 15,
-    "p": "................ "
-  },
-  "Don't Mess with Texas": {
-    "Wi": 45,
-    "L": 60,
-    "T": 14,
-    "WH": 51,
-    "LH": 56,
-    "TH": 12,
-    "WP": 42,
-    "LP": 58,
-    "TP": 19,
-    "p": ".......... "
-  },
-  "Irish Guinness07": {
-    "Wi": 47,
-    "L": 59,
-    "T": 13,
-    "WH": 41,
-    "LH": 62,
-    "TH": 16,
-    "WP": 58,
-    "LP": 45,
-    "TP": 16,
-    "p": "................. "
-  },
-  "Irish Dawgs": {
-    "Wi": 30,
-    "L": 76,
-    "T": 13,
-    "WH": 43,
-    "LH": 64,
-    "TH": 12,
-    "WP": 30,
-    "LP": 72,
-    "TP": 17,
-    "p": "........................ "
-  },
-  "The Mike Shitty All-Stars": {
-    "Wi": 26,
-    "L": 80,
-    "T": 13,
-    "WH": 12,
-    "LH": 98,
-    "TH": 9,
-    "WP": 61,
-    "LP": 37,
-    "TP": 21,
-    "p": "...... "
-  }
-}
+  var hist = {
+    "I Punt Cats": {Wi: 93, L: 26, T: 7, WH: 92, LH: 22, TH: 12, WP: 54, LP: 56, TP: 16, p: ".......................... "},
+    "Tropical Storm Braz": {Wi: 80, L: 35, T: 11, WH: 59, LH: 51, TH: 16, WP: 75, LP: 33, TP: 18, p: "............. "},
+    "Prospect Hoarders": {Wi: 67, L: 51, T: 8, WH: 58, LH: 44, TH: 24, WP: 64, LP: 47, TP: 15, p: "................ "},
+    "Colt .45s": {Wi: 62, L: 47, T: 17, WH: 83, LH: 32, TH: 11, WP: 40, LP: 66, TP: 20, p: "............................. "},
+    "Irish Guinness07": {Wi: 49, L: 63, T: 14, WH: 41, LH: 69, TH: 16, WP: 64, LP: 46, TP: 16, p: "................. "},
+    "Don't Mess with Texas": {Wi: 47, L: 64, T: 15, WH: 56, LH: 58, TH: 12, WP: 44, LP: 63, TP: 19, p: ".......... "},
+    "Irish Dawgs": {Wi: 30, L: 83, T: 13, WH: 44, LH: 69, TH: 13, WP: 31, LP: 78, TP: 17, p: "........................ "},
+    "The Mike Shitty All-Stars": {Wi: 27, L: 86, T: 13, WH: 14, LH: 102, TH: 10, WP: 61, LP: 44, TP: 21, p: "...... "}
+  };
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
   var cats = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
@@ -294,16 +206,15 @@ var hist = {
     console.log(cats[i] + periods[i] + highs[cats[i]]['val'] + ' - ' + highs[cats[i]]['teams'].join('; '));
   }
 
-  //console.log('\n\nvar hist = ' + JSON.stringify(hist, null, 2));
   console.log('\n\nvar hist = {')
--  for (i=0; i<teams.length; i++) {
--    histObj = hist[teams[i]];
--    console.log('\t\t"' + teams[i] + '": {Wi: ' + histObj['Wi'] + ', L: ' + histObj['L'] + ', T: ' +
--      histObj['T'] + ', WH: ' + histObj['WH'] + ', LH: ' + histObj['LH'] + ', TH: ' +
--      histObj['TH'] + ', WP: ' + histObj['WP'] + ', LP: ' + histObj['LP'] + ', TP: ' +
--      histObj['TP'] + ', p: "' + histObj['p'] + '"}' + (i == teams.length-1 ? '' : ','));
--  }
--  console.log('\t};');
+  for (i=0; i<teams.length; i++) {
+    histObj = hist[teams[i]];
+    console.log('\t\t"' + teams[i] + '": {Wi: ' + histObj['Wi'] + ', L: ' + histObj['L'] + ', T: ' +
+      histObj['T'] + ', WH: ' + histObj['WH'] + ', LH: ' + histObj['LH'] + ', TH: ' +
+      histObj['TH'] + ', WP: ' + histObj['WP'] + ', LP: ' + histObj['LP'] + ', TP: ' +
+      histObj['TP'] + ', p: "' + histObj['p'] + '"}' + (i == teams.length-1 ? '' : ','));
+  }
+  console.log('\t};');
 }
 
 
