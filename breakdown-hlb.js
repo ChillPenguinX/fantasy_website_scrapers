@@ -10,14 +10,14 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
   var hist = {
-		"I Punt Cats": {Wi: 104, L: 36, T: 7, WH: 97, LH: 35, TH: 15, WP: 65, LP: 61, TP: 21, p: ".......................... "},
-		"Tropical Storm Braz": {Wi: 93, L: 41, T: 13, WH: 69, LH: 61, TH: 17, WP: 92, LP: 35, TP: 20, p: "............. "},
-		"Prospect Hoarders": {Wi: 84, L: 54, T: 9, WH: 78, LH: 45, TH: 24, WP: 71, LP: 58, TP: 18, p: "................ "},
-		"Colt .45s": {Wi: 66, L: 61, T: 20, WH: 87, LH: 45, TH: 15, WP: 48, LP: 79, TP: 20, p: "............................. "},
-		"Irish Guinness07": {Wi: 61, L: 70, T: 16, WH: 55, LH: 73, TH: 19, WP: 73, LP: 54, TP: 20, p: "................. "},
-		"Don't Mess with Texas": {Wi: 48, L: 82, T: 17, WH: 62, LH: 69, TH: 16, WP: 47, LP: 81, TP: 19, p: ".......... "},
-		"Irish Dawgs": {Wi: 39, L: 94, T: 14, WH: 51, LH: 76, TH: 20, WP: 36, LP: 94, TP: 17, p: "........................ "},
-		"The Mike Shitty All-Stars": {Wi: 37, L: 94, T: 16, WH: 20, LH: 115, TH: 12, WP: 76, LP: 46, TP: 25, p: "...... "}
+		"I Punt Cats": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......................... "},
+    		"Colt .45s": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............................. "},
+    		"Irish Guinness07": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................. "},
+		"The Michael Wacha Wachas": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "...... "},
+    		"Don't Mess with Texas": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......... "},
+    		"Irish Dawgs": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........................ "},
+    		"Prospect Hoarders": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................ "},
+    		"Tropical Storm Braz": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............. "},
 	};
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
