@@ -190,6 +190,8 @@ function bd() {
   for (i=1; i<teams.length; i++) {
     for (k=0; k<cats.length; k++) {
       teamBVal = stats[teams[i]][cats[k]];
+      if ($.inArray(cats[k], qual_cats) != -1 && disqualified[teams[i]])
+      	continue;
       if ((highs[cats[k]]['val'] < teamBVal && $.inArray(cats[k], neg_cats) == -1) ||
           (highs[cats[k]]['val'] > teamBVal && $.inArray(cats[k], neg_cats) != -1)) {
         highs[cats[k]]['teams'] = [teams[i]];
