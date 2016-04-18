@@ -10,14 +10,14 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
   var hist = {
-		"Tropical Storm Braz": {Wi: 7, L: 0, T: 0, WH: 6, LH: 0, TH: 1, WP: 7, LP: 0, TP: 0, p: "............. "},
-		"I Punt Cats": {Wi: 6, L: 1, T: 0, WH: 6, LH: 1, TH: 0, WP: 3, LP: 2, TP: 2, p: ".......................... "},
-		"Don't Mess with Texas": {Wi: 5, L: 2, T: 0, WH: 5, LH: 1, TH: 1, WP: 4, LP: 1, TP: 2, p: ".......... "},
-		"Colt .45s": {Wi: 3, L: 4, T: 0, WH: 3, LH: 4, TH: 0, WP: 3, LP: 3, TP: 1, p: "............................. "},
-		"Irish Dawgs": {Wi: 3, L: 4, T: 0, WH: 4, LH: 3, TH: 0, WP: 2, LP: 5, TP: 0, p: "........................ "},
-		"Prospect Hoarders": {Wi: 3, L: 4, T: 0, WH: 2, LH: 5, TH: 0, WP: 5, LP: 1, TP: 1, p: "................ "},
-		"Irish Guinness07": {Wi: 1, L: 6, T: 0, WH: 0, LH: 6, TH: 1, WP: 1, LP: 6, TP: 0, p: "................. "},
-		"The Mike Shitty All-Stars": {Wi: 0, L: 7, T: 0, WH: 0, LH: 6, TH: 1, WP: 0, LP: 7, TP: 0, p: "...... "}
+		"Tropical Storm Braz": {Wi: 12, L: 1, T: 1, WH: 11, LH: 1, TH: 2, WP: 13, LP: 1, TP: 0, p: "............. "},
+		"Don't Mess with Texas": {Wi: 10, L: 3, T: 1, WH: 8, LH: 4, TH: 2, WP: 11, LP: 1, TP: 2, p: ".......... "},
+		"Colt .45s": {Wi: 9, L: 4, T: 1, WH: 9, LH: 4, TH: 1, WP: 7, LP: 6, TP: 1, p: "............................. "},
+		"Prospect Hoarders": {Wi: 7, L: 6, T: 1, WH: 7, LH: 5, TH: 2, WP: 7, LP: 5, TP: 2, p: "................ "},
+		"I Punt Cats": {Wi: 7, L: 7, T: 0, WH: 8, LH: 5, TH: 1, WP: 3, LP: 8, TP: 3, p: ".......................... "},
+		"Irish Dawgs": {Wi: 5, L: 9, T: 0, WH: 5, LH: 7, TH: 2, WP: 4, LP: 9, TP: 1, p: "........................ "},
+		"The Mike Shitty All-Stars": {Wi: 3, L: 11, T: 0, WH: 1, LH: 11, TH: 2, WP: 5, LP: 9, TP: 0, p: "...... "},
+		"Irish Guinness07": {Wi: 1, L: 13, T: 0, WH: 0, LH: 12, TH: 2, WP: 1, LP: 12, TP: 1, p: "................. "}
 	};
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
