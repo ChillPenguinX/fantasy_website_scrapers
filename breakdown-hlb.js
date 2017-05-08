@@ -10,14 +10,14 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 var hist = {
-		"Tropical Storm Braz": {Wi: 20, L: 6, T: 2, WH: 12, LH: 13, TH: 3, WP: 18, LP: 8, TP: 2, p: "............. "},
-		"Colt .45s": {Wi: 17, L: 9, T: 2, WH: 13, LH: 7, TH: 8, WP: 14, LP: 11, TP: 3, p: "............................. "},
-		"Irish Guinness07": {Wi: 14, L: 9, T: 5, WH: 16, LH: 9, TH: 3, WP: 13, LP: 13, TP: 2, p: "................. "},
-		"The Mike Shitty All-Stars": {Wi: 14, L: 10, T: 4, WH: 13, LH: 9, TH: 6, WP: 7, LP: 18, TP: 3, p: "...... "},
-		"Prospect Hoarders": {Wi: 14, L: 11, T: 3, WH: 10, LH: 14, TH: 4, WP: 20, LP: 7, TP: 1, p: "................ "},
-		"I Punt Cats": {Wi: 10, L: 12, T: 6, WH: 8, LH: 16, TH: 4, WP: 23, LP: 3, TP: 2, p: ".......................... "},
-		"Don't Mess with Texas": {Wi: 6, L: 18, T: 4, WH: 8, LH: 14, TH: 6, WP: 4, LP: 20, TP: 4, p: ".......... "},
-		"Irish Dawgs": {Wi: 2, L: 22, T: 4, WH: 12, LH: 10, TH: 6, WP: 4, LP: 23, TP: 1, p: "........................ "}
+		"Tropical Storm Braz": {Wi: 27, L: 6, T: 2, WH: 19, LH: 13, TH: 3, WP: 25, LP: 8, TP: 2, p: "............. "},
+		"Prospect Hoarders": {Wi: 20, L: 12, T: 3, WH: 16, LH: 15, TH: 4, WP: 23, LP: 9, TP: 3, p: "................ "},
+		"Colt .45s": {Wi: 19, L: 12, T: 4, WH: 15, LH: 12, TH: 8, WP: 18, LP: 13, TP: 4, p: "............................. "},
+		"The Mike Shitty All-Stars": {Wi: 18, L: 12, T: 5, WH: 17, LH: 11, TH: 7, WP: 10, LP: 22, TP: 3, p: "...... "},
+		"Irish Guinness07": {Wi: 18, L: 12, T: 5, WH: 19, LH: 12, TH: 4, WP: 15, LP: 17, TP: 3, p: "................. "},
+		"I Punt Cats": {Wi: 12, L: 17, T: 6, WH: 8, LH: 23, TH: 4, WP: 29, LP: 4, TP: 2, p: ".......................... "},
+		"Don't Mess with Texas": {Wi: 7, L: 23, T: 5, WH: 11, LH: 16, TH: 8, WP: 5, LP: 26, TP: 4, p: ".......... "},
+		"Irish Dawgs": {Wi: 2, L: 29, T: 4, WH: 13, LH: 16, TH: 6, WP: 4, LP: 30, TP: 1, p: "........................ "}
 	};
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
