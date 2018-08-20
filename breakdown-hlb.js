@@ -10,14 +10,14 @@ function bd() {
   //each time you run this, a new version of this object will be printed last. The idea is for you to copy that
   //and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 var hist = {
-		"Prospect Hoarders": {Wi: 81, L: 34, T: 11, WH: 60, LH: 48, TH: 18, WP: 88, LP: 25, TP: 13, p: "................ "},
-		"Irish Guinness07": {Wi: 66, L: 51, T: 9, WH: 51, LH: 54, TH: 21, WP: 83, LP: 32, TP: 11, p: "................. "},
-		"I Punt Cats": {Wi: 64, L: 50, T: 12, WH: 64, LH: 46, TH: 16, WP: 50, LP: 62, TP: 14, p: ".......................... "},
-		"Tropical Storm Braz": {Wi: 62, L: 52, T: 12, WH: 51, LH: 59, TH: 16, WP: 66, LP: 46, TP: 14, p: "............. "},
-		"Colt .45s": {Wi: 57, L: 61, T: 8, WH: 54, LH: 53, TH: 19, WP: 55, LP: 56, TP: 15, p: "............................. "},
-		"Don't Mess with Texas": {Wi: 47, L: 66, T: 13, WH: 51, LH: 61, TH: 14, WP: 41, LP: 68, TP: 17, p: ".......... "},
-		"The Mike Shitty All-Stars": {Wi: 45, L: 67, T: 14, WH: 40, LH: 61, TH: 25, WP: 47, LP: 67, TP: 12, p: "...... "},
-		"Irish Dawgs": {Wi: 36, L: 77, T: 13, WH: 62, LH: 51, TH: 13, WP: 21, LP: 95, TP: 10, p: "........................ "}
+		"Prospect Hoarders": {Wi: 86, L: 36, T: 11, WH: 63, LH: 51, TH: 19, WP: 95, LP: 25, TP: 13, p: "................ "},
+		"I Punt Cats": {Wi: 70, L: 51, T: 12, WH: 69, LH: 47, TH: 17, WP: 55, LP: 63, TP: 15, p: ".......................... "},
+		"Tropical Storm Braz": {Wi: 69, L: 52, T: 12, WH: 58, LH: 59, TH: 16, WP: 71, LP: 47, TP: 15, p: "............. "},
+		"Irish Guinness07": {Wi: 68, L: 55, T: 10, WH: 52, LH: 59, TH: 22, WP: 87, LP: 35, TP: 11, p: "................. "},
+		"Colt .45s": {Wi: 58, L: 65, T: 10, WH: 57, LH: 55, TH: 21, WP: 55, LP: 62, TP: 16, p: "............................. "},
+		"Don't Mess with Texas": {Wi: 47, L: 71, T: 15, WH: 51, LH: 68, TH: 14, WP: 44, LP: 72, TP: 17, p: ".......... "},
+		"The Mike Shitty All-Stars": {Wi: 45, L: 73, T: 15, WH: 41, LH: 66, TH: 26, WP: 48, LP: 72, TP: 13, p: "...... "},
+		"Irish Dawgs": {Wi: 40, L: 80, T: 13, WH: 67, LH: 53, TH: 13, WP: 22, LP: 101, TP: 10, p: "........................ "}
 	};
 
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
