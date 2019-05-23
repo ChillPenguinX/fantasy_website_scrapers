@@ -23,7 +23,7 @@ var hist = {
   //list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
   var cats = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
               'QS', 'W', 'SV', 'ERA', 'WHIP', 'K/9'];
-  var catsLoad = ['AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
+  var catsLoad = ['Hitters', 'AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
               'IP', 'K/9', 'ERA', 'WHIP', 'QS', 'W', 'SV'];
   //list any categories where it's better to have a lower number here, in any order. They need to match the text in cats.
   var neg_cats = ['ERA', 'WHIP'];
@@ -34,23 +34,33 @@ var hist = {
   //for display purposes when showing highs
   var periods = ['....... ','..... ','.... ', '..... ','.... ','.... ' ,'...... ', '....... ', '...... ', '.... ','.. ','..... '];
 
-
+console.log("starting...");
 
   var stats = {};
   var teams = [];
   var highs = {};
   var disqualified = {};
   var row, statObj, teamName, histObj;
-  $('.pointer--live-scoring').each(function() {
+  $('td.ng-tns-c13-3.ng-star-inserted').each(function() {
     row = $(this);
-    teamName = row.find('.teamName a').text();
-    teams.push(teamName);
-    statObj = stats[teamName] = {};
-    statObj['Wi']=statObj['L']=statObj['T']=statObj['WH']=statObj['LH']=statObj['TH']=statObj['WP']=statObj['LP']=statObj['TP']=0;
-    row.find('.ng-tns-c28-14').each(function(index) {
-      statObj[catsLoad[index]] = parseFloat($(this).text());
+    teamName = row.find('div.ng-tns-c13-3').text();
+    if (teamName)
+    {
+	    console.log('found team ' + teamName);
+	    teams.push(teamName);
+	    statObj = stats[teamName] = {};
+	    statObj['Wi']=statObj['L']=statObj['T']=statObj['WH']=statObj['LH']=statObj['TH']=statObj['WP']=statObj['LP']=statObj['TP']=0;
+	    //row.find('.belowMinimum').each(function(){disqualified[teamName] = true;});
+	}
+  });
+  $('tr.pointer--live-scoring.ng-tns-c13-3.ng-star-inserted').each(function(rowIndex) {
+  	row = $(this);
+  	teamName = teams[rowIndex];
+  	console.log('getting stats for ' + teamName);
+  	row.find('td.ng-tns-c13-3.ng-star-inserted').each(function(colIndex) {
+      statObj[catsLoad[colIndex]] = parseFloat($(this).text());
+      console.log(catsLoad[colIndex] + " = " + statObj[catsLoad[colIndex]]);
     });
-    row.find('.belowMinimum').each(function(){disqualified[teamName] = true;});
   });
   var teamAWinsH, teamBWinsH, teamAWinsP, teamBWinsP, i, j, k, teamAVal, teamBVal, week;
 
@@ -220,6 +230,3 @@ var hist = {
   }
   console.log('\t};');
 }
-
-
-//type bd()
