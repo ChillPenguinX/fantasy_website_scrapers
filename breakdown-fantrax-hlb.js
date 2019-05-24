@@ -19,6 +19,10 @@ function bd() {
 		"Don't Mess with Texas": {Wi: 17, L: 28, T: 4, WH: 10, LH: 37, TH: 2, WP: 30, LP: 17, TP: 2, p: ".......... "},
 		"The Mike Shitty All-Stars": {Wi: 15, L: 30, T: 4, WH: 20, LH: 24, TH: 5, WP: 13, LP: 31, TP: 5, p: "...... "}
 	};
+
+	var highsHist = {
+
+	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
 	var cats = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
@@ -251,15 +255,65 @@ function bd() {
 		}
 	}
 
+	// print the highs for this week
 	console.log('\n[b][u]Week ' + week + ' Highs:[/u][/b]');
 	for (i = 0; i < cats.length; i++)
 	{
-		if (i == 6)
+		if (i == cats.length >> 1)
 			console.log(' ');
 		console.log(cats[i] + periods[i] + highs[cats[i]]['val'] + ' - ' + highs[cats[i]]['teams'].join('; '));
 	}
 
-	console.log('\n\nvar hist = {')
+	// update the historical highs
+	for (i = 0; i < cats.length; i++)
+	{
+		var catName = cats[i];
+		var bNegCat = $.inArray(catName, neg_cats) != -1;
+		var thisWeekHighObj = highs[catName];
+		var thisWeekHighVal = thisWeekHighObj['val'];
+		var thisWeekHighTeams = thisWeekHighObj['teams'];
+		var oldHighObj = highsHist[catName];
+
+		if (!oldHighObj)
+		{
+			highsHist[catName] = oldHighObj = {teams: thisWeekHighTeams, val: thisWeekHighVal, weeks: []};
+			for (j = 0; j < thisWeekHighTeams.length; j++)
+				oldHighObj['weeks'].push(week);
+		}
+		else
+		{
+			var oldHighVal = oldHighObj['val'];
+			if (oldHighVal == thisWeekHighVal)
+			{
+				for (j = 0; j < thisWeekHighTeams.length; j++)
+				{
+					oldHighObj['teams'].push(thisWeekHighTeams[j]);
+					oldHighObj['weeks'].push(week);
+				}
+			}
+			else if ((oldHighVal > thisWeekHighVal) != bNegCat)
+			{
+				oldHighObj['teams'] = thisWeekHighTeams;
+				for (j = 0; j < thisWeekHighTeams.length; j++)
+					oldHighObj['weeks'].push(week);
+			}
+		}
+	}
+
+	// print the historicalhighs after this week
+	console.log('\nSeason  Highs:');
+	for (i = 0; i < cats.length; i++)
+	{
+		if (i == cats.length >> 1)
+			console.log(' ');
+		var catName = cats[i];
+		var highHistObj = highsHist[catName];
+		console.log(catName + periods[i] + highHistObj['val'] + ' - ' + highHistObj['teams'].join('; ') + ' - ' + 
+			(highHistObj['weeks'].length == 1 ? 'Week ' : 'Weeks ') + highHistObj['weeks'].join(','));
+	}
+
+	// print the hist object for updating
+	console.log('\n\nvar hist = {');
 	for (i = 0; i < teams.length; i++)
 	{
 		histObj = hist[teams[i]];
@@ -267,6 +321,17 @@ function bd() {
 			histObj['T'] + ', WH: ' + histObj['WH'] + ', LH: ' + histObj['LH'] + ', TH: ' +
 			histObj['TH'] + ', WP: ' + histObj['WP'] + ', LP: ' + histObj['LP'] + ', TP: ' +
 			histObj['TP'] + ', p: "' + histObj['p'] + '"}' + (i == teams.length-1 ? '' : ','));
+	}
+	console.log('\t};');
+
+	// print the highs hist object for updating
+	console.log('\n\nvar highsHist = {');
+	for (i = 0; i < cats.length; i++)
+	{
+		var catName = cats[i];
+		var histHighsObj = highsHist[catName];
+		console.log('\t\t"' + catName + '": {val: ' + histHighsObj['val'] + ', teams: ["' + histHighsObj['teams'].join('","') + '"], weeks: [' + 
+			histHighsObj['weeks'].join(',') + ']}' + (i + 1 == cats.length ? '' : ','));
 	}
 	console.log('\t};');
 }
