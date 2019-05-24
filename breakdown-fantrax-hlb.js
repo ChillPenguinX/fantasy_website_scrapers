@@ -10,25 +10,25 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var hist = {
-		"Colt .45s": {Wi: 3, L: 16, T: 2, WH: 10, LH: 8, TH: 3, WP: 3, LP: 17, TP: 1, p: "............................. "},
-		"Don't Mess with Texas": {Wi: 10, L: 9, T: 2, WH: 6, LH: 14, TH: 1, WP: 15, LP: 6, TP: 0, p: ".......... "},
-		"I Punt Cats": {Wi: 8, L: 11, T: 2, WH: 10, LH: 9, TH: 2, WP: 6, LP: 12, TP: 3, p: ".......................... "},
-		"Irish Dawgs": {Wi: 13, L: 6, T: 2, WH: 11, LH: 8, TH: 2, WP: 11, LP: 7, TP: 3, p: "........................ "},
-		"Irish Guinness07": {Wi: 11, L: 7, T: 3, WH: 8, LH: 12, TH: 1, WP: 14, LP: 6, TP: 1, p: "................. "},
-		"Prospect Hoarders": {Wi: 12, L: 8, T: 1, WH: 11, LH: 9, TH: 1, WP: 8, LP: 11, TP: 2, p: "................ "},
-		"The Mike Shitty All-Stars": {Wi: 6, L: 13, T: 2, WH: 8, LH: 10, TH: 3, WP: 6, LP: 13, TP: 2, p: "...... "},
-		"Tropical Storm Braz": {Wi: 14, L: 7, T: 0, WH: 13, LH: 7, TH: 1, WP: 14, LP: 5, TP: 2, p: "............. "}
+		"Colt .45s": {Wi: 5, L: 20, T: 3, WH: 12, LH: 12, TH: 4, WP: 4, LP: 23, TP: 1, p: "............................. "},
+		"Don't Mess with Texas": {Wi: 11, L: 15, T: 2, WH: 6, LH: 20, TH: 2, WP: 17, LP: 11, TP: 0, p: ".......... "},
+		"I Punt Cats": {Wi: 13, L: 13, T: 2, WH: 15, LH: 10, TH: 3, WP: 10, LP: 14, TP: 4, p: ".......................... "},
+		"Irish Dawgs": {Wi: 15, L: 10, T: 3, WH: 11, LH: 14, TH: 3, WP: 14, LP: 10, TP: 4, p: "........................ "},
+		"Irish Guinness07": {Wi: 18, L: 7, T: 3, WH: 15, LH: 12, TH: 1, WP: 18, LP: 9, TP: 1, p: "................. "},
+		"Prospect Hoarders": {Wi: 17, L: 9, T: 2, WH: 16, LH: 10, TH: 2, WP: 14, LP: 12, TP: 2, p: "................ "},
+		"The Mike Shitty All-Stars": {Wi: 6, L: 20, T: 2, WH: 10, LH: 14, TH: 4, WP: 6, LP: 20, TP: 2, p: "...... "},
+		"Tropical Storm Braz": {Wi: 18, L: 9, T: 1, WH: 17, LH: 10, TH: 1, WP: 21, LP: 5, TP: 2, p: "............. "}
 	};
 
 	var highsHist = {
-		"R": {val: 56, teams: ["Don't Mess with Texas","Tropical Storm Braz"], weeks: [2,3]},
+		"R": {val: 62, teams: ["Irish Guinness07"], weeks: [4]},
 		"HR": {val: 22, teams: ["Tropical Storm Braz"], weeks: [3]},
-		"RBI": {val: 66, teams: ["Irish Dawgs"], weeks: [2]},
-		"SB": {val: 8, teams: ["Irish Guinness07","The Mike Shitty All-Stars","Tropical Storm Braz"], weeks: [2,2,3]},
+		"RBI": {val: 66, teams: ["Irish Dawgs","Irish Guinness07"], weeks: [2,4]},
+		"SB": {val: 11, teams: ["I Punt Cats"], weeks: [4]},
 		"OBP": {val: 0.387, teams: ["Colt .45s"], weeks: [1]},
 		"SLG": {val: 0.577, teams: ["Irish Dawgs"], weeks: [2]},
 		"QS": {val: 9, teams: ["Irish Guinness07"], weeks: [2]},
-		"W": {val: 5, teams: ["Irish Guinness07","I Punt Cats","Irish Dawgs","Tropical Storm Braz"], weeks: [2,3,3,3]},
+		"W": {val: 5, teams: ["Irish Guinness07","I Punt Cats","Irish Dawgs","Tropical Storm Braz","Irish Dawgs","Irish Guinness07","Tropical Storm Braz"], weeks: [2,3,3,3,4,4,4]},
 		"SV": {val: 6, teams: ["Don't Mess with Texas"], weeks: [2]},
 		"ERA": {val: 1.94, teams: ["Don't Mess with Texas"], weeks: [1]},
 		"WHIP": {val: 0.797, teams: ["Don't Mess with Texas"], weeks: [1]},
@@ -321,8 +321,8 @@ function bd() {
 			console.log(' ');
 		var catName = cats[i];
 		var highHistObj = highsHist[catName];
-		console.log(catName + periods[i] + highHistObj['val'] + ' - ' + highHistObj['teams'].join('; ') + ' - ' + 
-			(highHistObj['weeks'].length == 1 ? 'Week ' : 'Weeks ') + highHistObj['weeks'].join(','));
+		console.log(catName + periods[i] + highHistObj['val'] + ' - ' + (highHistObj['teams'].length > 3 ? highHistObj['teams'].length + ' tied' :
+			highHistObj['teams'].join('; ') + ' - ' + (highHistObj['weeks'].length == 1 ? 'Week ' : 'Weeks ') + highHistObj['weeks'].join(',')));
 	}
 
 	// print the hist object for updating
