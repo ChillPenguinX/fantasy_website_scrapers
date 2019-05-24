@@ -41,27 +41,31 @@ console.log("starting...");
   var highs = {};
   var disqualified = {};
   var row, statObj, teamName, histObj;
-  $('td.ng-tns-c13-3.ng-star-inserted').each(function() {
+  $('td.ng-star-inserted').each(function() {
     row = $(this);
-    teamName = row.find('div.ng-tns-c13-3').text();
-    if (teamName)
+    teamName = row.find('div').text();
+    if (teamName && hist[teamName])
     {
 	    //console.log('found team ' + teamName);
 	    teams.push(teamName);
 	    //row.find('.belowMinimum').each(function(){disqualified[teamName] = true;});
 	}
   });
-  $('tr.pointer--live-scoring.ng-tns-c13-3.ng-star-inserted').each(function(rowIndex) {
+  $('tr.pointer--live-scoring.ng-star-inserted').each(function(rowIndex) {
   	row = $(this);
   	teamName = teams[rowIndex];
-  	statObj = stats[teamName] = {};
-	statObj['Wi']=statObj['L']=statObj['T']=statObj['WH']=statObj['LH']=statObj['TH']=statObj['WP']=statObj['LP']=statObj['TP']=0;
-  	//console.log('getting stats for ' + teamName);
-  	row.find('td.ng-tns-c13-3.ng-star-inserted').each(function(colIndex) {
-    	statObj[catsLoad[colIndex]] = parseFloat($(this).text());
-     	//console.log(catsLoad[colIndex] + " = " + statObj[catsLoad[colIndex]]);
-    });
+  	if (teamName && hist[teamName])
+  	{
+	  	statObj = stats[teamName] = {};
+		statObj['Wi']=statObj['L']=statObj['T']=statObj['WH']=statObj['LH']=statObj['TH']=statObj['WP']=statObj['LP']=statObj['TP']=0;
+	  	//console.log('getting stats for ' + teamName);
+	  	row.find('td.ng-star-inserted').each(function(colIndex) {
+	    	statObj[catsLoad[colIndex]] = parseFloat($(this).text());
+	     	//console.log(catsLoad[colIndex] + " = " + statObj[catsLoad[colIndex]]);
+	    });
+	}
   });
+  
   var teamAWinsH, teamBWinsH, teamAWinsP, teamBWinsP, i, j, k, teamAVal, teamBVal, week;
 
   for (i=0; i<teams.length; i++) {
