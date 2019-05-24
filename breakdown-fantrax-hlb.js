@@ -10,14 +10,14 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var hist = {
-		"Prospect Hoarders": {Wi: 30, L: 13, T: 6, WH: 27, LH: 15, TH: 7, WP: 27, LP: 14, TP: 8, p: "................ "},
-		"Irish Dawgs": {Wi: 27, L: 16, T: 6, WH: 21, LH: 20, TH: 8, WP: 24, LP: 15, TP: 10, p: "........................ "},
-		"Irish Guinness07": {Wi: 27, L: 18, T: 4, WH: 24, LH: 23, TH: 2, WP: 27, LP: 15, TP: 7, p: "................. "},
-		"Colt .45s": {Wi: 23, L: 23, T: 3, WH: 30, LH: 13, TH: 6, WP: 11, LP: 35, TP: 3, p: "............................. "},
-		"I Punt Cats": {Wi: 21, L: 26, T: 2, WH: 25, LH: 21, TH: 3, WP: 18, LP: 27, TP: 4, p: ".......................... "},
-		"Tropical Storm Braz": {Wi: 21, L: 27, T: 1, WH: 21, LH: 25, TH: 3, WP: 24, LP: 20, TP: 5, p: "............. "},
-		"Don't Mess with Texas": {Wi: 17, L: 28, T: 4, WH: 10, LH: 37, TH: 2, WP: 30, LP: 17, TP: 2, p: ".......... "},
-		"The Mike Shitty All-Stars": {Wi: 15, L: 30, T: 4, WH: 20, LH: 24, TH: 5, WP: 13, LP: 31, TP: 5, p: "...... "}
+		"I Punt Cats": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......................... "},
+		"Colt .45s": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............................. "},
+		"Irish Guinness07": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................. "},
+		"The Mike Shitty All-Stars": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "...... "},
+		"Don't Mess with Texas": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......... "},
+		"Irish Dawgs": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........................ "},
+		"Prospect Hoarders": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................ "},
+		"Tropical Storm Braz": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............. "},
 	};
 
 	var highsHist = {
