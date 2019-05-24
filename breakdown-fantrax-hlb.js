@@ -10,14 +10,14 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var hist = {
-		"Colt .45s": {Wi: 10, L: 22, T: 3, WH: 17, LH: 13, TH: 5, WP: 5, LP: 28, TP: 2, p: "............................. "},
-		"Don't Mess with Texas": {Wi: 13, L: 19, T: 3, WH: 7, LH: 26, TH: 2, WP: 23, LP: 11, TP: 1, p: ".......... "},
-		"I Punt Cats": {Wi: 13, L: 20, T: 2, WH: 18, LH: 14, TH: 3, WP: 10, LP: 21, TP: 4, p: ".......................... "},
-		"Irish Dawgs": {Wi: 21, L: 10, T: 4, WH: 17, LH: 14, TH: 4, WP: 17, LP: 11, TP: 7, p: "........................ "},
-		"Irish Guinness07": {Wi: 20, L: 11, T: 4, WH: 17, LH: 17, TH: 1, WP: 21, LP: 11, TP: 3, p: "................. "},
-		"Prospect Hoarders": {Wi: 23, L: 9, T: 3, WH: 21, LH: 10, TH: 4, WP: 18, LP: 12, TP: 5, p: "................ "},
-		"The Mike Shitty All-Stars": {Wi: 10, L: 23, T: 2, WH: 14, LH: 17, TH: 4, WP: 7, LP: 25, TP: 3, p: "...... "},
-		"Tropical Storm Braz": {Wi: 19, L: 15, T: 1, WH: 17, LH: 17, TH: 1, WP: 24, LP: 6, TP: 5, p: "............. "}
+		"Colt .45s": {Wi: 17, L: 22, T: 3, WH: 24, LH: 13, TH: 5, WP: 7, LP: 33, TP: 2, p: "............................. "},
+		"Don't Mess with Texas": {Wi: 17, L: 21, T: 4, WH: 10, LH: 30, TH: 2, WP: 29, LP: 11, TP: 2, p: ".......... "},
+		"I Punt Cats": {Wi: 14, L: 26, T: 2, WH: 20, LH: 19, TH: 3, WP: 11, LP: 27, TP: 4, p: ".......................... "},
+		"Irish Dawgs": {Wi: 24, L: 13, T: 5, WH: 20, LH: 16, TH: 6, WP: 20, LP: 13, TP: 9, p: "........................ "},
+		"Irish Guinness07": {Wi: 26, L: 12, T: 4, WH: 23, LH: 18, TH: 1, WP: 24, LP: 11, TP: 7, p: "................. "},
+		"Prospect Hoarders": {Wi: 26, L: 11, T: 5, WH: 25, LH: 12, TH: 5, WP: 21, LP: 13, TP: 8, p: "................ "},
+		"The Mike Shitty All-Stars": {Wi: 12, L: 28, T: 2, WH: 14, LH: 24, TH: 4, WP: 11, LP: 26, TP: 5, p: "...... "},
+		"Tropical Storm Braz": {Wi: 19, L: 22, T: 1, WH: 18, LH: 22, TH: 2, WP: 24, LP: 13, TP: 5, p: "............. "}
 	};
 
 	var highsHist = {
@@ -29,10 +29,10 @@ function bd() {
 		"SLG": {val: 0.577, teams: ["Irish Dawgs"], weeks: [2]},
 		"QS": {val: 9, teams: ["Irish Guinness07"], weeks: [2]},
 		"W": {val: 6, teams: ["Irish Dawgs"], weeks: [5]},
-		"SV": {val: 6, teams: ["Don't Mess with Texas"], weeks: [2]},
+		"SV": {val: 6, teams: ["Don't Mess with Texas","Don't Mess with Texas"], weeks: [2,6]},
 		"ERA": {val: 1.94, teams: ["Don't Mess with Texas"], weeks: [1]},
 		"WHIP": {val: 0.797, teams: ["Don't Mess with Texas"], weeks: [1]},
-		"K/9": {val: 12.5, teams: ["Prospect Hoarders"], weeks: [3]}
+		"K/9": {val: 13.17, teams: ["Prospect Hoarders"], weeks: [6]}
 	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
