@@ -83,10 +83,11 @@ function bd() {
 	});
 
 	var teamAWinsH, teamBWinsH, teamAWinsP, teamBWinsP, i, j, k, teamAVal, teamBVal, week;
+	var numTeams = teams.length;
 
-	for (i = 0; i < teams.length; i++)
+	for (i = 0; i < numTeams; i++)
 	{
-		for (j = i + 1; j < teams.length; j++)
+		for (j = i + 1; j < numTeams; j++)
 		{
 			teamA = stats[teams[i]];
 			teamB = stats[teams[j]];
@@ -200,10 +201,10 @@ function bd() {
 	teams.sort(function(a,b){
 		teamA = stats[a];
 		teamB = stats[b];
-		return ((teamB['Wi'] + teamB['T']/2)/11) - ((teamA['Wi'] + teamA['T']/2)/11);
+		return ((teamB['Wi'] + teamB['T']/2)/(numTeams-1)) - ((teamA['Wi'] + teamA['T']/2)/(numTeams-1));
 	});
 
-	for (i = 0; i < teams.length; i++)
+	for (i = 0; i < numTeams; i++)
 	{
 		statObj = stats[teams[i]];
 		histObj = BREAKDOWN_HIST[teams[i]]
@@ -218,7 +219,7 @@ function bd() {
 		histObj['TP'] += statObj['TP'];
 		if (!i)
 		{
-			week = (histObj['Wi'] + histObj['L'] + histObj['T']) / (teams.length - 1);
+			week = (histObj['Wi'] + histObj['L'] + histObj['T']) / (numTeams - 1);
 			console.log('Week ' + week + ' Breakdowns (Combined, Hitting, Pitching)')
 		}
 		console.log(teams[i] + histObj['p'] + '' + statObj['Wi'] + '-' + statObj['L'] + '-' + statObj['T'] +
@@ -235,7 +236,7 @@ function bd() {
 
 	console.log('\nSeason Breakdowns (Combined, Hitting, Pitching)');
 	var percentage;
-	for (i = 0; i < teams.length; i++)
+	for (i = 0; i < numTeams; i++)
 	{
 		histObj = BREAKDOWN_HIST[teams[i]];
 		percentage = ((histObj['Wi'] + histObj['T']/2)/totalGames).toFixed(3);
@@ -247,7 +248,7 @@ function bd() {
 	for (k = 0; k < NUM_CATS; k++)
 		highs[CATS[k]] = {teams: [teams[0]], val: stats[teams[0]][CATS[k]]};
 	
-	for (i = 1; i < teams.length; i++)
+	for (i = 1; i < numTeams; i++)
 	{
 		for (k = 0; k < NUM_CATS; k++)
 		{
@@ -330,13 +331,13 @@ function bd() {
 
 	// print the BREAKDOWN_HIST object for updating
 	console.log('\n\nvar BREAKDOWN_HIST = {');
-	for (i = 0; i < teams.length; i++)
+	for (i = 0; i < numTeams; i++)
 	{
 		histObj = BREAKDOWN_HIST[teams[i]];
 		console.log('\t\t"' + teams[i] + '": {Wi: ' + histObj['Wi'] + ', L: ' + histObj['L'] + ', T: ' +
 			histObj['T'] + ', WH: ' + histObj['WH'] + ', LH: ' + histObj['LH'] + ', TH: ' +
 			histObj['TH'] + ', WP: ' + histObj['WP'] + ', LP: ' + histObj['LP'] + ', TP: ' +
-			histObj['TP'] + ', p: "' + histObj['p'] + '"}' + (i == teams.length-1 ? '' : ','));
+			histObj['TP'] + ', p: "' + histObj['p'] + '"}' + (i == numTeams-1 ? '' : ','));
 	}
 	console.log('\t};');
 
