@@ -187,7 +187,7 @@ function bd() {
 	}
 	teams.sort(function(a,b){
 		teamA = stats[a];
-		teamB = stats[b];
+		teamB = stats;
 		return ((teamB['Wi'] + teamB['T']/2)/11) - ((teamA['Wi'] + teamA['T']/2)/11);
 	});
 
@@ -207,9 +207,9 @@ function bd() {
 		if (!i)
 		{
 			week = (histObj['Wi'] + histObj['L'] + histObj['T']) / (teams.length - 1);
-			console.log('[b][u]Week ' + week + ' Breakdowns (Combined, Hitting, Pitching)[/u][/b]')
+			console.log('Week ' + week + ' Breakdowns (Combined, Hitting, Pitching)')
 		}
-		console.log(teams[i] + histObj['p'] + '[b]' + statObj['Wi'] + '-' + statObj['L'] + '-' + statObj['T'] + '[/b]' +
+		console.log(teams[i] + histObj['p'] + '' + statObj['Wi'] + '-' + statObj['L'] + '-' + statObj['T'] +
 			', ' + statObj['WH'] + '-' + statObj['LH'] + '-' + statObj['TH'] +
 			', ' + statObj['WP'] + '-' + statObj['LP'] + '-' + statObj['TP']);
 	}
@@ -217,17 +217,17 @@ function bd() {
 
 	teams.sort(function(a,b){
 		teamA = hist[a];
-		teamB = hist[b];
+		teamB = hist;
 		return ((teamB['Wi'] + teamB['T']/2)/totalGames) - ((teamA['Wi'] + teamA['T']/2)/totalGames);
 	});
 
-	console.log('\n[b][u]Season Breakdowns (Combined, Hitting, Pitching)[/u][/b]');
+	console.log('\nSeason Breakdowns (Combined, Hitting, Pitching)');
 	var percentage;
 	for (i = 0; i < teams.length; i++)
 	{
 		histObj = hist[teams[i]];
 		percentage = ((histObj['Wi'] + histObj['T']/2)/totalGames).toFixed(3);
-		console.log(teams[i] + histObj['p'] + '(' + percentage + ') [b]' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'] + '[/b]' +
+		console.log(teams[i] + histObj['p'] + '(' + percentage + ') ' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'] +
 			', ' + histObj['WH'] + '-' + histObj['LH'] + '-' + histObj['TH'] +
 			', ' + histObj['WP'] + '-' + histObj['LP'] + '-' + histObj['TP']);
 	}
@@ -256,7 +256,7 @@ function bd() {
 	}
 
 	// print the highs for this week
-	console.log('\n[b][u]Week ' + week + ' Highs:[/u][/b]');
+	console.log('\nWeek ' + week + ' Highs:');
 	for (i = 0; i < cats.length; i++)
 	{
 		if (i == cats.length >> 1)
@@ -325,7 +325,7 @@ function bd() {
 	console.log('\t};');
 
 	// print the highs hist object for updating
-	console.log('\n\nvar highsHist = {');
+	console.log('\n\tvar highsHist = {');
 	for (i = 0; i < cats.length; i++)
 	{
 		var catName = cats[i];
