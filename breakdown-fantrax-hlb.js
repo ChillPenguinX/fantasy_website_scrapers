@@ -9,7 +9,7 @@ function bd() {
 	//the periods are for display purposes. You can remove them, make them different lengths, and replace them.
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
-	var hist = {
+	var BREAKDOWN_HIST = {
 		"Prospect Hoarders": {Wi: 30, L: 13, T: 6, WH: 27, LH: 15, TH: 7, WP: 27, LP: 14, TP: 8, p: ".............. "},
 		"Irish Dawgs": {Wi: 27, L: 16, T: 6, WH: 21, LH: 20, TH: 8, WP: 24, LP: 15, TP: 10, p: ".................... "},
 		"Irish Guinness07": {Wi: 27, L: 18, T: 4, WH: 24, LH: 23, TH: 2, WP: 27, LP: 15, TP: 7, p: "............... "},
@@ -20,7 +20,7 @@ function bd() {
 		"The Mike Shitty All-Stars": {Wi: 15, L: 30, T: 4, WH: 20, LH: 24, TH: 5, WP: 13, LP: 31, TP: 5, p: "...... "}
 	};
 
-	var highsHist = {
+	var HIGHS_HIST = {
 		"R": {val: 62, teams: ["Irish Guinness07"], weeks: [4]},
 		"HR": {val: 22, teams: ["Tropical Storm Braz"], weeks: [3]},
 		"RBI": {val: 66, teams: ["Irish Dawgs","Irish Guinness07"], weeks: [2,4]},
@@ -36,11 +36,12 @@ function bd() {
 	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
-	var cats = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
+	var CATS = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
 		'QS', 'W', 'SV', 'ERA', 'WHIP', 'K/9'];
-	var catsLoad = ['Hitters', 'AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
+	var NUM_CATS = CATS.length;
+	var CATS_LOAD = ['Hitters', 'AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
 		'IP', 'K/9', 'ERA', 'WHIP', 'QS', 'W', 'SV'];
-	//list any categories where it's better to have a lower number here, in any order. They need to match the text in cats.
+	//list any categories where it's better to have a lower number here, in any order. They need to match the text in CATS.
 	var neg_cats = ['ERA', 'WHIP'];
 	// list of categories where the team must qualify (currently assumes that if you fail one, you fail them all)
 	var qual_cats = ['ERA', 'WHIP', 'K/9'];
@@ -59,7 +60,7 @@ function bd() {
 	$('td.ng-star-inserted').each(function() {
 		row = $(this);
 		teamName = row.find('div').text();
-		if (teamName && hist[teamName])
+		if (teamName && BREAKDOWN_HIST[teamName])
 		{
 			//console.log('found team ' + teamName);
 			teams.push(teamName);
@@ -69,14 +70,14 @@ function bd() {
 	$('tr.pointer--live-scoring.ng-star-inserted').each(function(rowIndex) {
 		row = $(this);
 		teamName = teams[rowIndex];
-		if (teamName && hist[teamName])
+		if (teamName && BREAKDOWN_HIST[teamName])
 		{
 			statObj = stats[teamName] = {};
 			statObj['Wi']=statObj['L']=statObj['T']=statObj['WH']=statObj['LH']=statObj['TH']=statObj['WP']=statObj['LP']=statObj['TP']=0;
 			//console.log('getting stats for ' + teamName);
 			row.find('td.ng-star-inserted').each(function(colIndex) {
-				statObj[catsLoad[colIndex]] = parseFloat($(this).text());
-				//console.log(catsLoad[colIndex] + " = " + statObj[catsLoad[colIndex]]);
+				statObj[CATS_LOAD[colIndex]] = parseFloat($(this).text());
+				//console.log(CATS_LOAD[colIndex] + " = " + statObj[CATS_LOAD[colIndex]]);
 			});
 		}
 	});
@@ -90,10 +91,10 @@ function bd() {
 			teamA = stats[teams[i]];
 			teamB = stats[teams[j]];
 			teamAWinsH = teamBWinsH = teamAWinsP = teamBWinsP = 0;
-			for (k = 0; k < cats.length; k++)
+			for (k = 0; k < NUM_CATS; k++)
 			{
 				// first, check disqualifiers
-				// if ($.inArray(cats[k], qual_cats) != -1) {
+				// if ($.inArray(CATS[k], qual_cats) != -1) {
 				//   if (disqualified[teams[i]]) {
 				//     if (!disqualified[teams[j]]) {
 				//       if (k < num_hitting_cats) {
@@ -112,20 +113,20 @@ function bd() {
 				//     continue;
 				//   }
 				// } // end check disqualifiers
-				teamAVal = teamA[cats[k]];
-				teamBVal = teamB[cats[k]];
+				teamAVal = teamA[CATS[k]];
+				teamBVal = teamB[CATS[k]];
 				if (teamAVal > teamBVal)
 				{
 					if (k < num_hitting_cats)
 					{
-						if ($.inArray(cats[k], neg_cats) != -1)
+						if ($.inArray(CATS[k], neg_cats) != -1)
 							teamBWinsH++
 						else
 							teamAWinsH++;
 					}
 					else
 					{
-						if ($.inArray(cats[k], neg_cats) != -1)
+						if ($.inArray(CATS[k], neg_cats) != -1)
 							teamBWinsP++;
 						else
 							teamAWinsP++;
@@ -135,14 +136,14 @@ function bd() {
 				{
 					if (k < num_hitting_cats)
 					{
-						if ($.inArray(cats[k], neg_cats) != -1)
+						if ($.inArray(CATS[k], neg_cats) != -1)
 							teamAWinsH++;
 						else
 							teamBWinsH++;
 					}
 					else
 					{
-						if ($.inArray(cats[k], neg_cats) != -1)
+						if ($.inArray(CATS[k], neg_cats) != -1)
 							teamAWinsP++;
 						else
 							teamBWinsP++;
@@ -205,7 +206,7 @@ function bd() {
 	for (i = 0; i < teams.length; i++)
 	{
 		statObj = stats[teams[i]];
-		histObj = hist[teams[i]]
+		histObj = BREAKDOWN_HIST[teams[i]]
 		histObj['Wi']  += statObj['Wi'];
 		histObj['L']  += statObj['L'];
 		histObj['T']  += statObj['T'];
@@ -227,8 +228,8 @@ function bd() {
 	var totalGames = histObj['Wi'] + histObj['L'] + histObj['T'];
 
 	teams.sort(function(a,b){
-		teamA = hist[a];
-		teamB = hist[b];
+		teamA = BREAKDOWN_HIST[a];
+		teamB = BREAKDOWN_HIST[b];
 		return ((teamB['Wi'] + teamB['T']/2)/totalGames) - ((teamA['Wi'] + teamA['T']/2)/totalGames);
 	});
 
@@ -236,58 +237,60 @@ function bd() {
 	var percentage;
 	for (i = 0; i < teams.length; i++)
 	{
-		histObj = hist[teams[i]];
+		histObj = BREAKDOWN_HIST[teams[i]];
 		percentage = ((histObj['Wi'] + histObj['T']/2)/totalGames).toFixed(3);
 		console.log(teams[i] + histObj['p'] + '(' + percentage + ') ' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'] +
 			', ' + histObj['WH'] + '-' + histObj['LH'] + '-' + histObj['TH'] +
 			', ' + histObj['WP'] + '-' + histObj['LP'] + '-' + histObj['TP']);
 	}
 
-	for (k = 0; k < cats.length; k++)
-		highs[cats[k]] = {teams: [teams[0]], val: stats[teams[0]][cats[k]]};
+	for (k = 0; k < NUM_CATS; k++)
+		highs[CATS[k]] = {teams: [teams[0]], val: stats[teams[0]][CATS[k]]};
 	
 	for (i = 1; i < teams.length; i++)
 	{
-		for (k = 0; k < cats.length; k++)
+		for (k = 0; k < NUM_CATS; k++)
 		{
-			teamBVal = stats[teams[i]][cats[k]];
-			if ($.inArray(cats[k], qual_cats) != -1 && disqualified[teams[i]])
+			var catName = CATS[k];
+			teamBVal = stats[teams[i]][catName];
+			if ($.inArray(catName, qual_cats) != -1 && disqualified[teams[i]])
 				continue;
-			if ((highs[cats[k]]['val'] < teamBVal && $.inArray(cats[k], neg_cats) == -1) ||
-				(highs[cats[k]]['val'] > teamBVal && $.inArray(cats[k], neg_cats) != -1))
+			if ((highs[catName]['val'] < teamBVal && $.inArray(catName, neg_cats) == -1) ||
+				(highs[catName]['val'] > teamBVal && $.inArray(catName, neg_cats) != -1))
 			{
-				highs[cats[k]]['teams'] = [teams[i]];
-				highs[cats[k]]['val'] = teamBVal;
+				highs[catName]['teams'] = [teams[i]];
+				highs[catName]['val'] = teamBVal;
 			}
-			else if (highs[cats[k]]['val'] == teamBVal)
+			else if (highs[catName]['val'] == teamBVal)
 			{
-				highs[cats[k]]['teams'].push(teams[i]);
+				highs[catName]['teams'].push(teams[i]);
 			}
 		}
 	}
 
 	// print the highs for this week
 	console.log('\nWeek ' + week + ' Highs:');
-	for (i = 0; i < cats.length; i++)
+	for (i = 0; i < NUM_CATS; i++)
 	{
-		if (i == cats.length >> 1)
+		var catName = CATS[i];
+		if (i == num_hitting_cats)
 			console.log(' ');
-		console.log(cats[i] + periods[i] + highs[cats[i]]['val'] + ' - ' + highs[cats[i]]['teams'].join('; '));
+		console.log(catName + periods[i] + highs[catName]['val'] + ' - ' + highs[catName]['teams'].join('; '));
 	}
 
 	// update the historical highs
-	for (i = 0; i < cats.length; i++)
+	for (i = 0; i < NUM_CATS; i++)
 	{
-		var catName = cats[i];
+		var catName = CATS[i];
 		var bNegCat = $.inArray(catName, neg_cats) != -1;
 		var thisWeekHighObj = highs[catName];
 		var thisWeekHighVal = thisWeekHighObj['val'];
 		var thisWeekHighTeams = thisWeekHighObj['teams'];
-		var oldHighObj = highsHist[catName];
+		var oldHighObj = HIGHS_HIST[catName];
 
 		if (!oldHighObj)
 		{
-			highsHist[catName] = oldHighObj = {teams: thisWeekHighTeams, val: thisWeekHighVal, weeks: []};
+			HIGHS_HIST[catName] = oldHighObj = {teams: thisWeekHighTeams, val: thisWeekHighVal, weeks: []};
 			for (j = 0; j < thisWeekHighTeams.length; j++)
 				oldHighObj['weeks'].push(week);
 		}
@@ -315,21 +318,21 @@ function bd() {
 
 	// print the historicalhighs after this week
 	console.log('\nSeason  Highs:');
-	for (i = 0; i < cats.length; i++)
+	for (i = 0; i < NUM_CATS; i++)
 	{
-		if (i == cats.length >> 1)
+		if (i == num_hitting_cats)
 			console.log(' ');
-		var catName = cats[i];
-		var highHistObj = highsHist[catName];
+		var catName = CATS[i];
+		var highHistObj = HIGHS_HIST[catName];
 		console.log(catName + periods[i] + highHistObj['val'] + ' - ' + (highHistObj['teams'].length > 3 ? highHistObj['teams'].length + ' tied' :
 			highHistObj['teams'].join('; ') + ' - ' + (highHistObj['weeks'].length == 1 ? 'Week ' : 'Weeks ') + highHistObj['weeks'].join(',')));
 	}
 
-	// print the hist object for updating
-	console.log('\n\nvar hist = {');
+	// print the BREAKDOWN_HIST object for updating
+	console.log('\n\nvar BREAKDOWN_HIST = {');
 	for (i = 0; i < teams.length; i++)
 	{
-		histObj = hist[teams[i]];
+		histObj = BREAKDOWN_HIST[teams[i]];
 		console.log('\t\t"' + teams[i] + '": {Wi: ' + histObj['Wi'] + ', L: ' + histObj['L'] + ', T: ' +
 			histObj['T'] + ', WH: ' + histObj['WH'] + ', LH: ' + histObj['LH'] + ', TH: ' +
 			histObj['TH'] + ', WP: ' + histObj['WP'] + ', LP: ' + histObj['LP'] + ', TP: ' +
@@ -338,13 +341,13 @@ function bd() {
 	console.log('\t};');
 
 	// print the highs hist object for updating
-	console.log('\n\tvar highsHist = {');
-	for (i = 0; i < cats.length; i++)
+	console.log('\n\tvar HIGHS_HIST = {');
+	for (i = 0; i < NUM_CATS; i++)
 	{
-		var catName = cats[i];
-		var histHighsObj = highsHist[catName];
+		var catName = CATS[i];
+		var histHighsObj = HIGHS_HIST[catName];
 		console.log('\t\t"' + catName + '": {val: ' + histHighsObj['val'] + ', teams: ["' + histHighsObj['teams'].join('","') + '"], weeks: [' + 
-			histHighsObj['weeks'].join(',') + ']}' + (i + 1 == cats.length ? '' : ','));
+			histHighsObj['weeks'].join(',') + ']}' + (i + 1 == NUM_CATS ? '' : ','));
 	}
 	console.log('\t};');
 }
