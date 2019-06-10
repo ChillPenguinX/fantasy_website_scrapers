@@ -10,14 +10,14 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Prospect Hoarders": {Wi: 38, L: 19, T: 6, WH: 34, LH: 21, TH: 8, WP: 33, LP: 21, TP: 9, p: ".............. "},
-		"Irish Dawgs": {Wi: 35, L: 22, T: 6, WH: 30, LH: 25, TH: 8, WP: 31, LP: 21, TP: 11, p: ".................... "},
-		"I Punt Cats": {Wi: 34, L: 27, T: 2, WH: 39, LH: 21, TH: 3, WP: 25, LP: 32, TP: 6, p: ".................... "},
-		"Irish Guinness07": {Wi: 31, L: 27, T: 5, WH: 28, LH: 33, TH: 2, WP: 35, LP: 20, TP: 8, p: "............... "},
-		"Colt .45s": {Wi: 26, L: 34, T: 3, WH: 35, LH: 21, TH: 7, WP: 14, LP: 46, TP: 3, p: "...................... "},
-		"Tropical Storm Braz": {Wi: 26, L: 36, T: 1, WH: 23, LH: 37, TH: 3, WP: 31, LP: 26, TP: 6, p: "............ "},
-		"The Mike Shitty All-Stars": {Wi: 23, L: 35, T: 5, WH: 30, LH: 26, TH: 7, WP: 19, LP: 37, TP: 7, p: "...... "},
-		"Don't Mess with Texas": {Wi: 23, L: 36, T: 4, WH: 13, LH: 48, TH: 2, WP: 37, LP: 22, TP: 4, p: ".......... "}
+		"Prospect Hoarders": {Wi: 44, L: 20, T: 6, WH: 38, LH: 22, TH: 10, WP: 39, LP: 21, TP: 10, p: ".............. "},
+		"Irish Dawgs": {Wi: 39, L: 24, T: 7, WH: 34, LH: 26, TH: 10, WP: 32, LP: 24, TP: 14, p: ".................... "},
+		"I Punt Cats": {Wi: 38, L: 29, T: 3, WH: 43, LH: 22, TH: 5, WP: 28, LP: 34, TP: 8, p: ".................... "},
+		"Irish Guinness07": {Wi: 32, L: 32, T: 6, WH: 28, LH: 39, TH: 3, WP: 38, LP: 24, TP: 8, p: "............... "},
+		"Colt .45s": {Wi: 33, L: 34, T: 3, WH: 42, LH: 21, TH: 7, WP: 17, LP: 48, TP: 5, p: "...................... "},
+		"The Mike Shitty All-Stars": {Wi: 26, L: 39, T: 5, WH: 32, LH: 30, TH: 8, WP: 25, LP: 37, TP: 8, p: "...... "},
+		"Tropical Storm Braz": {Wi: 27, L: 41, T: 2, WH: 25, LH: 41, TH: 4, WP: 32, LP: 31, TP: 7, p: "............ "},
+		"Don't Mess with Texas": {Wi: 23, L: 43, T: 4, WH: 13, LH: 54, TH: 3, WP: 37, LP: 29, TP: 4, p: ".......... "}
 	};
 
 	var HIGHS_HIST = {
@@ -28,7 +28,7 @@ function bd() {
 		"OBP": {val: 0.426, teams: ["I Punt Cats"], weeks: [9]},
 		"SLG": {val: 0.672, teams: ["I Punt Cats"], weeks: [8]},
 		"QS": {val: 9, teams: ["Irish Guinness07"], weeks: [2]},
-		"W": {val: 6, teams: ["Irish Dawgs","Irish Dawgs","Prospect Hoarders"], weeks: [5,8,9]},
+		"W": {val: 7, teams: ["Prospect Hoarders"], weeks: [10]},
 		"SV": {val: 8, teams: ["Don't Mess with Texas"], weeks: [9]},
 		"ERA": {val: 1.94, teams: ["Don't Mess with Texas"], weeks: [1]},
 		"WHIP": {val: 0.794, teams: ["Irish Dawgs"], weeks: [8]},
