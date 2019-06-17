@@ -10,14 +10,14 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Prospect Hoarders": {Wi: 44, L: 20, T: 6, WH: 38, LH: 22, TH: 10, WP: 39, LP: 21, TP: 10, p: ".............. "},
-		"Irish Dawgs": {Wi: 39, L: 24, T: 7, WH: 34, LH: 26, TH: 10, WP: 32, LP: 24, TP: 14, p: ".................... "},
-		"I Punt Cats": {Wi: 38, L: 29, T: 3, WH: 43, LH: 22, TH: 5, WP: 28, LP: 34, TP: 8, p: ".................... "},
-		"Irish Guinness07": {Wi: 32, L: 32, T: 6, WH: 28, LH: 39, TH: 3, WP: 38, LP: 24, TP: 8, p: "............... "},
-		"Colt .45s": {Wi: 33, L: 34, T: 3, WH: 42, LH: 21, TH: 7, WP: 17, LP: 48, TP: 5, p: "...................... "},
-		"The Mike Shitty All-Stars": {Wi: 26, L: 39, T: 5, WH: 32, LH: 30, TH: 8, WP: 25, LP: 37, TP: 8, p: "...... "},
-		"Tropical Storm Braz": {Wi: 27, L: 41, T: 2, WH: 25, LH: 41, TH: 4, WP: 32, LP: 31, TP: 7, p: "............ "},
-		"Don't Mess with Texas": {Wi: 23, L: 43, T: 4, WH: 13, LH: 54, TH: 3, WP: 37, LP: 29, TP: 4, p: ".......... "}
+		"Prospect Hoarders": {Wi: 51, L: 20, T: 6, WH: 45, LH: 22, TH: 10, WP: 46, LP: 21, TP: 10, p: ".............. "},
+		"Irish Dawgs": {Wi: 41, L: 28, T: 8, WH: 34, LH: 32, TH: 11, WP: 35, LP: 26, TP: 16, p: ".................... "},
+		"I Punt Cats": {Wi: 39, L: 32, T: 6, WH: 49, LH: 23, TH: 5, WP: 28, LP: 40, TP: 9, p: ".................... "},
+		"Irish Guinness07": {Wi: 34, L: 34, T: 9, WH: 29, LH: 45, TH: 3, WP: 43, LP: 25, TP: 9, p: "............... "},
+		"Colt .45s": {Wi: 33, L: 39, T: 5, WH: 43, LH: 25, TH: 9, WP: 19, LP: 51, TP: 7, p: "...................... "},
+		"The Mike Shitty All-Stars": {Wi: 30, L: 40, T: 7, WH: 37, LH: 32, TH: 8, WP: 27, LP: 40, TP: 10, p: "...... "},
+		"Tropical Storm Braz": {Wi: 30, L: 42, T: 5, WH: 27, LH: 45, TH: 5, WP: 35, LP: 32, TP: 10, p: "............ "},
+		"Don't Mess with Texas": {Wi: 24, L: 47, T: 6, WH: 17, LH: 57, TH: 3, WP: 37, LP: 35, TP: 5, p: ".......... "}
 	};
 
 	var HIGHS_HIST = {
