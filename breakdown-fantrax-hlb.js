@@ -10,14 +10,14 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Prospect Hoarders": {Wi: 51, L: 20, T: 6, WH: 45, LH: 22, TH: 10, WP: 46, LP: 21, TP: 10, p: ".............. "},
-		"Irish Dawgs": {Wi: 41, L: 28, T: 8, WH: 34, LH: 32, TH: 11, WP: 35, LP: 26, TP: 16, p: ".................... "},
-		"I Punt Cats": {Wi: 39, L: 32, T: 6, WH: 49, LH: 23, TH: 5, WP: 28, LP: 40, TP: 9, p: ".................... "},
-		"Irish Guinness07": {Wi: 34, L: 34, T: 9, WH: 29, LH: 45, TH: 3, WP: 43, LP: 25, TP: 9, p: "............... "},
-		"Colt .45s": {Wi: 33, L: 39, T: 5, WH: 43, LH: 25, TH: 9, WP: 19, LP: 51, TP: 7, p: "...................... "},
-		"The Mike Shitty All-Stars": {Wi: 30, L: 40, T: 7, WH: 37, LH: 32, TH: 8, WP: 27, LP: 40, TP: 10, p: "...... "},
-		"Tropical Storm Braz": {Wi: 30, L: 42, T: 5, WH: 27, LH: 45, TH: 5, WP: 35, LP: 32, TP: 10, p: "............ "},
-		"Don't Mess with Texas": {Wi: 24, L: 47, T: 6, WH: 17, LH: 57, TH: 3, WP: 37, LP: 35, TP: 5, p: ".......... "}
+		"Prospect Hoarders": {Wi: 58, L: 20, T: 6, WH: 49, LH: 24, TH: 11, WP: 51, LP: 21, TP: 12, p: ".............. "},
+		"Irish Dawgs": {Wi: 45, L: 30, T: 9, WH: 37, LH: 35, TH: 12, WP: 39, LP: 28, TP: 17, p: ".................... "},
+		"I Punt Cats": {Wi: 43, L: 34, T: 7, WH: 51, LH: 27, TH: 6, WP: 33, LP: 40, TP: 11, p: ".................... "},
+		"Irish Guinness07": {Wi: 36, L: 38, T: 10, WH: 30, LH: 51, TH: 3, WP: 47, LP: 25, TP: 12, p: "............... "},
+		"Colt .45s": {Wi: 36, L: 42, T: 6, WH: 49, LH: 26, TH: 9, WP: 21, LP: 55, TP: 8, p: "...................... "},
+		"Tropical Storm Braz": {Wi: 31, L: 48, T: 5, WH: 29, LH: 47, TH: 8, WP: 36, LP: 36, TP: 12, p: "............ "},
+		"The Mike Shitty All-Stars": {Wi: 30, L: 47, T: 7, WH: 37, LH: 39, TH: 8, WP: 27, LP: 47, TP: 10, p: "...... "},
+		"Don't Mess with Texas": {Wi: 29, L: 49, T: 6, WH: 24, LH: 57, TH: 3, WP: 38, LP: 40, TP: 6, p: ".......... "}
 	};
 
 	var HIGHS_HIST = {
