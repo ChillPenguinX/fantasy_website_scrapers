@@ -235,14 +235,15 @@ function bd() {
 	});
 
 	console.log('\nSeason Breakdowns (Combined, Hitting, Pitching)');
-	var percentage;
 	for (i = 0; i < numTeams; i++)
 	{
 		histObj = BREAKDOWN_HIST[teams[i]];
-		percentage = ((histObj['Wi'] + histObj['T']/2)/totalGames).toFixed(3);
+		var percentage = ((histObj['Wi'] + histObj['T']/2)/totalGames).toFixed(3);
+		var hPerc = ((histObj['WH'] + histObj['TH']/2)/totalGames).toFixed(3);
+		var pPerc = ((histObj['WP'] + histObj['TP']/2)/totalGames).toFixed(3);
 		console.log(teams[i] + histObj['p'] + '(' + percentage + ') ' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'] +
-			', ' + histObj['WH'] + '-' + histObj['LH'] + '-' + histObj['TH'] +
-			', ' + histObj['WP'] + '-' + histObj['LP'] + '-' + histObj['TP']);
+			', ' + '(' + hPerc + ') ' + histObj['WH'] + '-' + histObj['LH'] + '-' + histObj['TH'] +
+			', ' + '(' + pPerc + ') ' + histObj['WP'] + '-' + histObj['LP'] + '-' + histObj['TP']);
 	}
 
 	for (k = 0; k < NUM_CATS; k++)
