@@ -241,9 +241,16 @@ function bd() {
 		var percentage = ((histObj['Wi'] + histObj['T']/2)/totalGames).toFixed(3);
 		var hPerc = ((histObj['WH'] + histObj['TH']/2)/totalGames).toFixed(3);
 		var pPerc = ((histObj['WP'] + histObj['TP']/2)/totalGames).toFixed(3);
-		console.log(teams[i] + histObj['p'] + '(' + percentage + ') ' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'] +
-			', ' + '(' + hPerc + ') ' + histObj['WH'] + '-' + histObj['LH'] + '-' + histObj['TH'] +
-			', ' + '(' + pPerc + ') ' + histObj['WP'] + '-' + histObj['LP'] + '-' + histObj['TP']);
+		var totalBd = '(' + percentage + ') ' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'];
+		var hitBd = '(' + hPerc + ') ' + histObj['WH'] + '-' + histObj['LH'] + '-' + histObj['TH'];
+		var pitchBd = '(' + pPerc + ') ' + histObj['WP'] + '-' + histObj['LP'] + '-' + histObj['TP'];
+		var bdLine = teams[i] + histObj['p'] + totalBd + ",";
+		for (j = totalBd.length; j <= 17; j++)
+			bdLine += " ";
+		bdLine += hitBd + ",";
+		for (j = hitBd.length; j <= 17; j++)
+			bdLine += " ";
+		console.log(bdLine + pitchBd);
 	}
 
 	for (k = 0; k < NUM_CATS; k++)
