@@ -10,14 +10,14 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Prospect Hoarders": {Wi: 68, L: 23, T: 7, WH: 55, LH: 31, TH: 12, WP: 65, LP: 21, TP: 12, p: ".............. "},
-		"Irish Dawgs": {Wi: 55, L: 34, T: 9, WH: 47, LH: 38, TH: 13, WP: 47, LP: 32, TP: 19, p: ".................... "},
-		"I Punt Cats": {Wi: 44, L: 45, T: 9, WH: 55, LH: 37, TH: 6, WP: 36, LP: 50, TP: 12, p: ".................... "},
-		"Colt .45s": {Wi: 43, L: 47, T: 8, WH: 60, LH: 29, TH: 9, WP: 27, LP: 63, TP: 8, p: "...................... "},
-		"Irish Guinness07": {Wi: 38, L: 50, T: 10, WH: 31, LH: 64, TH: 3, WP: 52, LP: 33, TP: 13, p: "............... "},
-		"Tropical Storm Braz": {Wi: 39, L: 54, T: 5, WH: 38, LH: 50, TH: 10, WP: 42, LP: 43, TP: 13, p: "............ "},
-		"Don't Mess with Texas": {Wi: 37, L: 54, T: 7, WH: 32, LH: 62, TH: 4, WP: 42, LP: 47, TP: 9, p: ".......... "},
-		"The Mike Shitty All-Stars": {Wi: 37, L: 54, T: 7, WH: 41, LH: 48, TH: 9, WP: 32, LP: 54, TP: 12, p: "...... "}
+		"Prospect Hoarders": {Wi: 72, L: 26, T: 7, WH: 60, LH: 33, TH: 12, WP: 68, LP: 22, TP: 15, p: ".............. "},
+		"Irish Dawgs": {Wi: 56, L: 40, T: 9, WH: 48, LH: 44, TH: 13, WP: 47, LP: 36, TP: 22, p: ".................... "},
+		"I Punt Cats": {Wi: 51, L: 45, T: 9, WH: 62, LH: 37, TH: 6, WP: 37, LP: 54, TP: 14, p: ".................... "},
+		"Colt .45s": {Wi: 45, L: 52, T: 8, WH: 63, LH: 32, TH: 10, WP: 27, LP: 68, TP: 10, p: "...................... "},
+		"Don't Mess with Texas": {Wi: 43, L: 55, T: 7, WH: 38, LH: 63, TH: 4, WP: 46, LP: 48, TP: 11, p: ".......... "},
+		"Tropical Storm Braz": {Wi: 44, L: 56, T: 5, WH: 40, LH: 54, TH: 11, WP: 48, LP: 43, TP: 14, p: "............ "},
+		"The Mike Shitty All-Stars": {Wi: 40, L: 58, T: 7, WH: 43, LH: 51, TH: 11, WP: 36, LP: 56, TP: 13, p: "...... "},
+		"Irish Guinness07": {Wi: 38, L: 57, T: 10, WH: 31, LH: 71, TH: 3, WP: 55, LP: 37, TP: 13, p: "............... "}
 	};
 
 	var HIGHS_HIST = {
