@@ -10,14 +10,14 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Prospect Hoarders": {Wi: 83, L: 29, T: 7, WH: 65, LH: 40, TH: 14, WP: 80, LP: 24, TP: 15, p: ".............. "},
-		"I Punt Cats": {Wi: 57, L: 51, T: 11, WH: 68, LH: 44, TH: 7, WP: 44, LP: 61, TP: 14, p: ".................... "},
-		"Irish Dawgs": {Wi: 56, L: 52, T: 11, WH: 48, LH: 54, TH: 17, WP: 48, LP: 47, TP: 24, p: ".................... "},
-		"Irish Guinness07": {Wi: 48, L: 58, T: 13, WH: 37, LH: 76, TH: 6, WP: 67, LP: 39, TP: 13, p: "............... "},
-		"Colt .45s": {Wi: 47, L: 58, T: 14, WH: 64, LH: 41, TH: 14, WP: 35, LP: 72, TP: 12, p: "...................... "},
-		"Don't Mess with Texas": {Wi: 48, L: 61, T: 10, WH: 50, LH: 64, TH: 5, WP: 50, LP: 58, TP: 11, p: ".......... "},
-		"Tropical Storm Braz": {Wi: 49, L: 63, T: 7, WH: 49, LH: 58, TH: 12, WP: 52, LP: 52, TP: 15, p: "............ "},
-		"The Mike Shitty All-Stars": {Wi: 47, L: 63, T: 9, WH: 52, LH: 56, TH: 11, WP: 41, LP: 64, TP: 14, p: "...... "}
+		"Prospect Hoarders": {Wi: 85, L: 34, T: 7, WH: 66, LH: 46, TH: 14, WP: 86, LP: 24, TP: 16, p: ".............. "},
+		"Irish Dawgs": {Wi: 61, L: 54, T: 11, WH: 54, LH: 54, TH: 18, WP: 51, LP: 50, TP: 25, p: ".................... "},
+		"I Punt Cats": {Wi: 60, L: 54, T: 12, WH: 72, LH: 47, TH: 7, WP: 44, LP: 67, TP: 15, p: ".................... "},
+		"Irish Guinness07": {Wi: 55, L: 58, T: 13, WH: 40, LH: 78, TH: 8, WP: 73, LP: 39, TP: 14, p: "............... "},
+		"Don't Mess with Texas": {Wi: 54, L: 62, T: 10, WH: 56, LH: 64, TH: 6, WP: 54, LP: 61, TP: 11, p: ".......... "},
+		"Tropical Storm Braz": {Wi: 52, L: 67, T: 7, WH: 52, LH: 61, TH: 13, WP: 54, LP: 57, TP: 15, p: "............ "},
+		"Colt .45s": {Wi: 48, L: 64, T: 14, WH: 66, LH: 45, TH: 15, WP: 35, LP: 78, TP: 13, p: "...................... "},
+		"The Mike Shitty All-Stars": {Wi: 47, L: 69, T: 10, WH: 52, LH: 63, TH: 11, WP: 45, LP: 66, TP: 15, p: "...... "}
 	};
 
 	var HIGHS_HIST = {
