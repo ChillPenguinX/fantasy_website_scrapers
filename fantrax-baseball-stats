@@ -2,19 +2,30 @@ var js = document.createElement("script");
 js.type = "text/javascript";
 js.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
 document.body.appendChild(js);
-function go() {
+function go(bPlayoffs=false) {
+	var year = $('div.content__headline').first().find('h3').text().split(" ")[0];
+	var week = $('mat-select.mat-select.ng-star-inserted').find('span.mat-select-value-text.ng-star-inserted').find('span.ng-star-inserted').first().text().split(" ")[0];
+	var seasonDesc = bPlayoffs ? "Playoffs" : "Regular Season";
+	var teams = [];
 	var names = [];
+	$('div.scoring-single-header.ng-star-inserted').each(function(){
+		$(this).find('h3').each(function(){
+			$(this).find('div').remove();
+			teams.push($(this).text().toUpperCase());
+		});
+	});
 	$('div.scorer__info__name').each(function() {
 		names.push($(this).find('a').text());
 	});
 	var lines = "";
 	$('tr.row--blank.ng-star-inserted').each(function(playerIndex){
-		var line = names[playerIndex];
+		var teamIdx = Math.floor(playerIndex/(names.length/2));
+		var line = year + "\t" + week + "\t" + seasonDesc + "\t" + teams[teamIdx] + "\t" + names[playerIndex];
 		$(this).find('td.ng-star-inserted').each(function(colIdx){
 			if (colIdx > 0)
 				line += "\t" + $(this).text();
 		});
-		lines += "\n" + line;
+		lines += "\n" + line + "\t" + teams[(teamIdx ^ 1)];
 	});
 	console.log(lines);
 }
