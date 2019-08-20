@@ -3,8 +3,18 @@ js.type = "text/javascript";
 js.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
 document.body.appendChild(js);
 function go() {
+    var year = $('div.content__headline').first().find('h3').text().split(" ")[0];
+    var week = $('mat-select.mat-select.ng-star-inserted').find('span.mat-select-value-text.ng-star-inserted').find('span.ng-star-inserted').first().text().split(" ")[0];
+    var seasonDesc = (parseInt(week) > 14) ? "Playoffs" : "Regular Season";
     var names = [];
     var points = [];
+    var teams = [];
+    $('div.scoring-single-header.ng-star-inserted').each(function(){
+        $(this).find('h3').each(function(){
+            $(this).find('div').remove();
+            teams.push($(this).text().toUpperCase());
+        });
+    });
     $('div.scorer__info__name').each(function() {
         names.push($(this).find('a').text());
     });
@@ -16,6 +26,9 @@ function go() {
     });
     var lines = "";
     for (var i = 0; i < names.length; i++)
-        lines += "\n" + names[i] + "\t" + points[i];
+    {
+        var teamIdx = Math.floor(i/(names.length/2));
+        lines += "\n" + year + "\t" + week + "\t" + seasonDesc + "\t" + teams[teamIdx] + "\t" + names[i] + "\t" + points[i] + "\t" + teams[teamIdx ^ 1];
+    }
     console.log(lines);
 }
