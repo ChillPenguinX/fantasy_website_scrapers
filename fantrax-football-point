@@ -1,0 +1,19 @@
+var js = document.createElement("script");
+js.type = "text/javascript";
+js.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
+document.body.appendChild(js);
+function go() {
+	var names = [];
+	var points = [];
+	$('div.scorer__info__name').each(function() {
+		names.push($(this).find('a').text());
+	});
+	$('tr.row--blank.ng-star-inserted').each(function(){
+		$(this).find('td.ng-star-inserted').each(function(colIdx){
+			if (colIdx == 1)
+				points.push(parseFloat($(this).text()));
+		});
+	});
+	for (var i = 0; i < names.length; i++)
+		console.log("," + names[i] + "," + points[i]);
+}
