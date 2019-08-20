@@ -1,0 +1,20 @@
+var js = document.createElement("script");
+js.type = "text/javascript";
+js.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
+document.body.appendChild(js);
+function go() {
+	var names = [];
+	$('div.scorer__info__name').each(function() {
+		names.push($(this).find('a').text());
+	});
+	var lines = "";
+	$('tr.row--blank.ng-star-inserted').each(function(playerIndex){
+		var line = names[playerIndex];
+		$(this).find('td.ng-star-inserted').each(function(colIdx){
+			if (colIdx > 0)
+				line += "\t" + $(this).text();
+		});
+		lines += "\n" + line;
+	});
+	console.log(lines);
+}
