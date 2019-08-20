@@ -17,7 +17,7 @@ function go() {
 	$('div.scorer__info__name').each(function() {
 		names.push($(this).find('a').text());
 	});
-	var lines = "";
+	var lines = [];
 	$('tr.row--blank.ng-star-inserted').each(function(playerIndex){
 		var teamIdx = Math.floor(playerIndex/(names.length/2));
 		var line = year + "\t" + week + "\t" + seasonDesc + "\t" + teams[teamIdx] + "\t" + names[playerIndex];
@@ -25,7 +25,16 @@ function go() {
 			if (colIdx > 0)
 				line += "\t" + $(this).text();
 		});
-		lines += "\n" + line + "\t" + teams[(teamIdx ^ 1)];
+		lines.push("\n" + line + "\t" + teams[(teamIdx ^ 1)]);
 	});
-	console.log(lines);
+	var output = "";
+	for (var i = 0; i < 14; i++)
+		output += lines[i];
+	for (var i = 23; i < 37; i++)
+		output += lines[i];
+	for (var i = 14; i < 23; i++)
+		output += lines[i];
+	for (var i = 37; i < 46; i++)
+		output += lines[i];
+	console.log(output);
 }
