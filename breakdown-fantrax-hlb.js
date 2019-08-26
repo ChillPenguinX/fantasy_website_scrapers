@@ -10,14 +10,14 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Prospect Hoarders": {Wi: 87, L: 38, T: 8, WH: 68, LH: 51, TH: 14, WP: 87, LP: 27, TP: 19, p: ".............. "},
-		"I Punt Cats": {Wi: 65, L: 55, T: 13, WH: 79, LH: 47, TH: 7, WP: 45, LP: 71, TP: 17, p: ".................... "},
-		"Irish Guinness07": {Wi: 62, L: 58, T: 13, WH: 44, LH: 81, TH: 8, WP: 80, LP: 39, TP: 14, p: "............... "},
-		"Irish Dawgs": {Wi: 62, L: 60, T: 11, WH: 54, LH: 60, TH: 19, WP: 55, LP: 52, TP: 26, p: ".................... "},
-		"Don't Mess with Texas": {Wi: 59, L: 63, T: 11, WH: 61, LH: 65, TH: 7, WP: 60, LP: 62, TP: 11, p: ".......... "},
-		"Tropical Storm Braz": {Wi: 56, L: 70, T: 7, WH: 57, LH: 62, TH: 14, WP: 55, LP: 61, TP: 17, p: "............ "},
-		"Colt .45s": {Wi: 50, L: 68, T: 15, WH: 69, LH: 49, TH: 15, WP: 35, LP: 85, TP: 13, p: "...................... "},
-		"The Mike Shitty All-Stars": {Wi: 47, L: 76, T: 10, WH: 52, LH: 69, TH: 12, WP: 49, LP: 69, TP: 15, p: "...... "}
+		"Prospect Hoarders": {Wi: 93, L: 39, T: 8, WH: 72, LH: 52, TH: 16, WP: 94, LP: 27, TP: 19, p: ".............. "},
+		"Irish Guinness07": {Wi: 69, L: 58, T: 13, WH: 51, LH: 81, TH: 8, WP: 86, LP: 40, TP: 14, p: "............... "},
+		"I Punt Cats": {Wi: 69, L: 58, T: 13, WH: 81, LH: 48, TH: 11, WP: 48, LP: 74, TP: 18, p: ".................... "},
+		"Irish Dawgs": {Wi: 63, L: 65, T: 12, WH: 54, LH: 67, TH: 19, WP: 59, LP: 54, TP: 27, p: ".................... "},
+		"Don't Mess with Texas": {Wi: 60, L: 69, T: 11, WH: 63, LH: 69, TH: 8, WP: 60, LP: 69, TP: 11, p: ".......... "},
+		"Colt .45s": {Wi: 55, L: 70, T: 15, WH: 73, LH: 50, TH: 17, WP: 39, LP: 88, TP: 13, p: "...................... "},
+		"Tropical Storm Braz": {Wi: 57, L: 75, T: 8, WH: 59, LH: 66, TH: 15, WP: 56, LP: 66, TP: 18, p: "............ "},
+		"The Mike Shitty All-Stars": {Wi: 49, L: 81, T: 10, WH: 54, LH: 74, TH: 12, WP: 50, LP: 74, TP: 16, p: "...... "}
 	};
 
 	var HIGHS_HIST = {
@@ -31,7 +31,7 @@ function bd() {
 		"W": {val: 8, teams: ["Prospect Hoarders"], weeks: [14]},
 		"SV": {val: 8, teams: ["Don't Mess with Texas"], weeks: [9]},
 		"ERA": {val: 1.44, teams: ["Prospect Hoarders"], weeks: [14]},
-		"WHIP": {val: 0.794, teams: ["Irish Dawgs"], weeks: [8]},
+		"WHIP": {val: 0.781, teams: ["Prospect Hoarders"], weeks: [20]},
 		"K/9": {val: 13.17, teams: ["Prospect Hoarders"], weeks: [6]}
 	};
 	
