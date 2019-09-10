@@ -17,9 +17,13 @@ function go() {
     $('ultimate-table.ng-star-inserted').each(function(sectionIdx){
         console.log("section " + sectionIdx);
         var names = [];
+        var positions = [];
         var points = [];
         $(this).find('div.scorer__info__name').each(function() {
             names.push($(this).find('a').text());
+        });
+        $(this).find('div.scorer__info__positions').each(function() {
+            positions.push($(this).find('span').first().text());
         });
         $(this).find('tr.row--blank.ng-star-inserted').each(function(){
             $(this).find('td.ng-star-inserted').each(function(colIdx){
@@ -31,7 +35,7 @@ function go() {
         {
             var teamIdx = sectionIdx % 2;
             var status = (sectionIdx < 2) ? "Active" : "Bench";
-            lines += "\n" + year + "\t" + week + "\t" + seasonDesc + "\t" + teams[teamIdx] + "\t" + names[i] + "\t" + points[i] + "\t" + teams[teamIdx ^ 1] + "\t" + status;
+            lines += "\n" + year + "\t" + week + "\t" + positions[i] + "\t" + seasonDesc + "\t" + teams[teamIdx] + "\t" + names[i] + "\t" + points[i] + "\t" + teams[teamIdx ^ 1] + "\t" + status;
         }
     });
     console.log(lines);
