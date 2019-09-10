@@ -7,10 +7,14 @@ function go() {
     var week = $('mat-select.mat-select.ng-star-inserted').find('span.mat-select-value-text.ng-star-inserted').find('span.ng-star-inserted').first().text().split(" ")[1];
     var seasonDesc = (parseInt(week) > 14) ? "Playoffs" : "Regular Season";
     var teams = [];
+    var scores = {};
     $('div.scoring-single-header.ng-star-inserted').each(function(){
         $(this).find('h3').each(function(){
+            var score = parseFloat($(this).find('span.total--live-scoring').text());
             $(this).find('div').remove();
-            teams.push($(this).text().toUpperCase());
+            var teamName = $(this).text().toUpperCase();
+            teams.push(teamName);
+            scores[teamName] = score;
         });
     });
     var lines = "";
@@ -44,7 +48,9 @@ function go() {
         {
             var teamIdx = sectionIdx % 2;
             var status = (sectionIdx < 2) ? "Active" : "Bench";
-            lines += "\n" + year + "\t" + week + "\t" + positions[i] + "\t" + seasonDesc + "\t" + teams[teamIdx] + "\t" + names[i] + "\t" + points[i] + "\t" + teams[teamIdx ^ 1] + "\t" + status;
+            var result = (teams[teamIdx] > teams[teamIdx ^ 1]) ? "W" : (teams[teamIdx] < teams[teamIdx ^ 1]) ? "L" : "T";
+            lines += "\n" + year + "\t" + week + "\t" + positions[i] + "\t" + seasonDesc + "\t" + teams[teamIdx] + "\t" + names[i] + "\t" + points[i] +
+                "\t" + teams[teamIdx ^ 1] + "\t" + status + "\t" + result;
         }
     });
     lines += "\n";
