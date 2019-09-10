@@ -8,19 +8,21 @@ function go() {
     var seasonDesc = (parseInt(week) > 14) ? "Playoffs" : "Regular Season";
     var teams = [];
     var scores = {};
-    $('div.scoring-single-header.ng-star-inserted').each(function(){
-        $(this).find('h3').each(function(){
-            var score = parseFloat($(this).find('span.total--live-scoring').text());
-            $(this).find('div').remove();
-            var teamName = $(this).text().toUpperCase();
-            teams.push(teamName);
-            scores[teamName] = score;
-        });
+    $('div.scoring-single-header.ng-star-inserted').each(function(idx){
+        var score = parseFloat($(this).find('span.total--live-scoring').first().text());
+        if (!isNaN(score))
+        {
+            $(this).find('h3').each(function(){
+                $(this).find('div').remove();
+                var teamName = $(this).text().toUpperCase();
+                teams.push(teamName);
+                scores[teamName] = score;
+            });
+        }
     });
     var lines = "";
     var bestBallDatas = [{}, {}];
     $('ultimate-table.ng-star-inserted').each(function(sectionIdx){
-        console.log("section " + sectionIdx);
         var names = [];
         var positions = [];
         var points = [];
@@ -47,10 +49,12 @@ function go() {
         for (var i = 0; i < names.length; i++)
         {
             var teamIdx = sectionIdx % 2;
+            var me = teams[teamIdx];
+            var them = teams[teamIdx ^ 1];
             var status = (sectionIdx < 2) ? "Active" : "Bench";
-            var result = (teams[teamIdx] > teams[teamIdx ^ 1]) ? "W" : (teams[teamIdx] < teams[teamIdx ^ 1]) ? "L" : "T";
-            lines += "\n" + year + "\t" + week + "\t" + positions[i] + "\t" + seasonDesc + "\t" + teams[teamIdx] + "\t" + names[i] + "\t" + points[i] +
-                "\t" + teams[teamIdx ^ 1] + "\t" + status + "\t" + result;
+            var result = (scores[me] > scores[them]) ? "W" : (scores[me] < scores[them]) ? "L" : "T";
+            lines += "\n" + year + "\t" + week + "\t" + positions[i] + "\t" + seasonDesc + "\t" + me + "\t" + names[i] + "\t" + points[i] +
+                "\t" + them + "\t" + status + "\t" + result;
         }
     });
     lines += "\n";
