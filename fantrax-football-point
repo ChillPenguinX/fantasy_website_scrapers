@@ -14,11 +14,13 @@ function go() {
         });
     });
     var lines = "";
+    var bestBallDatas = [{}, {}];
     $('ultimate-table.ng-star-inserted').each(function(sectionIdx){
         console.log("section " + sectionIdx);
         var names = [];
         var positions = [];
         var points = [];
+        var thisBestBallData = bestBallDatas[sectionIdx % 2];
         $(this).find('div.scorer__info__name').each(function() {
             names.push($(this).find('a').text());
         });
@@ -28,7 +30,14 @@ function go() {
         $(this).find('tr.row--blank.ng-star-inserted').each(function(){
             $(this).find('td.ng-star-inserted').each(function(colIdx){
                 if (colIdx == 1)
-                    points.push(parseFloat($(this).text()));
+                {
+                    var thisPoints = parseFloat($(this).text());
+                    var position = positions[points.length];
+                    points.push(thisPoints);
+                    if (!thisBestBallData[position])
+                        thisBestBallData[position] = [];
+                    thisBestBallData[position].push(thisPoints);
+                }
             });
         });
         for (var i = 0; i < names.length; i++)
@@ -38,5 +47,22 @@ function go() {
             lines += "\n" + year + "\t" + week + "\t" + positions[i] + "\t" + seasonDesc + "\t" + teams[teamIdx] + "\t" + names[i] + "\t" + points[i] + "\t" + teams[teamIdx ^ 1] + "\t" + status;
         }
     });
+    lines += "\n";
+    var lineup = {"QB": 2, "RB": 3, "WR": 4, "TE": 1};
+    var lineupKeys = Object.keys(lineup);
+    for (var i = 0; i < 2; i++)
+    {
+        var teamName = teams[i];
+        var thisData = bestBallDatas[i];
+        var bestBallScore = 0;
+        for (var j = 0; j < lineupKeys.length; j++)
+        {
+            var pos = lineupKeys[j];
+            thisData[pos].sort(function(a, b){return b-a});
+            for (var k = 0; k < lineup[pos]; k++)
+                bestBallScore += thisData[pos][k];
+        }
+        lines += "\n" + teamName + " best ball: " + bestBallScore;
+    }
     console.log(lines);
 }
