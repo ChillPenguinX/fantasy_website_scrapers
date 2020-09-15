@@ -10,18 +10,29 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"I Punt Cats": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......................... "},
-		"Colt .45s": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............................. "},
-		"Irish Guinness07": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................. "},
-		"The Mike Shitty All-Stars": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "...... "},
-		"Don't Mess with Texas": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: ".......... "},
-		"Irish Dawgs": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........................ "},
-		"Prospect Hoarders": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................ "},
-		"Tropical Storm Braz": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............. "},
+		"Prospect Hoarders": {Wi: 7, L: 0, T: 0, WH: 7, LH: 0, TH: 0, WP: 6, LP: 1, TP: 0, p: "................ "},
+		"The Mike Shitty All-Stars": {Wi: 6, L: 1, T: 0, WH: 6, LH: 1, TH: 0, WP: 7, LP: 0, TP: 0, p: "...... "},
+		"I Punt Cats": {Wi: 5, L: 2, T: 0, WH: 5, LH: 2, TH: 0, WP: 2, LP: 4, TP: 1, p: ".......................... "},
+		"Irish Dawgs": {Wi: 3, L: 3, T: 1, WH: 3, LH: 3, TH: 1, WP: 2, LP: 3, TP: 2, p: "........................ "},
+		"Irish Guinness07": {Wi: 3, L: 4, T: 0, WH: 1, LH: 4, TH: 2, WP: 5, LP: 2, TP: 0, p: "................. "},
+		"Don't Mess with Texas": {Wi: 1, L: 4, T: 2, WH: 1, LH: 3, TH: 3, WP: 1, LP: 5, TP: 1, p: ".......... "},
+		"Tropical Storm Braz": {Wi: 1, L: 5, T: 1, WH: 0, LH: 7, TH: 0, WP: 2, LP: 3, TP: 2, p: "............. "},
+		"Colt .45s": {Wi: 0, L: 7, T: 0, WH: 1, LH: 4, TH: 2, WP: 0, LP: 7, TP: 0, p: "............................. "}
 	};
 
 	var HIGHS_HIST = {
-		
+		"R": {val: 71, teams: ["The Mike Shitty All-Stars"], weeks: [1]},
+		"HR": {val: 24, teams: ["Prospect Hoarders"], weeks: [1]},
+		"RBI": {val: 81, teams: ["Prospect Hoarders"], weeks: [1]},
+		"SB": {val: 7, teams: ["Tropical Storm Braz"], weeks: [1]},
+		"OBP": {val: 0.337, teams: ["Prospect Hoarders"], weeks: [1]},
+		"SLG": {val: 0.481, teams: ["Prospect Hoarders"], weeks: [1]},
+		"QS": {val: 6, teams: ["The Mike Shitty All-Stars","I Punt Cats"], weeks: [1,1]},
+		"W": {val: 5, teams: ["Prospect Hoarders","The Mike Shitty All-Stars","I Punt Cats"], weeks: [1,1,1]},
+		"SV": {val: 7, teams: ["Don't Mess with Texas"], weeks: [1]},
+		"ERA": {val: 3.35, teams: ["The Mike Shitty All-Stars"], weeks: [1]},
+		"WHIP": {val: 0.979, teams: ["The Mike Shitty All-Stars"], weeks: [1]},
+		"K/9": {val: 13.5, teams: ["Prospect Hoarders"], weeks: [1]}
 	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
