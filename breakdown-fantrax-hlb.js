@@ -39,7 +39,7 @@ function bd() {
 	var CATS = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
 		'QS', 'W', 'SV', 'ERA', 'WHIP', 'K/9'];
 	var NUM_CATS = CATS.length;
-	var CATS_LOAD = ['Hitters', 'AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
+	var CATS_LOAD = ['Pts', '+/-', 'AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
 		'IP', 'K/9', 'ERA', 'WHIP', 'QS', 'W', 'SV'];
 	//list any categories where it's better to have a lower number here, in any order. They need to match the text in CATS.
 	var neg_cats = ['ERA', 'WHIP'];
@@ -55,9 +55,9 @@ function bd() {
 	var highs = {};
 	var disqualified = {};
 	var row, statObj, teamName, histObj;
-	$('td.ng-star-inserted').each(function() {
+	$('a.text--ellipsis').each(function() {
 		row = $(this);
-		teamName = row.find('div').text();
+		teamName = row.text().trim();
 		if (teamName && BREAKDOWN_HIST[teamName])
 		{
 			//console.log('found team ' + teamName);
@@ -65,15 +65,19 @@ function bd() {
 			//row.find('.belowMinimum').each(function(){disqualified[teamName] = true;});
 		}
 	});
-	$('tr.pointer--live-scoring.ng-star-inserted').each(function(rowIndex) {
+
+	var liveScoringTable = $('league-livescoring-stat-table.live-scoring-stats.ng-star-inserted').first();
+	var tableBody = liveScoringTable.find('div.i-table__body').first();
+	tableBody.find('div.i-table__row.ng-star-inserted').each(function(rowIndex) {
 		row = $(this);
 		teamName = teams[rowIndex];
+		
 		if (teamName && BREAKDOWN_HIST[teamName])
 		{
 			statObj = stats[teamName] = {};
 			statObj['Wi']=statObj['L']=statObj['T']=statObj['WH']=statObj['LH']=statObj['TH']=statObj['WP']=statObj['LP']=statObj['TP']=0;
 			//console.log('getting stats for ' + teamName);
-			row.find('td.ng-star-inserted').each(function(colIndex) {
+			row.find('div.i-table__cell.i-table__cell--center.ng-star-inserted').each(function(colIndex) {
 				statObj[CATS_LOAD[colIndex]] = parseFloat($(this).text());
 				//console.log(CATS_LOAD[colIndex] + " = " + statObj[CATS_LOAD[colIndex]]);
 			});
