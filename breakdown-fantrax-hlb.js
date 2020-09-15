@@ -78,8 +78,19 @@ function bd() {
 			statObj['Wi']=statObj['L']=statObj['T']=statObj['WH']=statObj['LH']=statObj['TH']=statObj['WP']=statObj['LP']=statObj['TP']=0;
 			//console.log('getting stats for ' + teamName);
 			row.find('div.i-table__cell.i-table__cell--center.ng-star-inserted').each(function(colIndex) {
-				statObj[CATS_LOAD[colIndex]] = parseFloat($(this).text());
-				//console.log(CATS_LOAD[colIndex] + " = " + statObj[CATS_LOAD[colIndex]]);
+				var categoryName = CATS_LOAD[colIndex];
+				if ($(this).text() == "")
+				{
+					//console.log('found empty text');
+					statObj[categoryName] = 0;
+					if ($.inArray(categoryName, qual_cats) != -1)
+						disqualified[teamName] = true;
+				}
+				else
+				{
+					statObj[categoryName] = parseFloat($(this).text());
+					//console.log(categoryName + " = " + statObj[categoryName]);
+				}
 			});
 		}
 	});
@@ -97,25 +108,25 @@ function bd() {
 			for (k = 0; k < NUM_CATS; k++)
 			{
 				// first, check disqualifiers
-				// if ($.inArray(CATS[k], qual_cats) != -1) {
-				//   if (disqualified[teams[i]]) {
-				//     if (!disqualified[teams[j]]) {
-				//       if (k < num_hitting_cats) {
-				//         teamBWinsH++;
-				//       } else {
-				//         teamBWinsP++;
-				//       }
-				//     }
-				//     continue;
-				//   } else if (disqualified[teams[j]]) {
-				//     if (k < num_hitting_cats) {
-				//       teamAWinsH++;
-				//     } else {
-				//       teamAWinsP++;
-				//     }
-				//     continue;
-				//   }
-				// } // end check disqualifiers
+				if ($.inArray(CATS[k], qual_cats) != -1) {
+				  if (disqualified[teams[i]]) {
+				    if (!disqualified[teams[j]]) {
+				      if (k < num_hitting_cats) {
+				        teamBWinsH++;
+				      } else {
+				        teamBWinsP++;
+				      }
+				    }
+				    continue;
+				  } else if (disqualified[teams[j]]) {
+				    if (k < num_hitting_cats) {
+				      teamAWinsH++;
+				    } else {
+				      teamAWinsP++;
+				    }
+				    continue;
+				  }
+				} // end check disqualifiers
 				teamAVal = teamA[CATS[k]];
 				teamBVal = teamB[CATS[k]];
 				if (teamAVal > teamBVal)
