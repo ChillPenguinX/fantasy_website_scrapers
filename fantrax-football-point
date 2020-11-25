@@ -8,43 +8,49 @@ function go() {
     var seasonDesc = (parseInt(week) > 14) ? "Playoffs" : "Regular Season";
     var teams = [];
     var scores = {};
-    $('div.scoring-single-header.ng-star-inserted').each(function(idx){
-        var score = parseFloat($(this).find('span.total--live-scoring').first().text());
-        if (!isNaN(score))
-        {
-            $(this).find('h3').each(function(){
-                $(this).find('div').remove();
-                var teamName = $(this).text().toUpperCase();
-                teams.push(teamName);
-                scores[teamName] = score;
-            });
-        }
+    $('div.live-scoring-table__head.ng-star-inserted').each(function(idx){
+        //console.log("step 1");
+        var score = parseFloat($(this).find('h2.ng-star-inserted').first().text());
+        $(this).find('h5.text--ellipsis').each(function(){
+            //console.log("step 2");
+            var teamName = $(this).text().toUpperCase();
+            teams.push(teamName);
+            scores[teamName] = score;
+            //console.log("found team name: " + teamName + ", score: " + score);
+        });
     });
     var lines = "";
     var bestBallDatas = [{}, {}];
-    $('ultimate-table.ng-star-inserted').each(function(sectionIdx){
+    $('div.live-scoring-table__cell.ng-star-inserted').each(function(sectionIdx){
         var names = [];
         var positions = [];
         var points = [];
         var thisBestBallData = bestBallDatas[sectionIdx % 2];
         $(this).find('div.scorer__info__name').each(function() {
-            names.push($(this).find('a').text());
+            var playerName = $(this).find('a').text();
+            names.push(playerName);
+            //console.log("found " + playerName + " for team " + teams[sectionIdx % 2]);
         });
         $(this).find('div.scorer__info__positions').each(function() {
-            positions.push($(this).find('span').first().text());
+            var playerPos = $(this).find('span').first().text();
+            positions.push(playerPos);
+            //console.log("found " + playerPos + " for team " + teams[sectionIdx % 2]);
         });
-        $(this).find('tr.row--blank.ng-star-inserted').each(function(){
-            $(this).find('td.ng-star-inserted').each(function(colIdx){
-                if (colIdx == 1)
-                {
+        $(this).find('div.live-scoring-table__cell__total.ng-star-inserted').each(function(){
+            //$(this).find('td.ng-star-inserted').each(function(colIdx){
+            //    if (colIdx == 1)
+            //    {
                     var thisPoints = parseFloat($(this).text());
+                    if (isNaN(thisPoints))
+                        thisPoints = 0;
+                    //console.log("points: " + thisPoints);
                     var position = positions[points.length];
                     points.push(thisPoints);
                     if (!thisBestBallData[position])
                         thisBestBallData[position] = [];
                     thisBestBallData[position].push(thisPoints);
-                }
-            });
+            //    }
+            //});
         });
         for (var i = 0; i < names.length; i++)
         {
