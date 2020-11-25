@@ -37,20 +37,15 @@ function go() {
             //console.log("found " + playerPos + " for team " + teams[sectionIdx % 2]);
         });
         $(this).find('div.live-scoring-table__cell__total.ng-star-inserted').each(function(){
-            //$(this).find('td.ng-star-inserted').each(function(colIdx){
-            //    if (colIdx == 1)
-            //    {
-                    var thisPoints = parseFloat($(this).text());
-                    if (isNaN(thisPoints))
-                        thisPoints = 0;
-                    //console.log("points: " + thisPoints);
-                    var position = positions[points.length];
-                    points.push(thisPoints);
-                    if (!thisBestBallData[position])
-                        thisBestBallData[position] = [];
-                    thisBestBallData[position].push(thisPoints);
-            //    }
-            //});
+            var thisPoints = parseFloat($(this).text());
+            if (isNaN(thisPoints))
+                thisPoints = 0;
+            //console.log("points: " + thisPoints);
+            var position = positions[points.length];
+            points.push(thisPoints);
+            if (!thisBestBallData[position])
+                thisBestBallData[position] = [];
+            thisBestBallData[position].push(thisPoints);
         });
         for (var i = 0; i < names.length; i++)
         {
