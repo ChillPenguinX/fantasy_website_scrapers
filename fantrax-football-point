@@ -36,7 +36,7 @@ function go() {
             positions.push(playerPos);
             //console.log("found " + playerPos + " for team " + teams[sectionIdx % 2]);
         });
-        $(this).find('div.live-scoring-table__cell__total.ng-star-inserted').each(function(){
+        $(this).find('.live-scoring-table__cell__total.ng-star-inserted').each(function(){
             var thisPoints = parseFloat($(this).text());
             if (isNaN(thisPoints))
                 thisPoints = 0;
