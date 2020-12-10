@@ -3,7 +3,7 @@ js.type = "text/javascript";
 js.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
 document.body.appendChild(js);
 function go() {
-    var year = $('div.content__headline').first().find('h3').text().split(" ")[0];
+    var year = $('div.content__headline').first().find('span.color--gray-light').text().split(" ")[0];
     var week = $('mat-select.mat-select.ng-star-inserted').find('span.mat-select-value-text.ng-star-inserted').find('span.ng-star-inserted').first().text().split(" ")[1];
     var seasonDesc = (parseInt(week) > 14) ? "Playoffs" : "Regular Season";
     var teams = [];
