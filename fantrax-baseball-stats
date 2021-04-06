@@ -3,22 +3,27 @@ js.type = "text/javascript";
 js.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
 document.body.appendChild(js);
 function go() {
-	var year = $('div.content__headline').first().find('h3').text().split(" ")[0];
+	var year = $('div.content__headline').first().find('h4').text().split(" ")[0];
+	//console.log("year: " + year);
 	var week = $('mat-select.mat-select.ng-star-inserted').find('span.mat-select-value-text.ng-star-inserted').find('span.ng-star-inserted').first().text().split(" ")[0];
+	//console.log("week: " + week);
 	var seasonDesc = (parseInt(week) > 21) ? "Playoffs" : "Regular Season";
 	var teams = [];
 	var names = [];
-	$('div.scoring-single-header.ng-star-inserted').each(function(){
-		$(this).find('h3').each(function(){
-			$(this).find('div').remove();
-			teams.push($(this).text().toUpperCase());
+	$('div.scoring-table-detailed__header.ng-star-inserted').each(function(){
+		$(this).find('h5.text--ellipsis').each(function(){
+			var thisTeamName = $(this).text().toUpperCase();
+			teams.push(thisTeamName);
+			//console.log("found team: " + thisTeamName);
 		});
 	});
 	$('div.scorer__info__name').each(function() {
-		names.push($(this).find('a').text());
+		var thisPlayerName = $(this).find('a').text();
+		names.push(thisPlayerName);
+		//console.log("found player: " + thisPlayerName);
 	});
 	var lines = [];
-	$('tr.row--blank.ng-star-inserted').each(function(playerIndex){
+	$('tr.ng-star-inserted').each(function(playerIndex){
 		var teamIdx = Math.floor(playerIndex/(names.length/2));
 		var line = year + "\t" + week + "\t" + seasonDesc + "\t" + teams[teamIdx] + "\t" + names[playerIndex];
 		$(this).find('td.ng-star-inserted').each(function(colIdx){
@@ -38,3 +43,4 @@ function go() {
 		output += lines[i];
 	console.log(output);
 }
+// type go() to run. be sure to be on the detailed view for the matchup and that benches are hidden
