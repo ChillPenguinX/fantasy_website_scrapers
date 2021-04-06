@@ -2,45 +2,82 @@ var js = document.createElement("script");
 js.type = "text/javascript";
 js.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
 document.body.appendChild(js);
-function go() {
-	var year = $('div.content__headline').first().find('h4').text().split(" ")[0];
-	//console.log("year: " + year);
-	var week = $('mat-select.mat-select.ng-star-inserted').find('span.mat-select-value-text.ng-star-inserted').find('span.ng-star-inserted').first().text().split(" ")[0];
-	//console.log("week: " + week);
-	var seasonDesc = (parseInt(week) > 21) ? "Playoffs" : "Regular Season";
-	var teams = [];
+
+var sYear = '';
+var sWeek = '';
+var sSeasonDesc = '';
+var sTeamIdx = 0;
+var sTeams = [];
+var sLines = [];
+var NUM_HITTERS_PER_TEAM = 14;
+var NUM_PITCHERS_PER_TEAM = 9;
+var NUM_REGULAR_SEASON_WEEKS = 21;
+
+function clearStaticVars()
+{
+	sTeams = [];
+	sLines = [];
+}
+
+function gatherStats(groupIndex)
+{
+	// this function is called on each group in this order: home hitters, home pitchers, away hitters, away pitchers
+	
+	//console.log('groupIndex: ' + groupIndex);
 	var names = [];
-	$('div.scoring-table-detailed__header.ng-star-inserted').each(function(){
-		$(this).find('h5.text--ellipsis').each(function(){
-			var thisTeamName = $(this).text().toUpperCase();
-			teams.push(thisTeamName);
-			//console.log("found team: " + thisTeamName);
-		});
-	});
-	$('div.scorer__info__name').each(function() {
+	$(this).find('div.scorer__info__name').each(function() {
 		var thisPlayerName = $(this).find('a').text();
 		names.push(thisPlayerName);
 		//console.log("found player: " + thisPlayerName);
 	});
-	var lines = [];
-	$('tr.ng-star-inserted').each(function(playerIndex){
-		var teamIdx = Math.floor(playerIndex/(names.length/2));
-		var line = year + "\t" + week + "\t" + seasonDesc + "\t" + teams[teamIdx] + "\t" + names[playerIndex];
-		$(this).find('td.ng-star-inserted').each(function(colIdx){
-			if (colIdx > 0)
+
+	$(this).find('tr.ng-star-inserted').each(function(playerIndex){
+		if (playerIndex < names.length)
+		{
+			var line = sYear + "\t" + sWeek + "\t" + sSeasonDesc + "\t" + sTeams[teamIdx] + "\t" + names[playerIndex];
+			$(this).find('td.ng-star-inserted').each(function(colIdx){
 				line += "\t" + $(this).text();
+			});
+			sLines.push("\n" + line + "\t" + sTeams[(teamIdx ^ 1)]);
+		}
+	});
+}
+
+function go() {
+	clearStaticVars();
+	sYear = $('div.content__headline').first().find('h4').text().split(" ")[0];
+	//console.log("year: " + sYear);
+	sWeek = $('mat-select.mat-select.ng-star-inserted').find('span.mat-select-value-text.ng-star-inserted').find('span.ng-star-inserted').first().text().split(" ")[0];
+	//console.log("week: " + sWeek);
+	sSeasonDesc = (parseInt(sWeek) > NUM_REGULAR_SEASON_WEEKS) ? "Playoffs" : "Regular Season";
+	
+	$('div.scoring-table-detailed__header.ng-star-inserted').each(function(){
+		$(this).find('h5.text--ellipsis').each(function(){
+			var thisTeamName = $(this).text().toUpperCase();
+			sTeams.push(thisTeamName);
+			//console.log("found team: " + thisTeamName);
 		});
-		lines.push("\n" + line + "\t" + teams[(teamIdx ^ 1)]);
+	});
+
+	$('league-livescoring-detailed-table.ng-tns-c300-2.ng-star-inserted').each(function(){
+		teamIdx = 0;
+		$(this).find('ultimate-table.scoring-table-detailed__home.ng-star-inserted').each(gatherStats);
+		teamIdx = 1;
+		$(this).find('ultimate-table.scoring-table-detailed__away.ng-star-inserted').each(gatherStats);
 	});
 	var output = "";
-	for (var i = 0; i < 14; i++)
-		output += lines[i];
-	for (var i = 23; i < 37; i++)
-		output += lines[i];
-	for (var i = 14; i < 23; i++)
-		output += lines[i];
-	for (var i = 37; i < 46; i++)
-		output += lines[i];
+	// home hitters
+	for (var i = 0; i < NUM_HITTERS_PER_TEAM; i++)
+		output += sLines[i];
+	// away hitters
+	for (var i = NUM_HITTERS_PER_TEAM + NUM_PITCHERS_PER_TEAM; i < NUM_HITTERS_PER_TEAM * 2 + NUM_PITCHERS_PER_TEAM; i++)
+		output += sLines[i];
+	// home pitchers
+	for (var i = NUM_HITTERS_PER_TEAM; i < NUM_HITTERS_PER_TEAM + NUM_PITCHERS_PER_TEAM; i++)
+		output += sLines[i];
+	// away pitchers
+	for (var i = NUM_HITTERS_PER_TEAM * 2 + NUM_PITCHERS_PER_TEAM; i < (NUM_HITTERS_PER_TEAM + NUM_PITCHERS_PER_TEAM) * 2; i++)
+		output += sLines[i];
 	console.log(output);
 }
 // type go() to run. be sure to be on the detailed view for the matchup and that benches are hidden
