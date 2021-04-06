@@ -11,7 +11,7 @@ var sTeams = [];
 var sLines = [];
 var NUM_HITTERS_PER_TEAM = 14;
 var NUM_PITCHERS_PER_TEAM = 9;
-var NUM_REGULAR_SEASON_WEEKS = 21;
+var NUM_REGULAR_SEASON_WEEKS = 22;
 
 function clearStaticVars()
 {
