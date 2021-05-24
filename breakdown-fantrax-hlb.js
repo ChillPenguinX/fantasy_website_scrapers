@@ -10,31 +10,31 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Prospect Hoarders": {Wi: 36, L: 12, T: 6, WH: 28, LH: 19, TH: 7, WP: 25, LP: 15, TP: 14, p: "........... "},
-		"Tropical Storm Braz": {Wi: 34, L: 18, T: 2, WH: 28, LH: 19, TH: 7, WP: 29, LP: 17, TP: 8, p: "......... "},
-		"I Punt Cats": {Wi: 32, L: 18, T: 4, WH: 34, LH: 15, TH: 5, WP: 23, LP: 19, TP: 12, p: "................. "},
-		"Colt .45s": {Wi: 30, L: 18, T: 6, WH: 36, LH: 10, TH: 8, WP: 18, LP: 24, TP: 12, p: "................... "},
-		"Irish Dawgs": {Wi: 27, L: 21, T: 6, WH: 19, LH: 25, TH: 10, WP: 30, LP: 11, TP: 13, p: "................. "},
-		"Irish Guinness07": {Wi: 24, L: 21, T: 9, WH: 33, LH: 14, TH: 7, WP: 16, LP: 27, TP: 11, p: "............ "},
-		"Don't Mess with Texas": {Wi: 21, L: 26, T: 7, WH: 21, LH: 25, TH: 8, WP: 18, LP: 22, TP: 14, p: "....... "},
-		"The Mike Shitty All-Stars": {Wi: 19, L: 31, T: 4, WH: 10, LH: 32, TH: 12, WP: 27, LP: 20, TP: 7, p: "... "},
-		"Boguslaw's Barrelers": {Wi: 16, L: 34, T: 4, WH: 16, LH: 30, TH: 8, WP: 20, LP: 27, TP: 7, p: "........ "},
-		"Niptits": {Wi: 5, L: 45, T: 4, WH: 5, LH: 41, TH: 8, WP: 11, LP: 35, TP: 8, p: "..................... "}
+		"Prospect Hoarders": {Wi: 40, L: 15, T: 8, WH: 33, LH: 23, TH: 7, WP: 28, LP: 20, TP: 15, p: "........... "},
+		"I Punt Cats": {Wi: 41, L: 18, T: 4, WH: 42, LH: 15, TH: 6, WP: 30, LP: 21, TP: 12, p: "................. "},
+		"Tropical Storm Braz": {Wi: 37, L: 19, T: 7, WH: 29, LH: 27, TH: 7, WP: 38, LP: 17, TP: 8, p: "......... "},
+		"Irish Dawgs": {Wi: 33, L: 23, T: 7, WH: 27, LH: 25, TH: 11, WP: 32, LP: 18, TP: 13, p: "................. "},
+		"Colt .45s": {Wi: 33, L: 23, T: 7, WH: 40, LH: 13, TH: 10, WP: 19, LP: 31, TP: 13, p: "................... "},
+		"Irish Guinness07": {Wi: 29, L: 25, T: 9, WH: 39, LH: 16, TH: 8, WP: 19, LP: 32, TP: 12, p: "............ "},
+		"Don't Mess with Texas": {Wi: 27, L: 28, T: 8, WH: 24, LH: 29, TH: 10, WP: 23, LP: 26, TP: 14, p: "....... "},
+		"The Mike Shitty All-Stars": {Wi: 20, L: 38, T: 5, WH: 12, LH: 39, TH: 12, WP: 35, LP: 21, TP: 7, p: "... "},
+		"Boguslaw's Barrelers": {Wi: 17, L: 42, T: 4, WH: 16, LH: 39, TH: 8, WP: 25, LP: 30, TP: 8, p: "........ "},
+		"Niptits": {Wi: 6, L: 52, T: 5, WH: 9, LH: 45, TH: 9, WP: 11, LP: 44, TP: 8, p: "..................... "}
 	};
 
 	var HIGHS_HIST = {
-		"R": {val: 57, teams: ["Prospect Hoarders"], weeks: [4]},
-		"HR": {val: 19, teams: ["Prospect Hoarders"], weeks: [4]},
+		"R": {val: 58, teams: ["I Punt Cats"], weeks: [7]},
+		"HR": {val: 23, teams: ["I Punt Cats"], weeks: [7]},
 		"RBI": {val: 61, teams: ["Irish Guinness07"], weeks: [5]},
 		"SB": {val: 9, teams: ["The Mike Shitty All-Stars","Tropical Storm Braz"], weeks: [2,3]},
 		"OBP": {val: 0.405, teams: ["I Punt Cats"], weeks: [6]},
-		"SLG": {val: 0.538, teams: ["Tropical Storm Braz"], weeks: [6]},
-		"QS": {val: 7, teams: ["Prospect Hoarders","Irish Guinness07"], weeks: [2,3]},
-		"W": {val: 6, teams: ["Irish Dawgs","The Mike Shitty All-Stars","I Punt Cats","Irish Guinness07"], weeks: [3,3,4,5]},
+		"SLG": {val: 0.569, teams: ["Irish Dawgs"], weeks: [7]},
+		"QS": {val: 8, teams: ["The Mike Shitty All-Stars"], weeks: [7]},
+		"W": {val: 6, teams: ["Irish Dawgs","The Mike Shitty All-Stars","I Punt Cats","Irish Guinness07","Tropical Storm Braz","The Mike Shitty All-Stars"], weeks: [3,3,4,5,7,7]},
 		"SV": {val: 7, teams: ["Don't Mess with Texas"], weeks: [3]},
-		"ERA": {val: 1.79, teams: ["Tropical Storm Braz"], weeks: [2]},
+		"ERA": {val: 1.06, teams: ["The Mike Shitty All-Stars"], weeks: [7]},
 		"WHIP": {val: 0.782, teams: ["Tropical Storm Braz"], weeks: [6]},
-		"K/9": {val: 12.06, teams: ["Colt .45s"], weeks: [3]}
+		"K/9": {val: 12.23, teams: ["Don't Mess with Texas"], weeks: [7]}
 	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
