@@ -10,16 +10,16 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"I Punt Cats": {Wi: 50, L: 18, T: 4, WH: 49, LH: 17, TH: 6, WP: 38, LP: 21, TP: 13, p: "................. "},
-		"Prospect Hoarders": {Wi: 42, L: 20, T: 10, WH: 33, LH: 31, TH: 8, WP: 33, LP: 23, TP: 16, p: "........... "},
-		"Colt .45s": {Wi: 40, L: 25, T: 7, WH: 48, LH: 13, TH: 11, WP: 24, LP: 34, TP: 14, p: "................... "},
-		"Tropical Storm Braz": {Wi: 37, L: 26, T: 9, WH: 29, LH: 33, TH: 10, WP: 41, LP: 22, TP: 9, p: "......... "},
-		"Irish Dawgs": {Wi: 36, L: 26, T: 10, WH: 32, LH: 28, TH: 12, WP: 35, LP: 23, TP: 14, p: "................. "},
-		"Irish Guinness07": {Wi: 33, L: 28, T: 11, WH: 47, LH: 16, TH: 9, WP: 20, LP: 40, TP: 12, p: "............ "},
-		"Don't Mess with Texas": {Wi: 29, L: 33, T: 10, WH: 25, LH: 35, TH: 12, WP: 30, LP: 28, TP: 14, p: "....... "},
-		"The Mike Shitty All-Stars": {Wi: 28, L: 39, T: 5, WH: 14, LH: 45, TH: 13, WP: 43, LP: 21, TP: 8, p: "... "},
-		"Boguslaw's Barrelers": {Wi: 20, L: 48, T: 4, WH: 21, LH: 43, TH: 8, WP: 27, LP: 37, TP: 8, p: "........ "},
-		"Niptits": {Wi: 6, L: 58, T: 8, WH: 13, LH: 50, TH: 9, WP: 11, LP: 53, TP: 8, p: "..................... "}
+		"I Punt Cats": {Wi: 58, L: 19, T: 4, WH: 56, LH: 18, TH: 7, WP: 45, LP: 23, TP: 13, p: "................. "},
+		"Irish Dawgs": {Wi: 42, L: 29, T: 10, WH: 38, LH: 31, TH: 12, WP: 39, LP: 27, TP: 15, p: "................. "},
+		"Prospect Hoarders": {Wi: 42, L: 29, T: 10, WH: 33, LH: 40, TH: 8, WP: 36, LP: 28, TP: 17, p: "........... "},
+		"Tropical Storm Braz": {Wi: 41, L: 30, T: 10, WH: 34, LH: 34, TH: 13, WP: 41, LP: 29, TP: 11, p: "......... "},
+		"Colt .45s": {Wi: 41, L: 33, T: 7, WH: 49, LH: 21, TH: 11, WP: 25, LP: 41, TP: 15, p: "................... "},
+		"Irish Guinness07": {Wi: 37, L: 31, T: 13, WH: 49, LH: 22, TH: 10, WP: 28, LP: 41, TP: 12, p: "............ "},
+		"Don't Mess with Texas": {Wi: 38, L: 33, T: 10, WH: 32, LH: 35, TH: 14, WP: 39, LP: 28, TP: 14, p: "....... "},
+		"The Mike Shitty All-Stars": {Wi: 31, L: 45, T: 5, WH: 18, LH: 50, TH: 13, WP: 43, LP: 29, TP: 9, p: "... "},
+		"Boguslaw's Barrelers": {Wi: 26, L: 50, T: 5, WH: 27, LH: 44, TH: 10, WP: 31, LP: 40, TP: 10, p: "........ "},
+		"Niptits": {Wi: 8, L: 65, T: 8, WH: 15, LH: 56, TH: 10, WP: 16, LP: 57, TP: 8, p: "..................... "}
 	};
 
 	var HIGHS_HIST = {
