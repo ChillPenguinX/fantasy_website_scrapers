@@ -2,12 +2,20 @@ var js = document.createElement("script");
 js.type = "text/javascript";
 js.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
 document.body.appendChild(js);
+function ScoresSort(a, b) {
+    return b - a;
+}
 function go() {
     var year = $('div.content__headline').first().find('h3').text().split(" ")[0];
     var week = $('mat-select.mat-select.ng-star-inserted').find('span.mat-select-value-text.ng-star-inserted').find('span.ng-star-inserted').first().text().split(" ")[1];
     var seasonDesc = (parseInt(week) > 14) ? "Playoffs" : "Regular Season";
     var teams = [];
     var scores = {};
+    var multiPos = {
+        "Cordarrelle Patterson": "RB,WR"
+    };
+
+
     $('div.live-scoring-table__head.ng-star-inserted').each(function(idx){
         //console.log("step 1");
         var score = parseFloat($(this).find('h2.ng-star-inserted').first().text());
@@ -21,11 +29,13 @@ function go() {
     });
     var lines = "";
     var bestBallDatas = [{}, {}];
+    var multiPosFound = [[],[]];
     $('div.live-scoring-table__cell.ng-star-inserted').each(function(sectionIdx){
         var names = [];
         var positions = [];
         var points = [];
-        var thisBestBallData = bestBallDatas[sectionIdx % 2];
+        var teamIdx = sectionIdx % 2;
+        var thisBestBallData = bestBallDatas[teamIdx];
         $(this).find('div.scorer__info__name').each(function() {
             var playerName = $(this).find('a').text();
             names.push(playerName);
@@ -42,7 +52,16 @@ function go() {
                 thisPoints = 0;
             //console.log("points: " + thisPoints);
             var position = positions[points.length];
+            var playerName = names[points.length];
             points.push(thisPoints);
+            if (multiPos[playerName])
+            {
+                position = multiPos[playerName];
+                //console.log("found multi player: " + playerName);
+                var multiPosList = multiPosFound[teamIdx];
+                if ((multiPosList.length == 0) || (multiPosList.indexOf(position) == -1))
+                    multiPosList.push(position);
+            }
             if (!thisBestBallData[position])
                 thisBestBallData[position] = [];
             thisBestBallData[position].push(thisPoints);
@@ -58,9 +77,64 @@ function go() {
                 "\t" + them + "\t" + status + "\t" + result;
         }
     });
-    lines += "\n";
+   
+    for (var i = 0; i < 2; i++)
+    {
+        var thisData = bestBallDatas[i];
+        var posKeys = Object.keys(thisData);
+        for (var j = 0; j < posKeys.length; j++)
+            thisData[posKeys[j]].sort(ScoresSort);
+    }
+
     var lineup = {"QB": 2, "RB": 3, "WR": 4, "TE": 1};
+    for (var teamIdx = 0; teamIdx < 2; teamIdx++)
+    {
+        var thisData = bestBallDatas[teamIdx];
+        var thisMultiPosList = multiPosFound[teamIdx];
+        for (var multiPosIdx = 0; multiPosIdx < thisMultiPosList.length; multiPosIdx++)
+        {
+            var thisMultiPos = thisMultiPosList[multiPosIdx];
+            var thesePositions = thisMultiPos.split(",");
+            var scoresThisMultiPos = thisData[thisMultiPos];
+            for (var multiPosScoreIdx = 0; multiPosScoreIdx < scoresThisMultiPos.length; multiPosScoreIdx++)
+            {
+                var thisScore = scoresThisMultiPos[multiPosScoreIdx];
+                var lowestScore = -1;
+                var lowestScorePos = null;
+                for (var posIdx = 0; posIdx < thesePositions.length; posIdx++)
+                {
+                    var thisPos = thesePositions[posIdx];
+                    var thisPosList = thisData[thisPos];
+                    var lineupCountThisPos = lineup[thisPos];
+                    var numScoresThisPos = thisPosList.length;
+                    if (lineupCountThisPos > numScoresThisPos)
+                    {
+                        lowestScore = 0;
+                        lowestScorePos = thisPos;
+                        continue;
+                    }
+                    var lowestScoreThisPos = thisPosList[lineupCountThisPos - 1];
+                    if (lowestScoreThisPos >= thisScore)
+                        continue;
+                    if ((lowestScore == -1) || (lowestScoreThisPos < lowestScore))
+                    {
+                        lowestScore = lowestScoreThisPos;
+                        lowestScorePos = thisPos;
+                    }
+                }
+                if (lowestScore > -1)
+                {
+                    //console.log("Inserting score of " + thisScore + " into " + lowestScorePos + " list");
+                    var newPosList = thisData[lowestScorePos];
+                    newPosList.push(thisScore);
+                    newPosList.sort(ScoresSort);
+                }
+            }
+        }
+    }
+
     var lineupKeys = Object.keys(lineup);
+    lines += "\n";
     for (var i = 0; i < 2; i++)
     {
         var teamName = teams[i];
@@ -69,7 +143,6 @@ function go() {
         for (var j = 0; j < lineupKeys.length; j++)
         {
             var pos = lineupKeys[j];
-            thisData[pos].sort(function(a, b){return b-a});
             for (var k = 0; k < lineup[pos]; k++)
                 bestBallScore += thisData[pos][k];
         }
