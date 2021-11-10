@@ -59,7 +59,7 @@ function go() {
 		});
 	});
 
-	$('league-livescoring-detailed-table.ng-tns-c300-2.ng-star-inserted').each(function(){
+	$('league-livescoring-detailed-table.ng-star-inserted').each(function(){
 		teamIdx = 0;
 		$(this).find('ultimate-table.scoring-table-detailed__home.ng-star-inserted').each(gatherStats);
 		teamIdx = 1;
