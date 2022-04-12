@@ -23,18 +23,6 @@ function bd() {
 	};
 
 	var HIGHS_HIST = {
-		"R": {val: 65, teams: ["I Punt Cats"], weeks: [22]},
-		"HR": {val: 28, teams: ["Irish Dawgs"], weeks: [16]},
-		"RBI": {val: 72, teams: ["Irish Dawgs"], weeks: [16]},
-		"SB": {val: 16, teams: ["The Mike Shitty All-Stars"], weeks: [19]},
-		"OBP": {val: 0.405, teams: ["I Punt Cats"], weeks: [6]},
-		"SLG": {val: 0.597, teams: ["Don't Mess with Texas","Irish Dawgs"], weeks: [15,16]},
-		"QS": {val: 8, teams: ["The Mike Shitty All-Stars","Boguslaw's Barrelers"], weeks: [7,19]},
-		"W": {val: 8, teams: ["Prospect Hoarders"], weeks: [19]},
-		"SV": {val: 7, teams: ["Don't Mess with Texas","Don't Mess with Texas","Tropical Storm Braz"], weeks: [3,8,10]},
-		"ERA": {val: 1.06, teams: ["The Mike Shitty All-Stars"], weeks: [7]},
-		"WHIP": {val: 0.696, teams: ["Don't Mess with Texas"], weeks: [8]},
-		"K/9": {val: 12.58, teams: ["I Punt Cats"], weeks: [10]}
 	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
