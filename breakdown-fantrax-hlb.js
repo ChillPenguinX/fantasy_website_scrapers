@@ -23,15 +23,15 @@ function bd() {
 	};
 
 	var HIGHS_HIST = {
-		"R": {val: 81, teams: ["Tropical Storm Braz"], weeks: [15]},
-		"HR": {val: 26, teams: ["The Mike Shitty All-Stars"], weeks: [15]},
-		"RBI": {val: 83, teams: ["The Mike Shitty All-Stars"], weeks: [15]},
+		"R": {val: 60, teams: ["BringDing Dingers","Irish Dawgs"], weeks: [6,8]},
+		"HR": {val: 23, teams: ["I Punt Cats"], weeks: [13]},
+		"RBI": {val: 68, teams: ["BringDing Dingers"], weeks: [8]},
 		"SB": {val: 12, teams: ["I Punt Cats"], weeks: [9]},
 		"OBP": {val: 0.399, teams: ["BringDing Dingers"], weeks: [8]},
 		"SLG": {val: 0.62, teams: ["I Punt Cats"], weeks: [13]},
-		"QS": {val: 10, teams: ["Irish Guinness07"], weeks: [15]},
-		"W": {val: 9, teams: ["Irish Guinness07"], weeks: [15]},
-		"SV": {val: 9, teams: ["BringDing Dingers"], weeks: [15]},
+		"QS": {val: 9, teams: ["Prospect Hoarders"], weeks: [10]},
+		"W": {val: 7, teams: ["Boguslaw's Barrelers","Irish Guinness07","Prospect Hoarders"], weeks: [6,10,16]},
+		"SV": {val: 8, teams: ["BringDing Dingers"], weeks: [4]},
 		"ERA": {val: 1.04, teams: ["Boguslaw's Barrelers"], weeks: [6]},
 		"WHIP": {val: 0.744, teams: ["Colt .45s"], weeks: [10]},
 		"K/9": {val: 12.6, teams: ["Irish Dawgs"], weeks: [11]}
