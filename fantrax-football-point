@@ -16,10 +16,13 @@ function go() {
     };
 
 
-    $('div.live-scoring-table__head.ng-star-inserted').each(function(idx){
-        //console.log("step 1");
-        var score = parseFloat($(this).find('h2.ng-star-inserted').first().text());
-        $(this).find('h5.text--ellipsis').each(function(){
+    $('div.scoring-table__head.ng-star-inserted').each(function(idx){
+       // console.log("step 1");
+        var scoreStr = $(this).find('div.scoring-header__score-primary').find('h2.mat-tooltip-trigger').text();
+        if (scoreStr.indexOf('Week') == 0)
+            scoreStr = scoreStr.substring(4);
+        var score = parseFloat(scoreStr);
+        $(this).find('a.text--ellipsis').each(function(){
             //console.log("step 2");
             var teamName = $(this).text().toUpperCase();
             teams.push(teamName);
@@ -30,7 +33,7 @@ function go() {
     var lines = "";
     var bestBallDatas = [{}, {}];
     var multiPosFound = [[],[]];
-    $('div.live-scoring-table__cell.ng-star-inserted').each(function(sectionIdx){
+    $('div.scoring-table__cell.ng-star-inserted').each(function(sectionIdx){
         var names = [];
         var positions = [];
         var points = [];
@@ -46,8 +49,8 @@ function go() {
             positions.push(playerPos);
             //console.log("found " + playerPos + " for team " + teams[sectionIdx % 2]);
         });
-        $(this).find('.live-scoring-table__cell__fpts.ng-star-inserted').each(function(){
-            var thisPoints = parseFloat($(this).text());
+        $(this).find('.scoring-table__cell__fpts.ng-star-inserted').each(function(){
+            var thisPoints = parseFloat($(this).find('dt.color--orange').first().text());
             if (isNaN(thisPoints))
                 thisPoints = 0;
             //console.log("points: " + thisPoints);
