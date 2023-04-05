@@ -10,38 +10,26 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"BringDing Dingers": {Wi: 125, L: 55, T: 18, WH: 113, LH: 65, TH: 20, WP: 110, LP: 69, TP: 19, p: "........... "},
-		"Prospect Hoarders": {Wi: 115, L: 64, T: 19, WH: 74, LH: 102, TH: 22, WP: 137, LP: 39, TP: 22, p: "........... "},
-		"Colt .45s": {Wi: 114, L: 67, T: 17, WH: 131, LH: 50, TH: 17, WP: 92, LP: 86, TP: 20, p: "................... "},
-		"I Punt Cats": {Wi: 106, L: 71, T: 21, WH: 98, LH: 82, TH: 18, WP: 97, LP: 78, TP: 23, p: "................. "},
-		"The Mike Shitty All-Stars": {Wi: 102, L: 84, T: 12, WH: 88, LH: 88, TH: 22, WP: 105, LP: 73, TP: 20, p: "... "},
-		"Irish Dawgs": {Wi: 95, L: 91, T: 12, WH: 97, LH: 81, TH: 20, WP: 81, LP: 93, TP: 24, p: "................. "},
-		"Tropical Storm Braz": {Wi: 85, L: 93, T: 20, WH: 103, LH: 77, TH: 18, WP: 75, LP: 95, TP: 28, p: "......... "},
-		"Niptits": {Wi: 67, L: 114, T: 17, WH: 70, LH: 107, TH: 21, WP: 63, LP: 119, TP: 16, p: "..................... "},
-		"Irish Guinness07": {Wi: 55, L: 126, T: 17, WH: 79, LH: 101, TH: 18, WP: 42, LP: 133, TP: 23, p: "............ "},
-		"Boguslaw's Barrelers": {Wi: 40, L: 139, T: 19, WH: 42, LH: 142, TH: 14, WP: 83, LP: 100, TP: 15, p: "........ "}
+		"I Punt Cats": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................. "},
+		"Colt .45s": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................... "},
+		"Irish Guinness07": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............ "},
+		"The Mike Shitty All-Stars": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "... "},
+		"BringDing Dingers": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........... "},
+		"Irish Dawgs": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................. "},
+		"Prospect Hoarders": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........... "},
+		"Tropical Storm Braz": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "......... "},
+		"Niptits": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "..................... "},
+		"Boguslaw's Barrelers": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........ "},
 	};
 
 	var HIGHS_HIST = {
-		"R": {val: 60, teams: ["BringDing Dingers","Irish Dawgs","Irish Dawgs"], weeks: [6,8,18]},
-		"HR": {val: 23, teams: ["I Punt Cats"], weeks: [13]},
-		"RBI": {val: 68, teams: ["BringDing Dingers"], weeks: [8]},
-		"SB": {val: 12, teams: ["I Punt Cats","Irish Guinness07"], weeks: [9,22]},
-		"OBP": {val: 0.399, teams: ["BringDing Dingers"], weeks: [8]},
-		"SLG": {val: 0.62, teams: ["I Punt Cats"], weeks: [13]},
-		"QS": {val: 9, teams: ["Prospect Hoarders","The Mike Shitty All-Stars"], weeks: [10,21]},
-		"W": {val: 7, teams: ["Boguslaw's Barrelers","Irish Guinness07","Prospect Hoarders","I Punt Cats","Colt .45s","BringDing Dingers","The Mike Shitty All-Stars"], weeks: [6,10,16,19,20,21,22]},
-		"SV": {val: 8, teams: ["BringDing Dingers"], weeks: [4]},
-		"ERA": {val: 1.04, teams: ["Boguslaw's Barrelers"], weeks: [6]},
-		"WHIP": {val: 0.744, teams: ["Colt .45s"], weeks: [10]},
-		"K/9": {val: 12.6, teams: ["Irish Dawgs"], weeks: [11]}
 	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
 	var CATS = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
 		'QS', 'W', 'SV', 'ERA', 'WHIP', 'K/9'];
 	var NUM_CATS = CATS.length;
-	var CATS_LOAD = ['Pts', '+/-', 'AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
+	var CATS_LOAD = ['Pts', '+/-', 'Proj', 'AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
 		'IP', 'K/9', 'ERA', 'WHIP', 'QS', 'W', 'SV'];
 	//list any categories where it's better to have a lower number here, in any order. They need to match the text in CATS.
 	var neg_cats = ['ERA', 'WHIP'];
