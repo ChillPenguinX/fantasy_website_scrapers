@@ -51,8 +51,16 @@ function go() {
 	//console.log("week: " + sWeek);
 	sSeasonDesc = (parseInt(sWeek) > NUM_REGULAR_SEASON_WEEKS) ? "Playoffs" : "Regular Season";
 	
-	$('div.scoring-table-detailed__header.ng-star-inserted').each(function(){
-		$(this).find('h5.text--ellipsis').each(function(){
+	$('div.scoring-table-detailed__home.ng-star-inserted').each(function(){
+		$(this).find('header.scoring-header__name').each(function(){
+			var thisTeamName = $(this).text().toUpperCase();
+			sTeams.push(thisTeamName);
+			//console.log("found team: " + thisTeamName);
+		});
+	});
+
+	$('div.scoring-table-detailed__away.ng-star-inserted').each(function(){
+		$(this).find('header.scoring-header__name').each(function(){
 			var thisTeamName = $(this).text().toUpperCase();
 			sTeams.push(thisTeamName);
 			//console.log("found team: " + thisTeamName);
