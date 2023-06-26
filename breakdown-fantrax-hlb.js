@@ -10,16 +10,16 @@ function bd() {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Colt .45s": {Wi: 78, L: 12, T: 9, WH: 67, LH: 23, TH: 9, WP: 67, LP: 26, TP: 6, p: "................... "},
-		"Irish Dawgs": {Wi: 59, L: 34, T: 6, WH: 55, LH: 36, TH: 8, WP: 58, LP: 31, TP: 10, p: "................. "},
-		"Tropical Storm Braz": {Wi: 55, L: 35, T: 9, WH: 54, LH: 35, TH: 10, WP: 44, LP: 44, TP: 11, p: "......... "},
-		"I Punt Cats": {Wi: 49, L: 42, T: 8, WH: 50, LH: 44, TH: 5, WP: 51, LP: 42, TP: 6, p: "................. "},
-		"Prospect Hoarders": {Wi: 42, L: 48, T: 9, WH: 41, LH: 49, TH: 9, WP: 54, LP: 37, TP: 8, p: "........... "},
-		"BringDing Dingers": {Wi: 42, L: 49, T: 8, WH: 39, LH: 48, TH: 12, WP: 48, LP: 44, TP: 7, p: "........... "},
-		"The Magic Mikes": {Wi: 44, L: 51, T: 4, WH: 38, LH: 47, TH: 14, WP: 46, LP: 46, TP: 7, p: "............. "},
-		"Boguslaw's Barrelers": {Wi: 36, L: 54, T: 9, WH: 42, LH: 45, TH: 12, WP: 32, LP: 60, TP: 7, p: "........ "},
-		"Irish Guinness07": {Wi: 32, L: 63, T: 4, WH: 28, LH: 58, TH: 13, WP: 32, LP: 58, TP: 9, p: "............ "},
-		"Niptits": {Wi: 22, L: 71, T: 6, WH: 27, LH: 56, TH: 16, WP: 23, LP: 67, TP: 9, p: "..................... "}
+		"Colt .45s": {Wi: 85, L: 14, T: 9, WH: 75, LH: 23, TH: 10, WP: 71, LP: 28, TP: 9, p: "................... "},
+		"Irish Dawgs": {Wi: 62, L: 39, T: 7, WH: 57, LH: 41, TH: 10, WP: 61, LP: 35, TP: 12, p: "................. "},
+		"Tropical Storm Braz": {Wi: 58, L: 40, T: 10, WH: 56, LH: 39, TH: 13, WP: 48, LP: 47, TP: 13, p: "......... "},
+		"I Punt Cats": {Wi: 58, L: 42, T: 8, WH: 58, LH: 44, TH: 6, WP: 59, LP: 43, TP: 6, p: "................. "},
+		"Prospect Hoarders": {Wi: 49, L: 50, T: 9, WH: 46, LH: 52, TH: 10, WP: 60, LP: 39, TP: 9, p: "........... "},
+		"The Magic Mikes": {Wi: 47, L: 55, T: 6, WH: 42, LH: 49, TH: 17, WP: 49, LP: 50, TP: 9, p: "............. "},
+		"BringDing Dingers": {Wi: 43, L: 56, T: 9, WH: 42, LH: 50, TH: 16, WP: 49, LP: 52, TP: 7, p: "........... "},
+		"Boguslaw's Barrelers": {Wi: 38, L: 60, T: 10, WH: 45, LH: 50, TH: 13, WP: 34, LP: 67, TP: 7, p: "........ "},
+		"Irish Guinness07": {Wi: 39, L: 65, T: 4, WH: 29, LH: 64, TH: 15, WP: 41, LP: 58, TP: 9, p: "............ "},
+		"Niptits": {Wi: 22, L: 80, T: 6, WH: 27, LH: 65, TH: 16, WP: 23, LP: 76, TP: 9, p: "..................... "}
 	};
 
 	var HIGHS_HIST = {
@@ -27,7 +27,7 @@ function bd() {
 		"HR": {val: 24, teams: ["I Punt Cats"], weeks: [11]},
 		"RBI": {val: 71, teams: ["I Punt Cats"], weeks: [11]},
 		"SB": {val: 18, teams: ["Niptits"], weeks: [2]},
-		"OBP": {val: 0.401, teams: ["Colt .45s"], weeks: [8]},
+		"OBP": {val: 0.402, teams: ["I Punt Cats"], weeks: [12]},
 		"SLG": {val: 0.609, teams: ["I Punt Cats"], weeks: [11]},
 		"QS": {val: 11, teams: ["Prospect Hoarders"], weeks: [2]},
 		"W": {val: 8, teams: ["Tropical Storm Braz"], weeks: [6]},
