@@ -2,7 +2,7 @@ var js = document.createElement("script");
 js.type = "text/javascript";
 js.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
 document.body.appendChild(js);
-function bd() {
+function bd(bLongWeek = false) {
 
 
 	//put your team names here. this assumes 12 team, but you can adjust add more or remove some if needed
@@ -47,6 +47,8 @@ function bd() {
 	var neg_cats = ['ERA', 'WHIP'];
 	// list of categories where the team must qualify (currently assumes that if you fail one, you fail them all)
 	var qual_cats = ['ERA', 'WHIP', 'K/9'];
+	// categories that are based on percentages
+	var perc_cats = ['OBP', 'SLG', 'ERA', 'WHIP', 'K/9'];
 	//how many hitting categories do you have?
 	var num_hitting_cats = 6;
 	//for display purposes when showing highs
@@ -308,6 +310,9 @@ function bd() {
 	for (i = 0; i < NUM_CATS; i++)
 	{
 		var catName = CATS[i];
+		if (bLongWeek && ($.inArray(catName, perc_cats) == -1))
+			continue;
+
 		var bNegCat = $.inArray(catName, neg_cats) != -1;
 		var thisWeekHighObj = highs[catName];
 		var thisWeekHighVal = thisWeekHighObj['val'];
