@@ -17,7 +17,7 @@ function bd(bLongWeek = false) {
 		"Irish Dawgs": {Wi: 94, L: 75, T: 11, WH: 87, LH: 77, TH: 16, WP: 88, LP: 72, TP: 20, p: "................. "},
 		"Tropical Storm Braz": {Wi: 90, L: 73, T: 17, WH: 87, LH: 72, TH: 21, WP: 84, LP: 74, TP: 22, p: "......... "},
 		"Irish Guinness07": {Wi: 68, L: 103, T: 9, WH: 51, LH: 103, TH: 26, WP: 77, LP: 90, TP: 13, p: "............ "},
-		"The Magic Mikes": {Wi: 66, L: 103, T: 11, WH: 70, LH: 87, TH: 23, WP: 59, LP: 104, TP: 17, p: "............. "},
+		"Magic Mikes": {Wi: 66, L: 103, T: 11, WH: 70, LH: 87, TH: 23, WP: 59, LP: 104, TP: 17, p: "............. "},
 		"Boguslaw's Barrelers": {Wi: 58, L: 107, T: 15, WH: 67, LH: 92, TH: 21, WP: 58, LP: 110, TP: 12, p: "........ "},
 		"Niptits": {Wi: 38, L: 130, T: 12, WH: 44, LH: 114, TH: 22, WP: 53, LP: 113, TP: 14, p: "..................... "}
 	};
