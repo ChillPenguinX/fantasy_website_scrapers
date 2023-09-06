@@ -10,16 +10,16 @@ function bd(bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Colt .45s": {Wi: 129, L: 37, T: 14, WH: 120, LH: 41, TH: 19, WP: 104, LP: 59, TP: 17, p: "................... "},
-		"Prospect Hoarders": {Wi: 97, L: 66, T: 17, WH: 90, LH: 73, TH: 17, WP: 107, LP: 55, TP: 18, p: "........... "},
-		"I Punt Cats": {Wi: 96, L: 65, T: 19, WH: 90, LH: 77, TH: 13, WP: 104, LP: 61, TP: 15, p: "................. "},
-		"BringDing Dingers": {Wi: 95, L: 72, T: 13, WH: 95, LH: 65, TH: 20, WP: 84, LP: 80, TP: 16, p: "........... "},
-		"Irish Dawgs": {Wi: 94, L: 75, T: 11, WH: 87, LH: 77, TH: 16, WP: 88, LP: 72, TP: 20, p: "................. "},
-		"Tropical Storm Braz": {Wi: 90, L: 73, T: 17, WH: 87, LH: 72, TH: 21, WP: 84, LP: 74, TP: 22, p: "......... "},
-		"Irish Guinness07": {Wi: 68, L: 103, T: 9, WH: 51, LH: 103, TH: 26, WP: 77, LP: 90, TP: 13, p: "............ "},
-		"Magic Mikes": {Wi: 66, L: 103, T: 11, WH: 70, LH: 87, TH: 23, WP: 59, LP: 104, TP: 17, p: "............. "},
-		"Boguslaw's Barrelers": {Wi: 58, L: 107, T: 15, WH: 67, LH: 92, TH: 21, WP: 58, LP: 110, TP: 12, p: "........ "},
-		"Niptits": {Wi: 38, L: 130, T: 12, WH: 44, LH: 114, TH: 22, WP: 53, LP: 113, TP: 14, p: "..................... "}
+		"Colt .45s": {Wi: 132, L: 41, T: 16, WH: 121, LH: 49, TH: 19, WP: 110, LP: 61, TP: 18, p: "................... "},
+		"I Punt Cats": {Wi: 101, L: 67, T: 21, WH: 98, LH: 78, TH: 13, WP: 107, LP: 67, TP: 15, p: "................. "},
+		"BringDing Dingers": {Wi: 102, L: 73, T: 14, WH: 100, LH: 67, TH: 22, WP: 92, LP: 80, TP: 17, p: "........... "},
+		"Prospect Hoarders": {Wi: 100, L: 71, T: 18, WH: 93, LH: 78, TH: 18, WP: 110, LP: 60, TP: 19, p: "........... "},
+		"Irish Dawgs": {Wi: 99, L: 79, T: 11, WH: 90, LH: 82, TH: 17, WP: 93, LP: 75, TP: 21, p: "................. "},
+		"Tropical Storm Braz": {Wi: 92, L: 80, T: 17, WH: 92, LH: 74, TH: 23, WP: 85, LP: 81, TP: 23, p: "......... "},
+		"Magic Mikes": {Wi: 75, L: 103, T: 11, WH: 79, LH: 87, TH: 23, WP: 65, LP: 107, TP: 17, p: "..................... "},
+		"Irish Guinness07": {Wi: 74, L: 104, T: 11, WH: 56, LH: 105, TH: 28, WP: 85, LP: 90, TP: 14, p: "............ "},
+		"Boguslaw's Barrelers": {Wi: 58, L: 116, T: 15, WH: 69, LH: 99, TH: 21, WP: 58, LP: 119, TP: 12, p: "........ "},
+		"Niptits": {Wi: 39, L: 138, T: 12, WH: 44, LH: 123, TH: 22, WP: 54, LP: 119, TP: 16, p: "..................... "}
 	};
 
 	var HIGHS_HIST = {
