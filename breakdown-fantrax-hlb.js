@@ -10,16 +10,16 @@ function bd(bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Colt .45s": {Wi: 137, L: 45, T: 16, WH: 128, LH: 51, TH: 19, WP: 113, LP: 66, TP: 19, p: "................... "},
-		"BringDing Dingers": {Wi: 110, L: 73, T: 15, WH: 109, LH: 67, TH: 22, WP: 96, LP: 84, TP: 18, p: "........... "},
-		"I Punt Cats": {Wi: 106, L: 70, T: 22, WH: 104, LH: 80, TH: 14, WP: 110, LP: 69, TP: 19, p: "................. "},
-		"Prospect Hoarders": {Wi: 106, L: 72, T: 20, WH: 95, LH: 85, TH: 18, WP: 119, LP: 60, TP: 19, p: "........... "},
-		"Irish Dawgs": {Wi: 106, L: 81, T: 11, WH: 97, LH: 83, TH: 18, WP: 99, LP: 77, TP: 22, p: "................. "},
-		"Tropical Storm Braz": {Wi: 96, L: 85, T: 17, WH: 96, LH: 78, TH: 24, WP: 90, LP: 84, TP: 24, p: "......... "},
-		"Irish Guinness07": {Wi: 79, L: 108, T: 11, WH: 60, LH: 109, TH: 29, WP: 92, LP: 91, TP: 15, p: "............ "},
-		"Magic Mikes": {Wi: 77, L: 110, T: 11, WH: 82, LH: 93, TH: 23, WP: 67, LP: 113, TP: 18, p: "..................... "},
-		"Boguslaw's Barrelers": {Wi: 58, L: 125, T: 15, WH: 69, LH: 108, TH: 21, WP: 58, LP: 127, TP: 13, p: "........ "},
-		"Niptits": {Wi: 40, L: 146, T: 12, WH: 45, LH: 131, TH: 22, WP: 54, LP: 127, TP: 17, p: "..................... "}
+		"Colt .45s": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................... "},
+		"BringDing Dingers": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........... "},
+		"I Punt Cats": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................. "},
+		"Prospect Hoarders": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........... "},
+		"Irish Dawgs": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "................. "},
+		"Tropical Storm Braz": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "......... "},
+		"Irish Guinness07": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "............ "},
+		"Magic Mikes": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "..................... "},
+		"Boguslaw's Barrelers": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "........ "},
+		"Niptits": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0, p: "..................... "}
 	};
 
 	var HIGHS_HIST = {
