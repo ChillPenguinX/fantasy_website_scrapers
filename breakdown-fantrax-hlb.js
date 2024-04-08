@@ -23,18 +23,6 @@ function bd(bLongWeek = false) {
 	};
 
 	var HIGHS_HIST = {
-		"R": {val: 63, teams: ["Irish Dawgs"], weeks: [18]},
-		"HR": {val: 26, teams: ["Irish Dawgs"], weeks: [17]},
-		"RBI": {val: 71, teams: ["I Punt Cats"], weeks: [11]},
-		"SB": {val: 18, teams: ["Niptits"], weeks: [2]},
-		"OBP": {val: 0.406, teams: ["BringDing Dingers"], weeks: [17]},
-		"SLG": {val: 0.654, teams: ["Irish Dawgs"], weeks: [17]},
-		"QS": {val: 11, teams: ["Prospect Hoarders"], weeks: [2]},
-		"W": {val: 8, teams: ["Tropical Storm Braz","Irish Guinness07","Prospect Hoarders"], weeks: [6,14,20]},
-		"SV": {val: 10, teams: ["BringDing Dingers"], weeks: [3]},
-		"ERA": {val: 1.29, teams: ["Boguslaw's Barrelers"], weeks: [5]},
-		"WHIP": {val: 0.803, teams: ["Colt .45s"], weeks: [4]},
-		"K/9": {val: 12.4, teams: ["Colt .45s"], weeks: [20]}
 	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
