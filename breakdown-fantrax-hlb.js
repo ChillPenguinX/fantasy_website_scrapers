@@ -10,30 +10,30 @@ function bd(bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Irish Dawgs": {Wi: 17, L: 1, T: 0, WH: 13, LH: 4, TH: 1, WP: 16, LP: 1, TP: 1, p: "................. "},
-		"I Punt Cats": {Wi: 16, L: 2, T: 0, WH: 16, LH: 2, TH: 0, WP: 10, LP: 6, TP: 2, p: "................. "},
-		"BringDing Dingers": {Wi: 11, L: 5, T: 2, WH: 11, LH: 7, TH: 0, WP: 14, LP: 4, TP: 0, p: "........... "},
-		"Magic Mikes": {Wi: 9, L: 8, T: 1, WH: 6, LH: 11, TH: 1, WP: 11, LP: 6, TP: 1, p: "................. "},
-		"Boguslaw's Barrelers": {Wi: 8, L: 9, T: 1, WH: 8, LH: 8, TH: 2, WP: 6, LP: 8, TP: 4, p: "........ "},
-		"Tropical Storm Braz": {Wi: 6, L: 9, T: 3, WH: 4, LH: 13, TH: 1, WP: 10, LP: 5, TP: 3, p: "......... "},
-		"Prospect Hoarders": {Wi: 7, L: 11, T: 0, WH: 5, LH: 10, TH: 3, WP: 7, LP: 9, TP: 2, p: "........... "},
-		"Colt .45s": {Wi: 5, L: 12, T: 1, WH: 6, LH: 11, TH: 1, WP: 6, LP: 9, TP: 3, p: "................... "},
-		"Irish Guinness07": {Wi: 3, L: 12, T: 3, WH: 9, LH: 6, TH: 3, WP: 0, LP: 18, TP: 0, p: "............ "},
-		"Niptits": {Wi: 2, L: 15, T: 1, WH: 5, LH: 11, TH: 2, WP: 2, LP: 16, TP: 0, p: "..................... "}
+		"BringDing Dingers": {Wi: 20, L: 5, T: 2, WH: 20, LH: 7, TH: 0, WP: 22, LP: 4, TP: 1, p: "........... "},
+		"I Punt Cats": {Wi: 20, L: 5, T: 2, WH: 20, LH: 6, TH: 1, WP: 13, LP: 12, TP: 2, p: "................. "},
+		"Irish Dawgs": {Wi: 21, L: 6, T: 0, WH: 15, LH: 9, TH: 3, WP: 21, LP: 4, TP: 2, p: "................. "},
+		"Colt .45s": {Wi: 12, L: 13, T: 2, WH: 7, LH: 16, TH: 4, WP: 14, LP: 9, TP: 4, p: "................... "},
+		"Irish Guinness07": {Wi: 10, L: 13, T: 4, WH: 17, LH: 7, TH: 3, WP: 6, LP: 20, TP: 1, p: "............ "},
+		"Magic Mikes": {Wi: 11, L: 15, T: 1, WH: 12, LH: 13, TH: 2, WP: 11, LP: 15, TP: 1, p: "................. "},
+		"Prospect Hoarders": {Wi: 10, L: 17, T: 0, WH: 6, LH: 17, TH: 4, WP: 13, LP: 12, TP: 2, p: "........... "},
+		"Tropical Storm Braz": {Wi: 7, L: 15, T: 5, WH: 4, LH: 21, TH: 2, WP: 14, LP: 10, TP: 3, p: "......... "},
+		"Boguslaw's Barrelers": {Wi: 8, L: 17, T: 2, WH: 10, LH: 13, TH: 4, WP: 8, LP: 15, TP: 4, p: "........ "},
+		"Niptits": {Wi: 5, L: 18, T: 4, WH: 11, LH: 13, TH: 3, WP: 3, LP: 24, TP: 0, p: "..................... "}
 	};
 
 	var HIGHS_HIST = {
 		"R": {val: 55, teams: ["I Punt Cats"], weeks: [2]},
 		"HR": {val: 16, teams: ["I Punt Cats","Boguslaw's Barrelers"], weeks: [2,2]},
 		"RBI": {val: 59, teams: ["Boguslaw's Barrelers"], weeks: [2]},
-		"SB": {val: 9, teams: ["Magic Mikes"], weeks: [2]},
+		"SB": {val: 16, teams: ["Colt .45s"], weeks: [3]},
 		"OBP": {val: 0.41, teams: ["I Punt Cats"], weeks: [2]},
 		"SLG": {val: 0.512, teams: ["Niptits"], weeks: [2]},
-		"QS": {val: 5, teams: ["Irish Dawgs","Magic Mikes"], weeks: [2,2]},
-		"W": {val: 5, teams: ["BringDing Dingers","Magic Mikes","Tropical Storm Braz"], weeks: [2,2,2]},
-		"SV": {val: 4, teams: ["I Punt Cats","Magic Mikes"], weeks: [2,2]},
+		"QS": {val: 6, teams: ["Colt .45s"], weeks: [3]},
+		"W": {val: 7, teams: ["BringDing Dingers"], weeks: [3]},
+		"SV": {val: 5, teams: ["I Punt Cats"], weeks: [3]},
 		"ERA": {val: 1.5, teams: ["BringDing Dingers"], weeks: [2]},
-		"WHIP": {val: 1.006, teams: ["Irish Dawgs"], weeks: [2]},
+		"WHIP": {val: 0.979, teams: ["Irish Guinness07"], weeks: [3]},
 		"K/9": {val: 11.91, teams: ["I Punt Cats"], weeks: [2]}
 	};
 	
@@ -42,7 +42,7 @@ function bd(bLongWeek = false) {
 		'QS', 'W', 'SV', 'ERA', 'WHIP', 'K/9'];
 	var NUM_CATS = CATS.length;
 	var CATS_LOAD = ['Pts', '+/-', 'Proj', 'AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
-		'IP', 'QS', 'W', 'K/9', 'SV', 'ERA', 'WHIP'];
+		'IP', 'K/9', 'ERA', 'WHIP', 'QS', 'W', 'SV'];
 	//list any categories where it's better to have a lower number here, in any order. They need to match the text in CATS.
 	var neg_cats = ['ERA', 'WHIP'];
 	// list of categories where the team must qualify (currently assumes that if you fail one, you fail them all)
