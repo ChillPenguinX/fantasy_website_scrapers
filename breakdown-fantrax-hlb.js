@@ -10,16 +10,16 @@ function bd(bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"I Punt Cats": {Wi: 28, L: 5, T: 3, WH: 28, LH: 7, TH: 1, WP: 18, LP: 14, TP: 4, p: "................. "},
-		"Irish Dawgs": {Wi: 26, L: 10, T: 0, WH: 20, LH: 13, TH: 3, WP: 24, LP: 6, TP: 6, p: "................. "},
-		"BringDing Dingers": {Wi: 24, L: 10, T: 2, WH: 24, LH: 12, TH: 0, WP: 28, LP: 4, TP: 4, p: "........... "},
-		"Magic Mikes": {Wi: 19, L: 15, T: 2, WH: 21, LH: 13, TH: 2, WP: 14, LP: 20, TP: 2, p: "................. "},
-		"Colt .45s": {Wi: 18, L: 16, T: 2, WH: 13, LH: 19, TH: 4, WP: 19, LP: 9, TP: 8, p: "................... "},
-		"Tropical Storm Braz": {Wi: 14, L: 17, T: 5, WH: 11, LH: 23, TH: 2, WP: 18, LP: 14, TP: 4, p: "......... "},
-		"Prospect Hoarders": {Wi: 13, L: 23, T: 0, WH: 9, LH: 23, TH: 4, WP: 19, LP: 12, TP: 5, p: "........... "},
-		"Irish Guinness07": {Wi: 11, L: 21, T: 4, WH: 17, LH: 15, TH: 4, WP: 8, LP: 25, TP: 3, p: "............ "},
-		"Niptits": {Wi: 7, L: 25, T: 4, WH: 13, LH: 20, TH: 3, WP: 4, LP: 32, TP: 0, p: "..................... "},
-		"Boguslaw's Barrelers": {Wi: 8, L: 26, T: 2, WH: 10, LH: 21, TH: 5, WP: 8, LP: 24, TP: 4, p: "........ "}
+		"I Punt Cats": {Wi: 28, L: 5, T: 3, WH: 28, LH: 7, TH: 1, WP: 18, LP: 14, TP: 4},
+		"Irish Dawgs": {Wi: 26, L: 10, T: 0, WH: 20, LH: 13, TH: 3, WP: 24, LP: 6, TP: 6},
+		"BringDing Dingers": {Wi: 24, L: 10, T: 2, WH: 24, LH: 12, TH: 0, WP: 28, LP: 4, TP: 4},
+		"Magic Mikes": {Wi: 19, L: 15, T: 2, WH: 21, LH: 13, TH: 2, WP: 14, LP: 20, TP: 2},
+		"Colt .45s": {Wi: 18, L: 16, T: 2, WH: 13, LH: 19, TH: 4, WP: 19, LP: 9, TP: 8},
+		"Tropical Storm Braz": {Wi: 14, L: 17, T: 5, WH: 11, LH: 23, TH: 2, WP: 18, LP: 14, TP: 4},
+		"Prospect Hoarders": {Wi: 13, L: 23, T: 0, WH: 9, LH: 23, TH: 4, WP: 19, LP: 12, TP: 5},
+		"Irish Guinness07": {Wi: 11, L: 21, T: 4, WH: 17, LH: 15, TH: 4, WP: 8, LP: 25, TP: 3},
+		"Niptits": {Wi: 7, L: 25, T: 4, WH: 13, LH: 20, TH: 3, WP: 4, LP: 32, TP: 0},
+		"Boguslaw's Barrelers": {Wi: 8, L: 26, T: 2, WH: 10, LH: 21, TH: 5, WP: 8, LP: 24, TP: 4}
 	};
 
 	var HIGHS_HIST = {
@@ -223,6 +223,23 @@ function bd(bLongWeek = false) {
 
 	var output = "";
 
+	var longestTeamLen = 0;
+	for (i = 0; i < numTeams; i++)
+	{
+		if (teams[i].length > longestTeamLen)
+			longestTeamLen = teams[i].length;
+	}
+
+	for (i = 0; i < numTeams; i++)
+	{
+		histObj = BREAKDOWN_HIST[teams[i]];
+		var p = '';
+		var numDots = longestTeamLen - teams[i].length + 5;
+		for (j = 0; j < numDots; j++)
+			p += '.';
+		histObj['p'] = p + ' ';
+	}
+
 	for (i = 0; i < numTeams; i++)
 	{
 		statObj = stats[teams[i]];
@@ -241,7 +258,7 @@ function bd(bLongWeek = false) {
 			week = (histObj['Wi'] + histObj['L'] + histObj['T']) / (numTeams - 1);
 			output += '\n' + 'Week ' + week + ' Breakdowns (Combined, Hitting, Pitching)';
 		}
-		output += '\n' + teams[i] + histObj['p'] + '' + statObj['Wi'] + '-' + statObj['L'] + '-' + statObj['T'] +
+		output += '\n' + teams[i] + histObj['p'] + statObj['Wi'] + '-' + statObj['L'] + '-' + statObj['T'] +
 			', ' + statObj['WH'] + '-' + statObj['LH'] + '-' + statObj['TH'] +
 			', ' + statObj['WP'] + '-' + statObj['LP'] + '-' + statObj['TP'];
 	}
@@ -367,7 +384,7 @@ function bd(bLongWeek = false) {
 		output += '\n' + '\t\t"' + teams[i] + '": {Wi: ' + histObj['Wi'] + ', L: ' + histObj['L'] + ', T: ' +
 			histObj['T'] + ', WH: ' + histObj['WH'] + ', LH: ' + histObj['LH'] + ', TH: ' +
 			histObj['TH'] + ', WP: ' + histObj['WP'] + ', LP: ' + histObj['LP'] + ', TP: ' +
-			histObj['TP'] + ', p: "' + histObj['p'] + '"}' + (i == numTeams-1 ? '' : ',');
+			histObj['TP'] + '"}' + (i == numTeams-1 ? '' : ',');
 	}
 	output += '\n' + '\t};';
 
