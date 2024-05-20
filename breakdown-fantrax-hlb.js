@@ -10,45 +10,31 @@ function bd(bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"I Punt Cats": {Wi: 39, L: 8, T: 7, WH: 38, LH: 10, TH: 6, WP: 25, LP: 24, TP: 5},
-		"BringDing Dingers": {Wi: 36, L: 14, T: 4, WH: 31, LH: 21, TH: 2, WP: 44, LP: 4, TP: 6},
-		"Magic Mikes": {Wi: 30, L: 19, T: 5, WH: 31, LH: 18, TH: 5, WP: 26, LP: 24, TP: 4},
-		"Irish Dawgs": {Wi: 30, L: 23, T: 1, WH: 26, LH: 23, TH: 5, WP: 31, LP: 17, TP: 6},
-		"Tropical Storm Braz": {Wi: 26, L: 21, T: 7, WH: 26, LH: 25, TH: 3, WP: 25, LP: 23, TP: 6},
-		"Colt .45s": {Wi: 22, L: 27, T: 5, WH: 19, LH: 29, TH: 6, WP: 24, LP: 20, TP: 10},
-		"Prospect Hoarders": {Wi: 23, L: 29, T: 2, WH: 17, LH: 31, TH: 6, WP: 27, LP: 18, TP: 9},
-		"Irish Guinness07": {Wi: 20, L: 27, T: 7, WH: 19, LH: 29, TH: 6, WP: 23, LP: 25, TP: 6},
-		"Niptits": {Wi: 11, L: 36, T: 7, WH: 25, LH: 24, TH: 5, WP: 7, LP: 47, TP: 0},
-		"Boguslaw's Barrelers": {Wi: 9, L: 42, T: 3, WH: 12, LH: 34, TH: 8, WP: 10, LP: 40, TP: 4}
+		"BringDing Dingers": {Wi: 44, L: 15, T: 4, WH: 39, LH: 21, TH: 3, WP: 48, LP: 8, TP: 7},
+		"I Punt Cats": {Wi: 39, L: 17, T: 7, WH: 38, LH: 19, TH: 6, WP: 26, LP: 32, TP: 5},
+		"Tropical Storm Braz": {Wi: 35, L: 21, T: 7, WH: 34, LH: 25, TH: 4, WP: 28, LP: 27, TP: 8},
+		"Magic Mikes": {Wi: 35, L: 23, T: 5, WH: 36, LH: 22, TH: 5, WP: 31, LP: 26, TP: 6},
+		"Irish Dawgs": {Wi: 35, L: 27, T: 1, WH: 32, LH: 26, TH: 5, WP: 31, LP: 26, TP: 6},
+		"Colt .45s": {Wi: 28, L: 30, T: 5, WH: 25, LH: 31, TH: 7, WP: 30, LP: 22, TP: 11},
+		"Prospect Hoarders": {Wi: 29, L: 32, T: 2, WH: 19, LH: 35, TH: 9, WP: 36, LP: 18, TP: 9},
+		"Irish Guinness07": {Wi: 21, L: 35, T: 7, WH: 20, LH: 35, TH: 8, WP: 25, LP: 31, TP: 7},
+		"Niptits": {Wi: 14, L: 42, T: 7, WH: 28, LH: 29, TH: 6, WP: 15, LP: 48, TP: 0},
+		"Boguslaw's Barrelers": {Wi: 11, L: 49, T: 3, WH: 13, LH: 41, TH: 9, WP: 13, LP: 45, TP: 5}
 	};
 
 	var HIGHS_HIST = {
 		"R": {val: 55, teams: ["I Punt Cats"], weeks: [2]},
-		"HR": {val: 17, teams: ["Magic Mikes"], weeks: [4]},
+		"HR": {val: 17, teams: ["Magic Mikes","BringDing Dingers"], weeks: [4,7]},
 		"RBI": {val: 59, teams: ["Boguslaw's Barrelers"], weeks: [2]},
 		"SB": {val: 16, teams: ["Colt .45s"], weeks: [3]},
 		"OBP": {val: 0.41, teams: ["I Punt Cats"], weeks: [2]},
-		"SLG": {val: 0.543, teams: ["Magic Mikes"], weeks: [4]},
-		"QS": {val: 8, teams: ["Irish Guinness07"], weeks: [6]},
-		"W": {val: 7, teams: ["BringDing Dingers","Magic Mikes"], weeks: [3,6]},
+		"SLG": {val: 0.552, teams: ["BringDing Dingers"], weeks: [7]},
+		"QS": {val: 9, teams: ["Prospect Hoarders"], weeks: [7]},
+		"W": {val: 8, teams: ["Prospect Hoarders"], weeks: [7]},
 		"SV": {val: 5, teams: ["I Punt Cats","I Punt Cats","BringDing Dingers"], weeks: [3,4,4]},
 		"ERA": {val: 1.5, teams: ["BringDing Dingers"], weeks: [2]},
-		"WHIP": {val: 0.945, teams: ["Colt .45s"], weeks: [6]},
-		"K/9": {val: 11.91, teams: ["I Punt Cats"], weeks: [2]}
-	};
-	var HIGHS_HIST = {
-		"R": {val: 55, teams: ["I Punt Cats"], weeks: [2]},
-		"HR": {val: 17, teams: ["Magic Mikes"], weeks: [4]},
-		"RBI": {val: 59, teams: ["Boguslaw's Barrelers"], weeks: [2]},
-		"SB": {val: 16, teams: ["Colt .45s"], weeks: [3]},
-		"OBP": {val: 0.41, teams: ["I Punt Cats"], weeks: [2]},
-		"SLG": {val: 0.543, teams: ["Magic Mikes"], weeks: [4]},
-		"QS": {val: 7, teams: ["Colt .45s"], weeks: [4]},
-		"W": {val: 7, teams: ["BringDing Dingers"], weeks: [3]},
-		"SV": {val: 5, teams: ["I Punt Cats","I Punt Cats","BringDing Dingers"], weeks: [3,4,4]},
-		"ERA": {val: 1.5, teams: ["BringDing Dingers"], weeks: [2]},
-		"WHIP": {val: 0.965, teams: ["Irish Guinness07"], weeks: [5]},
-		"K/9": {val: 11.91, teams: ["I Punt Cats"], weeks: [2]}
+		"WHIP": {val: 0.775, teams: ["Prospect Hoarders"], weeks: [7]},
+		"K/9": {val: 11.97, teams: ["Irish Guinness07"], weeks: [7]}
 	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
