@@ -10,28 +10,28 @@ function bd(bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"BringDing Dingers": {Wi: 44, L: 15, T: 4, WH: 39, LH: 21, TH: 3, WP: 48, LP: 8, TP: 7},
-		"I Punt Cats": {Wi: 39, L: 17, T: 7, WH: 38, LH: 19, TH: 6, WP: 26, LP: 32, TP: 5},
-		"Tropical Storm Braz": {Wi: 35, L: 21, T: 7, WH: 34, LH: 25, TH: 4, WP: 28, LP: 27, TP: 8},
-		"Magic Mikes": {Wi: 35, L: 23, T: 5, WH: 36, LH: 22, TH: 5, WP: 31, LP: 26, TP: 6},
-		"Irish Dawgs": {Wi: 35, L: 27, T: 1, WH: 32, LH: 26, TH: 5, WP: 31, LP: 26, TP: 6},
-		"Colt .45s": {Wi: 28, L: 30, T: 5, WH: 25, LH: 31, TH: 7, WP: 30, LP: 22, TP: 11},
-		"Prospect Hoarders": {Wi: 29, L: 32, T: 2, WH: 19, LH: 35, TH: 9, WP: 36, LP: 18, TP: 9},
-		"Irish Guinness07": {Wi: 21, L: 35, T: 7, WH: 20, LH: 35, TH: 8, WP: 25, LP: 31, TP: 7},
-		"Niptits": {Wi: 14, L: 42, T: 7, WH: 28, LH: 29, TH: 6, WP: 15, LP: 48, TP: 0},
-		"Boguslaw's Barrelers": {Wi: 11, L: 49, T: 3, WH: 13, LH: 41, TH: 9, WP: 13, LP: 45, TP: 5}
+		"I Punt Cats": {Wi: 47, L: 17, T: 8, WH: 46, LH: 20, TH: 6, WP: 33, LP: 34, TP: 5},
+		"BringDing Dingers": {Wi: 48, L: 19, T: 5, WH: 43, LH: 25, TH: 4, WP: 51, LP: 13, TP: 8},
+		"Magic Mikes": {Wi: 42, L: 24, T: 6, WH: 45, LH: 22, TH: 5, WP: 37, LP: 29, TP: 6},
+		"Tropical Storm Braz": {Wi: 39, L: 24, T: 9, WH: 40, LH: 27, TH: 5, WP: 30, LP: 33, TP: 9},
+		"Irish Dawgs": {Wi: 38, L: 32, T: 2, WH: 35, LH: 30, TH: 7, WP: 34, LP: 31, TP: 7},
+		"Colt .45s": {Wi: 32, L: 34, T: 6, WH: 28, LH: 35, TH: 9, WP: 34, LP: 27, TP: 11},
+		"Prospect Hoarders": {Wi: 30, L: 40, T: 2, WH: 21, LH: 42, TH: 9, WP: 36, LP: 26, TP: 10},
+		"Irish Guinness07": {Wi: 23, L: 40, T: 9, WH: 20, LH: 44, TH: 8, WP: 34, LP: 31, TP: 7},
+		"Boguslaw's Barrelers": {Wi: 18, L: 50, T: 4, WH: 18, LH: 43, TH: 11, WP: 21, LP: 46, TP: 5},
+		"Niptits": {Wi: 14, L: 51, T: 7, WH: 29, LH: 37, TH: 6, WP: 16, LP: 56, TP: 0}
 	};
 
 	var HIGHS_HIST = {
 		"R": {val: 55, teams: ["I Punt Cats"], weeks: [2]},
-		"HR": {val: 17, teams: ["Magic Mikes","BringDing Dingers"], weeks: [4,7]},
+		"HR": {val: 18, teams: ["I Punt Cats"], weeks: [8]},
 		"RBI": {val: 59, teams: ["Boguslaw's Barrelers"], weeks: [2]},
 		"SB": {val: 16, teams: ["Colt .45s"], weeks: [3]},
 		"OBP": {val: 0.41, teams: ["I Punt Cats"], weeks: [2]},
 		"SLG": {val: 0.552, teams: ["BringDing Dingers"], weeks: [7]},
 		"QS": {val: 9, teams: ["Prospect Hoarders"], weeks: [7]},
 		"W": {val: 8, teams: ["Prospect Hoarders"], weeks: [7]},
-		"SV": {val: 5, teams: ["I Punt Cats","I Punt Cats","BringDing Dingers"], weeks: [3,4,4]},
+		"SV": {val: 6, teams: ["BringDing Dingers"], weeks: [8]},
 		"ERA": {val: 1.5, teams: ["BringDing Dingers"], weeks: [2]},
 		"WHIP": {val: 0.775, teams: ["Prospect Hoarders"], weeks: [7]},
 		"K/9": {val: 11.97, teams: ["Irish Guinness07"], weeks: [7]}
@@ -42,7 +42,7 @@ function bd(bLongWeek = false) {
 		'QS', 'W', 'SV', 'ERA', 'WHIP', 'K/9'];
 	var NUM_CATS = CATS.length;
 	var CATS_LOAD = ['Pts', '+/-', 'Proj', 'AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
-		'IP', 'K/9', 'ERA', 'WHIP', 'QS', 'W', 'SV'];
+		'IP', 'W', 'QS', 'SV', 'ERA', 'WHIP', 'K/9'];
 	//list any categories where it's better to have a lower number here, in any order. They need to match the text in CATS.
 	var neg_cats = ['ERA', 'WHIP'];
 	// list of categories where the team must qualify (currently assumes that if you fail one, you fail them all)
