@@ -10,16 +10,16 @@ function bd(bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"I Punt Cats": {Wi: 54, L: 19, T: 8, WH: 51, LH: 23, TH: 7, WP: 41, LP: 35, TP: 5},
-		"Magic Mikes": {Wi: 50, L: 25, T: 6, WH: 54, LH: 22, TH: 5, WP: 41, LP: 33, TP: 7},
-		"BringDing Dingers": {Wi: 50, L: 25, T: 6, WH: 45, LH: 30, TH: 6, WP: 53, LP: 19, TP: 9},
-		"Tropical Storm Braz": {Wi: 43, L: 28, T: 10, WH: 43, LH: 29, TH: 9, WP: 32, LP: 38, TP: 11},
-		"Irish Dawgs": {Wi: 44, L: 35, T: 2, WH: 43, LH: 31, TH: 7, WP: 39, LP: 33, TP: 9},
-		"Colt .45s": {Wi: 41, L: 34, T: 6, WH: 33, LH: 37, TH: 11, WP: 43, LP: 27, TP: 11},
-		"Prospect Hoarders": {Wi: 33, L: 46, T: 2, WH: 22, LH: 50, TH: 9, WP: 42, LP: 28, TP: 11},
-		"Irish Guinness07": {Wi: 23, L: 49, T: 9, WH: 20, LH: 53, TH: 8, WP: 36, LP: 35, TP: 10},
-		"Boguslaw's Barrelers": {Wi: 21, L: 56, T: 4, WH: 22, LH: 46, TH: 13, WP: 22, LP: 53, TP: 6},
-		"Niptits": {Wi: 16, L: 58, T: 7, WH: 31, LH: 43, TH: 7, WP: 16, LP: 64, TP: 1}
+		"I Punt Cats": {Wi: 57, L: 24, T: 9, WH: 52, LH: 31, TH: 7, WP: 48, LP: 37, TP: 5},
+		"BringDing Dingers": {Wi: 58, L: 26, T: 6, WH: 53, LH: 31, TH: 6, WP: 55, LP: 25, TP: 10},
+		"Magic Mikes": {Wi: 55, L: 27, T: 8, WH: 63, LH: 22, TH: 5, WP: 43, LP: 39, TP: 8},
+		"Tropical Storm Braz": {Wi: 49, L: 31, T: 10, WH: 49, LH: 32, TH: 9, WP: 37, LP: 41, TP: 12},
+		"Irish Dawgs": {Wi: 51, L: 37, T: 2, WH: 46, LH: 35, TH: 9, WP: 48, LP: 33, TP: 9},
+		"Colt .45s": {Wi: 42, L: 41, T: 7, WH: 35, LH: 42, TH: 13, WP: 47, LP: 32, TP: 11},
+		"Prospect Hoarders": {Wi: 36, L: 51, T: 3, WH: 25, LH: 54, TH: 11, WP: 49, LP: 30, TP: 11},
+		"Irish Guinness07": {Wi: 27, L: 53, T: 10, WH: 27, LH: 55, TH: 8, WP: 37, LP: 43, TP: 10},
+		"Boguslaw's Barrelers": {Wi: 26, L: 60, T: 4, WH: 24, LH: 51, TH: 15, WP: 28, LP: 55, TP: 7},
+		"Niptits": {Wi: 16, L: 67, T: 7, WH: 31, LH: 52, TH: 7, WP: 16, LP: 73, TP: 1}
 	};
 
 	var HIGHS_HIST = {
