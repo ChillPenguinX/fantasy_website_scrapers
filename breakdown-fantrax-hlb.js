@@ -10,16 +10,16 @@ function bd(bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"I Punt Cats": {Wi: 57, L: 24, T: 9, WH: 52, LH: 31, TH: 7, WP: 48, LP: 37, TP: 5},
-		"BringDing Dingers": {Wi: 58, L: 26, T: 6, WH: 53, LH: 31, TH: 6, WP: 55, LP: 25, TP: 10},
-		"Magic Mikes": {Wi: 55, L: 27, T: 8, WH: 63, LH: 22, TH: 5, WP: 43, LP: 39, TP: 8},
-		"Tropical Storm Braz": {Wi: 49, L: 31, T: 10, WH: 49, LH: 32, TH: 9, WP: 37, LP: 41, TP: 12},
-		"Irish Dawgs": {Wi: 51, L: 37, T: 2, WH: 46, LH: 35, TH: 9, WP: 48, LP: 33, TP: 9},
-		"Colt .45s": {Wi: 42, L: 41, T: 7, WH: 35, LH: 42, TH: 13, WP: 47, LP: 32, TP: 11},
-		"Prospect Hoarders": {Wi: 36, L: 51, T: 3, WH: 25, LH: 54, TH: 11, WP: 49, LP: 30, TP: 11},
-		"Irish Guinness07": {Wi: 27, L: 53, T: 10, WH: 27, LH: 55, TH: 8, WP: 37, LP: 43, TP: 10},
-		"Boguslaw's Barrelers": {Wi: 26, L: 60, T: 4, WH: 24, LH: 51, TH: 15, WP: 28, LP: 55, TP: 7},
-		"Niptits": {Wi: 16, L: 67, T: 7, WH: 31, LH: 52, TH: 7, WP: 16, LP: 73, TP: 1}
+		"BringDing Dingers": {Wi: 67, L: 26, T: 6, WH: 62, LH: 31, TH: 6, WP: 62, LP: 25, TP: 12},
+		"I Punt Cats": {Wi: 63, L: 27, T: 9, WH: 54, LH: 37, TH: 8, WP: 54, LP: 39, TP: 6},
+		"Magic Mikes": {Wi: 57, L: 34, T: 8, WH: 65, LH: 25, TH: 9, WP: 43, LP: 47, TP: 9},
+		"Irish Dawgs": {Wi: 59, L: 38, T: 2, WH: 53, LH: 36, TH: 10, WP: 55, LP: 34, TP: 10},
+		"Tropical Storm Braz": {Wi: 49, L: 39, T: 11, WH: 49, LH: 41, TH: 9, WP: 42, LP: 44, TP: 13},
+		"Colt .45s": {Wi: 47, L: 45, T: 7, WH: 38, LH: 44, TH: 17, WP: 50, LP: 38, TP: 11},
+		"Prospect Hoarders": {Wi: 39, L: 56, T: 4, WH: 29, LH: 56, TH: 14, WP: 49, LP: 36, TP: 14},
+		"Irish Guinness07": {Wi: 34, L: 55, T: 10, WH: 30, LH: 58, TH: 11, WP: 44, LP: 44, TP: 11},
+		"Boguslaw's Barrelers": {Wi: 27, L: 66, T: 6, WH: 28, LH: 52, TH: 19, WP: 29, LP: 62, TP: 8},
+		"Niptits": {Wi: 18, L: 74, T: 7, WH: 32, LH: 60, TH: 7, WP: 19, LP: 78, TP: 2}
 	};
 
 	var HIGHS_HIST = {
@@ -34,7 +34,7 @@ function bd(bLongWeek = false) {
 		"SV": {val: 6, teams: ["BringDing Dingers","Colt .45s"], weeks: [8,9]},
 		"ERA": {val: 1.5, teams: ["BringDing Dingers"], weeks: [2]},
 		"WHIP": {val: 0.775, teams: ["Prospect Hoarders"], weeks: [7]},
-		"K/9": {val: 11.97, teams: ["Irish Guinness07"], weeks: [7]}
+		"K/9": {val: 12.05, teams: ["Irish Dawgs"], weeks: [11]}
 	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
