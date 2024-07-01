@@ -10,16 +10,16 @@ function bd(bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"I Punt Cats": {Wi: 72, L: 34, T: 11, WH: 61, LH: 47, TH: 9, WP: 65, LP: 44, TP: 8},
-		"BringDing Dingers": {Wi: 70, L: 41, T: 6, WH: 70, LH: 38, TH: 9, WP: 64, LP: 41, TP: 12},
-		"Irish Dawgs": {Wi: 68, L: 46, T: 3, WH: 56, LH: 49, TH: 12, WP: 71, LP: 36, TP: 10},
-		"Magic Mikes": {Wi: 62, L: 45, T: 10, WH: 73, LH: 35, TH: 9, WP: 45, LP: 63, TP: 9},
+		"BringDing Dingers": {Wi: 74, L: 35, T: 8, WH: 70, LH: 38, TH: 9, WP: 69, LP: 33, TP: 15},
+		"I Punt Cats": {Wi: 71, L: 34, T: 12, WH: 61, LH: 47, TH: 9, WP: 64, LP: 44, TP: 9},
+		"Irish Dawgs": {Wi: 67, L: 47, T: 3, WH: 56, LH: 49, TH: 12, WP: 70, LP: 36, TP: 11},
+		"Magic Mikes": {Wi: 61, L: 46, T: 10, WH: 73, LH: 35, TH: 9, WP: 44, LP: 64, TP: 9},
 		"Tropical Storm Braz": {Wi: 58, L: 48, T: 11, WH: 59, LH: 48, TH: 10, WP: 52, LP: 50, TP: 15},
-		"Colt .45s": {Wi: 57, L: 53, T: 7, WH: 46, LH: 54, TH: 17, WP: 62, LP: 41, TP: 14},
-		"Irish Guinness07": {Wi: 50, L: 57, T: 10, WH: 42, LH: 61, TH: 14, WP: 55, LP: 48, TP: 14},
-		"Prospect Hoarders": {Wi: 51, L: 62, T: 4, WH: 42, LH: 58, TH: 17, WP: 57, LP: 44, TP: 16},
-		"Boguslaw's Barrelers": {Wi: 33, L: 78, T: 6, WH: 34, LH: 63, TH: 20, WP: 33, LP: 75, TP: 9},
-		"Niptits": {Wi: 26, L: 83, T: 8, WH: 39, LH: 69, TH: 9, WP: 25, LP: 87, TP: 5}
+		"Colt .45s": {Wi: 56, L: 53, T: 8, WH: 46, LH: 54, TH: 17, WP: 61, LP: 42, TP: 14},
+		"Irish Guinness07": {Wi: 49, L: 58, T: 10, WH: 42, LH: 61, TH: 14, WP: 54, LP: 48, TP: 15},
+		"Prospect Hoarders": {Wi: 50, L: 63, T: 4, WH: 42, LH: 58, TH: 17, WP: 56, LP: 45, TP: 16},
+		"Boguslaw's Barrelers": {Wi: 33, L: 78, T: 6, WH: 34, LH: 63, TH: 20, WP: 32, LP: 76, TP: 9},
+		"Niptits": {Wi: 26, L: 83, T: 8, WH: 39, LH: 69, TH: 9, WP: 24, LP: 88, TP: 5}
 	};
 
 	var HIGHS_HIST = {
