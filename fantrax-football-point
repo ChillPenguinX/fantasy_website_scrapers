@@ -12,9 +12,9 @@ function go() {
     var teams = [];
     var scores = {};
     var multiPos = {
-        "Cordarrelle Patterson": "RB,WR"
+        "Cordarrelle Patterson": "RB,WR",
+        "Taysom Hill": "QB,TE"
     };
-
 
     $('div.scoring-table__head.ng-star-inserted').each(function(idx){
        // console.log("step 1");
