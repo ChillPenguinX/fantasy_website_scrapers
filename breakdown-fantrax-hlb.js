@@ -10,16 +10,16 @@ function bd(bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"BringDing Dingers": {Wi: 119, L: 49, T: 12, WH: 109, LH: 54, TH: 17, WP: 107, LP: 49, TP: 24},
-		"I Punt Cats": {Wi: 110, L: 55, T: 15, WH: 98, LH: 65, TH: 17, WP: 99, LP: 66, TP: 15},
-		"Magic Mikes": {Wi: 92, L: 75, T: 13, WH: 108, LH: 58, TH: 14, WP: 62, LP: 102, TP: 16},
-		"Colt .45s": {Wi: 85, L: 82, T: 13, WH: 67, LH: 90, TH: 23, WP: 97, LP: 62, TP: 21},
-		"Irish Dawgs": {Wi: 87, L: 85, T: 8, WH: 76, LH: 88, TH: 16, WP: 95, LP: 64, TP: 21},
-		"Prospect Hoarders": {Wi: 82, L: 86, T: 12, WH: 83, LH: 78, TH: 19, WP: 75, LP: 79, TP: 26},
-		"Irish Guinness07": {Wi: 80, L: 85, T: 15, WH: 60, LH: 101, TH: 19, WP: 98, LP: 62, TP: 20},
-		"Tropical Storm Braz": {Wi: 80, L: 85, T: 15, WH: 89, LH: 77, TH: 14, WP: 77, LP: 77, TP: 26},
-		"Boguslaw's Barrelers": {Wi: 59, L: 112, T: 9, WH: 58, LH: 98, TH: 24, WP: 51, LP: 112, TP: 17},
-		"Niptits": {Wi: 44, L: 124, T: 12, WH: 61, LH: 100, TH: 19, WP: 40, LP: 128, TP: 12}
+		"BringDing Dingers": {Wi: 126, L: 51, T: 12, WH: 114, LH: 58, TH: 17, WP: 110, LP: 51, TP: 28},
+		"I Punt Cats": {Wi: 111, L: 62, T: 16, WH: 98, LH: 74, TH: 17, WP: 105, LP: 68, TP: 16},
+		"Magic Mikes": {Wi: 97, L: 78, T: 14, WH: 109, LH: 63, TH: 17, WP: 70, LP: 103, TP: 16},
+		"Colt .45s": {Wi: 91, L: 84, T: 14, WH: 69, LH: 95, TH: 25, WP: 106, LP: 62, TP: 21},
+		"Prospect Hoarders": {Wi: 89, L: 87, T: 13, WH: 90, LH: 78, TH: 21, WP: 78, LP: 82, TP: 29},
+		"Irish Dawgs": {Wi: 91, L: 90, T: 8, WH: 83, LH: 89, TH: 17, WP: 95, LP: 73, TP: 21},
+		"Tropical Storm Braz": {Wi: 84, L: 90, T: 15, WH: 90, LH: 82, TH: 17, WP: 81, LP: 80, TP: 28},
+		"Irish Guinness07": {Wi: 80, L: 93, T: 16, WH: 61, LH: 107, TH: 21, WP: 101, LP: 66, TP: 22},
+		"Boguslaw's Barrelers": {Wi: 59, L: 119, T: 11, WH: 64, LH: 101, TH: 24, WP: 52, LP: 120, TP: 17},
+		"Niptits": {Wi: 51, L: 125, T: 13, WH: 69, LH: 100, TH: 20, WP: 42, LP: 135, TP: 12}
 	};
 
 	var HIGHS_HIST = {
