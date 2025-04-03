@@ -92,9 +92,9 @@ function bd(bLongWeek = false) {
 
 	for (i = 0; i < numTeams; i++)
 	{
+		teamA = stats[teams[i]];
 		for (j = i + 1; j < numTeams; j++)
 		{
-			teamA = stats[teams[i]];
 			teamB = stats[teams[j]];
 			teamAWinsH = teamBWinsH = teamAWinsP = teamBWinsP = 0;
 			for (k = 0; k < NUM_CATS; k++)
@@ -360,6 +360,8 @@ function bd(bLongWeek = false) {
 			output += '\n' + ' ';
 		var catName = CATS[i];
 		var highHistObj = HIGHS_HIST[catName];
+		if (bLongWeek && ($.inArray(catName, perc_cats) == -1) && !highHistObj)
+			continue;
 		output += '\n' + catName + periods[i] + highHistObj['val'] + ' - ' + (highHistObj['teams'].length > 3 ? highHistObj['teams'].length + ' tied' :
 			highHistObj['teams'].join('; ') + ' - ' + (highHistObj['weeks'].length == 1 ? 'Week ' : 'Weeks ') + highHistObj['weeks'].join(','));
 	}
@@ -382,6 +384,8 @@ function bd(bLongWeek = false) {
 	{
 		var catName = CATS[i];
 		var histHighsObj = HIGHS_HIST[catName];
+		if (bLongWeek && ($.inArray(catName, perc_cats) == -1) && !histHighsObj)
+			continue;
 		output += '\n' + '\t\t"' + catName + '": {val: ' + histHighsObj['val'] + ', teams: ["' + histHighsObj['teams'].join('","') + '"], weeks: [' + 
 			histHighsObj['weeks'].join(',') + ']}' + (i + 1 == NUM_CATS ? '' : ',');
 	}
