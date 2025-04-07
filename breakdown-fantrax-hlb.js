@@ -264,6 +264,8 @@ function bd(bLongWeek = false) {
 	});
 
 	output += '\n' + '\nSeason Breakdowns (Combined, Hitting, Pitching)';
+	var bdLines = []; var hitBds = []; var pitchBds = [];
+	var maxBdLineLen = 0; var maxHitLen = 0;
 	for (i = 0; i < numTeams; i++)
 	{
 		histObj = BREAKDOWN_HIST[teams[i]];
@@ -271,15 +273,27 @@ function bd(bLongWeek = false) {
 		var hPerc = ((histObj['WH'] + histObj['TH']/2)/totalGames).toFixed(3);
 		var pPerc = ((histObj['WP'] + histObj['TP']/2)/totalGames).toFixed(3);
 		var totalBd = '(' + percentage + ') ' + histObj['Wi'] + '-' + histObj['L'] + '-' + histObj['T'];
-		var hitBd = '(' + hPerc + ') ' + histObj['WH'] + '-' + histObj['LH'] + '-' + histObj['TH'];
+		var hitBd = '(' + hPerc + ') ' + histObj['WH'] + '-' + histObj['LH'] + '-' + histObj['TH'] + ",";
 		var pitchBd = '(' + pPerc + ') ' + histObj['WP'] + '-' + histObj['LP'] + '-' + histObj['TP'];
 		var bdLine = teams[i] + histObj['p'] + totalBd + ",";
-		for (j = totalBd.length; j <= 17; j++)
-			bdLine += " ";
-		bdLine += hitBd + ",";
-		for (j = hitBd.length; j <= 17; j++)
-			bdLine += " ";
-		output += '\n' + bdLine + pitchBd;
+		if (bdLine.length > maxBdLineLen)
+			maxBdLineLen = bdLine.length;
+		if (hitBd.length > maxHitLen)
+			maxHitLen = hitBd.length;
+		bdLines.push(bdLine);
+		hitBds.push(hitBd);
+		pitchBds.push(pitchBd);
+	}
+
+	for (i = 0; i < bdLines.length; i++)
+	{
+		output += '\n' + bdLines[i];
+		for (j = bdLines[i].length; j <= maxBdLineLen; j++)
+			output += " ";
+		output += hitBds[i];
+		for (j = hitBds[i].length; j <= maxHitLen; j++)
+			output += " ";
+		output += pitchBds[i];
 	}
 
 	for (k = 0; k < NUM_CATS; k++)
@@ -396,4 +410,4 @@ function bd(bLongWeek = false) {
 	}
 	output += '\n' + '\t};';
 	console.log(output);
-}
+} // bd(bLongWeek = false)
