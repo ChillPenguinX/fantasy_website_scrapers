@@ -55,11 +55,13 @@ function bd(bLongWeek = false) {
 	$('a.text--ellipsis').each(function() {
 		row = $(this);
 		teamName = row.text().trim();
-		if (teamName && BREAKDOWN_HIST[teamName])
+		if (teamName)
 		{
 			//console.log('found team ' + teamName);
 			teams.push(teamName);
 			//row.find('.belowMinimum').each(function(){disqualified[teamName] = true;});
+			if (!BREAKDOWN_HIST[teamName])
+				BREAKDOWN_HIST[teamName] = {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0};
 		}
 	});
 
