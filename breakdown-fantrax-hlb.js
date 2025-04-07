@@ -10,19 +10,24 @@ function bd(bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Colt .45s": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0},
-		"BringDing Dingers": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0},
-		"I Punt Cats": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0},
-		"Prospect Hoarders": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0},
-		"Irish Dawgs": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0},
-		"Tropical Storm Braz": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0},
-		"Irish Guinness07": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0},
-		"Magic Mikes": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0},
-		"Boguslaw's Barrelers": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0},
-		"Niptits": {Wi: 0, L: 0, T: 0, WH: 0, LH: 0, TH: 0, WP: 0, LP: 0, TP: 0}
+		"Colt .45s": {Wi: 9, L: 0, T: 0, WH: 9, LH: 0, TH: 0, WP: 5, LP: 3, TP: 1},
+		"Irish Guinness07": {Wi: 7, L: 2, T: 0, WH: 7, LH: 1, TH: 1, WP: 5, LP: 2, TP: 2},
+		"Niptits": {Wi: 6, L: 2, T: 1, WH: 6, LH: 3, TH: 0, WP: 8, LP: 0, TP: 1},
+		"Tropical Storm Braz": {Wi: 6, L: 3, T: 0, WH: 5, LH: 3, TH: 1, WP: 4, LP: 4, TP: 1},
+		"BringDing Dingers": {Wi: 5, L: 3, T: 1, WH: 4, LH: 5, TH: 0, WP: 8, LP: 1, TP: 0},
+		"Magic Mikes": {Wi: 4, L: 3, T: 2, WH: 6, LH: 2, TH: 1, WP: 3, LP: 6, TP: 0},
+		"Prospect Hoarders": {Wi: 3, L: 6, T: 0, WH: 3, LH: 5, TH: 1, WP: 1, LP: 7, TP: 1},
+		"Boguslaw's Barrelers": {Wi: 2, L: 7, T: 0, WH: 2, LH: 7, TH: 0, WP: 0, LP: 9, TP: 0},
+		"I Punt Cats": {Wi: 1, L: 8, T: 0, WH: 0, LH: 8, TH: 1, WP: 6, LP: 2, TP: 1},
+		"Irish Dawgs": {Wi: 0, L: 9, T: 0, WH: 0, LH: 8, TH: 1, WP: 1, LP: 7, TP: 1}
 	};
 
 	var HIGHS_HIST = {
+		"OBP": {val: 0.363, teams: ["Colt .45s"], weeks: [1]},
+		"SLG": {val: 0.511, teams: ["Colt .45s"], weeks: [1]},
+		"ERA": {val: 2.84, teams: ["Niptits"], weeks: [1]},
+		"WHIP": {val: 0.988, teams: ["I Punt Cats"], weeks: [1]},
+		"K/9": {val: 12.07, teams: ["Irish Dawgs"], weeks: [1]}
 	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
