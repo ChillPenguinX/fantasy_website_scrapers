@@ -10,16 +10,16 @@ function bd(bLongWeek = false, bUpdateHistorical = true) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Colt .45s": {Wi: 20, L: 5, T: 2, WH: 22, LH: 5, TH: 0, WP: 14, LP: 9, TP: 4},
-		"Magic Mikes": {Wi: 14, L: 9, T: 4, WH: 11, LH: 12, TH: 4, WP: 18, LP: 8, TP: 1},
-		"Irish Guinness07": {Wi: 16, L: 11, T: 0, WH: 13, LH: 12, TH: 2, WP: 15, LP: 8, TP: 4},
-		"Boguslaw's Barrelers": {Wi: 15, L: 11, T: 1, WH: 14, LH: 13, TH: 0, WP: 12, LP: 13, TP: 2},
-		"Niptits": {Wi: 13, L: 9, T: 5, WH: 14, LH: 12, TH: 1, WP: 18, LP: 8, TP: 1},
-		"Tropical Storm Braz": {Wi: 14, L: 11, T: 2, WH: 16, LH: 9, TH: 2, WP: 10, LP: 13, TP: 4},
-		"BringDing Dingers": {Wi: 13, L: 12, T: 2, WH: 12, LH: 15, TH: 0, WP: 15, LP: 9, TP: 3},
-		"Irish Dawgs": {Wi: 9, L: 16, T: 2, WH: 10, LH: 15, TH: 2, WP: 6, LP: 18, TP: 3},
-		"I Punt Cats": {Wi: 7, L: 19, T: 1, WH: 10, LH: 15, TH: 2, WP: 8, LP: 15, TP: 4},
-		"Prospect Hoarders": {Wi: 4, L: 22, T: 1, WH: 6, LH: 20, TH: 1, WP: 4, LP: 19, TP: 4}
+		"Colt .45s": {Wi: 28, L: 5, T: 3, WH: 29, LH: 7, TH: 0, WP: 19, LP: 10, TP: 7},
+		"Boguslaw's Barrelers": {Wi: 22, L: 11, T: 3, WH: 22, LH: 13, TH: 1, WP: 15, LP: 18, TP: 3},
+		"Magic Mikes": {Wi: 21, L: 10, T: 5, WH: 19, LH: 12, TH: 5, WP: 21, LP: 12, TP: 3},
+		"Irish Guinness07": {Wi: 19, L: 15, T: 2, WH: 17, LH: 16, TH: 3, WP: 17, LP: 14, TP: 5},
+		"Tropical Storm Braz": {Wi: 17, L: 15, T: 4, WH: 18, LH: 16, TH: 2, WP: 16, LP: 14, TP: 6},
+		"Niptits": {Wi: 15, L: 15, T: 6, WH: 14, LH: 20, TH: 2, WP: 23, LP: 9, TP: 4},
+		"BringDing Dingers": {Wi: 15, L: 17, T: 4, WH: 17, LH: 19, TH: 0, WP: 16, LP: 17, TP: 3},
+		"Irish Dawgs": {Wi: 15, L: 19, T: 2, WH: 14, LH: 18, TH: 4, WP: 13, LP: 19, TP: 4},
+		"I Punt Cats": {Wi: 8, L: 26, T: 2, WH: 13, LH: 20, TH: 3, WP: 8, LP: 24, TP: 4},
+		"Prospect Hoarders": {Wi: 4, L: 31, T: 1, WH: 6, LH: 28, TH: 2, WP: 10, LP: 21, TP: 5}
 	};
 
 	var HIGHS_HIST = {
