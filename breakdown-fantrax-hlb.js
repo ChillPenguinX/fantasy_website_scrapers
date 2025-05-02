@@ -2,7 +2,7 @@ var js = document.createElement("script");
 js.type = "text/javascript";
 js.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
 document.body.appendChild(js);
-function bd(bLongWeek = false, bUpdateHistorical = true) {
+function bd(bLongWeek = false, bMidWeek = false) {
 
 
 	//put your team names here. this assumes 12 team, but you can adjust add more or remove some if needed
@@ -272,7 +272,7 @@ function bd(bLongWeek = false, bUpdateHistorical = true) {
 		return ((teamB['Wi'] + teamB['T']/2)/totalGames) - ((teamA['Wi'] + teamA['T']/2)/totalGames);
 	});
 
-	if (bUpdateHistorical)
+	if (!bMidWeek)
 	{
 		output += '\n' + '\nSeason Breakdowns (Combined, Hitting, Pitching)';
 		var bdLines = []; var hitBds = []; var pitchBds = [];
@@ -342,7 +342,7 @@ function bd(bLongWeek = false, bUpdateHistorical = true) {
 		output += '\n' + catName + periods[i] + highs[catName]['val'] + ' - ' + highs[catName]['teams'].join('; ');
 	}
 
-	if (bUpdateHistorical)
+	if (!bMidWeek)
 	{
 		// update the historical highs
 		for (i = 0; i < NUM_CATS; i++)
@@ -425,4 +425,4 @@ function bd(bLongWeek = false, bUpdateHistorical = true) {
 		output += '\n' + '\t};';
 	}
 	console.log(output);
-} // bd(bLongWeek = false, bUpdateHistorical = true)
+} // bd(bLongWeek = false, bMidWeek = false)
