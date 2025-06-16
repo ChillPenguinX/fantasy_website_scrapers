@@ -10,16 +10,16 @@ function bd(bLongWeek = false, bMidWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Colt .45s": {Wi: 79, L: 7, T: 4, WH: 73, LH: 14, TH: 3, WP: 64, LP: 18, TP: 8},
-		"Magic Mikes": {Wi: 60, L: 23, T: 7, WH: 53, LH: 27, TH: 10, WP: 56, LP: 26, TP: 8},
-		"BringDing Dingers": {Wi: 47, L: 35, T: 8, WH: 50, LH: 39, TH: 1, WP: 41, LP: 40, TP: 9},
-		"Boguslaw's Barrelers": {Wi: 43, L: 39, T: 8, WH: 47, LH: 39, TH: 4, WP: 35, LP: 45, TP: 10},
-		"Tropical Storm Braz": {Wi: 42, L: 40, T: 8, WH: 44, LH: 42, TH: 4, WP: 38, LP: 39, TP: 13},
-		"Irish Guinness07": {Wi: 35, L: 44, T: 11, WH: 37, LH: 46, TH: 7, WP: 36, LP: 46, TP: 8},
-		"Prospect Hoarders": {Wi: 34, L: 50, T: 6, WH: 33, LH: 50, TH: 7, WP: 39, LP: 43, TP: 8},
-		"Irish Dawgs": {Wi: 28, L: 57, T: 5, WH: 35, LH: 48, TH: 7, WP: 21, LP: 65, TP: 4},
-		"I Punt Cats": {Wi: 23, L: 59, T: 8, WH: 19, LH: 65, TH: 6, WP: 48, LP: 33, TP: 9},
-		"Niptits": {Wi: 21, L: 58, T: 11, WH: 30, LH: 51, TH: 9, WP: 30, LP: 53, TP: 7}
+		"Colt .45s": {Wi: 84, L: 9, T: 6, WH: 78, LH: 14, TH: 7, WP: 67, LP: 23, TP: 9},
+		"Magic Mikes": {Wi: 65, L: 26, T: 8, WH: 59, LH: 28, TH: 12, WP: 58, LP: 31, TP: 10},
+		"BringDing Dingers": {Wi: 49, L: 42, T: 8, WH: 52, LH: 45, TH: 2, WP: 43, LP: 44, TP: 12},
+		"Tropical Storm Braz": {Wi: 48, L: 43, T: 8, WH: 47, LH: 44, TH: 8, WP: 44, LP: 40, TP: 15},
+		"Boguslaw's Barrelers": {Wi: 43, L: 48, T: 8, WH: 47, LH: 48, TH: 4, WP: 35, LP: 54, TP: 10},
+		"Irish Guinness07": {Wi: 36, L: 51, T: 12, WH: 41, LH: 49, TH: 9, WP: 37, LP: 54, TP: 8},
+		"Prospect Hoarders": {Wi: 38, L: 54, T: 7, WH: 34, LH: 57, TH: 8, WP: 45, LP: 46, TP: 8},
+		"Niptits": {Wi: 30, L: 58, T: 11, WH: 35, LH: 52, TH: 12, WP: 39, LP: 53, TP: 7},
+		"I Punt Cats": {Wi: 31, L: 60, T: 8, WH: 26, LH: 65, TH: 8, WP: 54, LP: 34, TP: 11},
+		"Irish Dawgs": {Wi: 30, L: 63, T: 6, WH: 36, LH: 53, TH: 10, WP: 26, LP: 69, TP: 4}
 	};
 
 	var HIGHS_HIST = {
