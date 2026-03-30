@@ -2,7 +2,7 @@ var js = document.createElement("script");
 js.type = "text/javascript";
 js.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
 document.body.appendChild(js);
-function bd(bLongWeek = false, bMidWeek = false) {
+function bd(bMidWeek = false, bLongWeek = false) {
 
 
 	//put your team names here. this assumes 12 team, but you can adjust add more or remove some if needed
@@ -10,31 +10,9 @@ function bd(bLongWeek = false, bMidWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Colt .45s": {Wi: 148, L: 29, T: 21, WH: 129, LH: 54, TH: 15, WP: 143, LP: 38, TP: 17},
-		"Magic Mikes": {Wi: 118, L: 62, T: 18, WH: 115, LH: 61, TH: 22, WP: 94, LP: 76, TP: 28},
-		"BringDing Dingers": {Wi: 108, L: 69, T: 21, WH: 116, LH: 71, TH: 11, WP: 91, LP: 79, TP: 28},
-		"Tropical Storm Braz": {Wi: 97, L: 81, T: 20, WH: 94, LH: 87, TH: 17, WP: 102, LP: 68, TP: 28},
-		"I Punt Cats": {Wi: 85, L: 94, T: 19, WH: 85, LH: 96, TH: 17, WP: 93, LP: 79, TP: 26},
-		"Irish Dawgs": {Wi: 76, L: 103, T: 19, WH: 93, LH: 81, TH: 24, WP: 52, LP: 129, TP: 17},
-		"Boguslaw's Barrelers": {Wi: 72, L: 108, T: 18, WH: 79, LH: 106, TH: 13, WP: 65, LP: 106, TP: 27},
-		"Prospect Hoarders": {Wi: 67, L: 115, T: 16, WH: 51, LH: 125, TH: 22, WP: 84, LP: 85, TP: 29},
-		"Irish Guinness07": {Wi: 61, L: 113, T: 24, WH: 68, LH: 115, TH: 15, WP: 75, LP: 106, TP: 17},
-		"Niptits": {Wi: 58, L: 116, T: 24, WH: 72, LH: 106, TH: 20, WP: 72, LP: 105, TP: 21}
 	};
 
 	var HIGHS_HIST = {
-		"R": {val: 63, teams: ["BringDing Dingers"], weeks: [18]},
-		"HR": {val: 23, teams: ["BringDing Dingers"], weeks: [18]},
-		"RBI": {val: 65, teams: ["Boguslaw's Barrelers"], weeks: [19]},
-		"SB": {val: 18, teams: ["Tropical Storm Braz"], weeks: [3]},
-		"OBP": {val: 0.41, teams: ["Colt .45s"], weeks: [12]},
-		"SLG": {val: 0.621, teams: ["Colt .45s"], weeks: [12]},
-		"QS": {val: 9, teams: ["Niptits"], weeks: [15]},
-		"W": {val: 8, teams: ["Magic Mikes","Colt .45s","Colt .45s"], weeks: [3,6,14]},
-		"SV": {val: 7, teams: ["BringDing Dingers"], weeks: [9]},
-		"ERA": {val: 1.04, teams: ["Prospect Hoarders"], weeks: [14]},
-		"WHIP": {val: 0.798, teams: ["Niptits"], weeks: [2]},
-		"K/9": {val: 13.68, teams: ["BringDing Dingers"], weeks: [17]}
 	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
