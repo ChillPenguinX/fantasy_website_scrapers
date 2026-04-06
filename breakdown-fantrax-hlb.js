@@ -10,9 +10,24 @@ function bd(bMidWeek = false, bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
+		"BringDing Dingers": {Wi: 9, L: 0, T: 0, WH: 9, LH: 0, TH: 0, WP: 7, LP: 2, TP: 0},
+		"Tropical Storm Braz": {Wi: 8, L: 1, T: 0, WH: 8, LH: 1, TH: 0, WP: 7, LP: 0, TP: 2},
+		"Colt .45s": {Wi: 7, L: 2, T: 0, WH: 2, LH: 7, TH: 0, WP: 8, LP: 0, TP: 1},
+		"Boguslaw's Barrelers": {Wi: 6, L: 3, T: 0, WH: 7, LH: 2, TH: 0, WP: 2, LP: 6, TP: 1},
+		"I Punt Cats": {Wi: 5, L: 4, T: 0, WH: 6, LH: 3, TH: 0, WP: 4, LP: 4, TP: 1},
+		"Magic Mikes": {Wi: 4, L: 5, T: 0, WH: 5, LH: 4, TH: 0, WP: 4, LP: 4, TP: 1},
+		"Prospect Hoarders": {Wi: 2, L: 6, T: 1, WH: 3, LH: 5, TH: 1, WP: 0, LP: 7, TP: 2},
+		"Irish Guinness07": {Wi: 1, L: 6, T: 2, WH: 3, LH: 5, TH: 1, WP: 0, LP: 6, TP: 3},
+		"Irish Dawgs": {Wi: 1, L: 8, T: 0, WH: 1, LH: 8, TH: 0, WP: 0, LP: 7, TP: 2},
+		"Niptits": {Wi: 0, L: 8, T: 1, WH: 0, LH: 9, TH: 0, WP: 6, LP: 2, TP: 1}
 	};
 
 	var HIGHS_HIST = {
+		"OBP": {val: 0.351, teams: ["BringDing Dingers"], weeks: [1]},
+		"SLG": {val: 0.429, teams: ["BringDing Dingers"], weeks: [1]},
+		"ERA": {val: 2.5, teams: ["Colt .45s"], weeks: [1]},
+		"WHIP": {val: 0.97, teams: ["Tropical Storm Braz"], weeks: [1]},
+		"K/9": {val: 11.75, teams: ["Colt .45s"], weeks: [1]}
 	};
 	
 	//list your categories here in the order they appear on the scoreboard. They do not need to match the text on the site.
@@ -20,7 +35,7 @@ function bd(bMidWeek = false, bLongWeek = false) {
 		'QS', 'W', 'SV', 'ERA', 'WHIP', 'K/9'];
 	var NUM_CATS = CATS.length;
 	var CATS_LOAD = ['Pts', '+/-', 'Proj', 'AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
-		'IP', 'W', 'QS', 'SV', 'ERA', 'WHIP', 'K/9'];
+		'IP', 'ERA', 'WHIP', 'W', 'SV', 'QS', 'K/9'];
 	//list any categories where it's better to have a lower number here, in any order. They need to match the text in CATS.
 	var neg_cats = ['ERA', 'WHIP'];
 	// list of categories where the team must qualify (currently assumes that if you fail one, you fail them all)
@@ -403,4 +418,4 @@ function bd(bMidWeek = false, bLongWeek = false) {
 		output += '\n' + '\t};';
 	}
 	console.log(output);
-} // bd(bLongWeek = false, bMidWeek = false)
+} // bd(bMidWeek = false, bLongWeek = false)
