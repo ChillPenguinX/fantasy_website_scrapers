@@ -41,8 +41,8 @@ function bd(bMidWeek = false, bLongWeek = false) {
 	var CATS = ['R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
 		'QS', 'W', 'SV', 'ERA', 'WHIP', 'K/9'];
 	var NUM_CATS = CATS.length;
-	var CATS_LOAD = ['Pts', '+/-', 'Proj', 'AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
-		'IP', 'ERA', 'WHIP', 'W', 'SV', 'QS', 'K/9'];
+	var CATS_LOAD = ['Pts', '+/-', 'Proj', 'GP', 'AB', 'H', 'R', 'HR', 'RBI', 'SB', 'OBP', 'SLG',
+		'GP', 'IP', 'QS', 'W', 'SV', 'ERA', 'WHIP', 'K/9'];
 	//list any categories where it's better to have a lower number here, in any order. They need to match the text in CATS.
 	var neg_cats = ['ERA', 'WHIP'];
 	// list of categories where the team must qualify (currently assumes that if you fail one, you fail them all)
