@@ -10,20 +10,20 @@ function bd(bMidWeek = false, bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"BringDing Dingers": {Wi: 60, L: 22, T: 8, WH: 47, LH: 35, TH: 8, WP: 65, LP: 18, TP: 7},
-		"Colt .45s": {Wi: 60, L: 26, T: 4, WH: 46, LH: 36, TH: 8, WP: 49, LP: 29, TP: 12},
-		"Boguslaw's Barrelers": {Wi: 51, L: 32, T: 7, WH: 51, LH: 32, TH: 7, WP: 38, LP: 42, TP: 10},
-		"I Punt Cats": {Wi: 50, L: 36, T: 4, WH: 57, LH: 22, TH: 11, WP: 42, LP: 38, TP: 10},
-		"Irish Dawgs": {Wi: 44, L: 40, T: 6, WH: 31, LH: 45, TH: 14, WP: 48, LP: 33, TP: 9},
-		"Magic Mikes": {Wi: 41, L: 44, T: 5, WH: 53, LH: 30, TH: 7, WP: 37, LP: 50, TP: 3},
-		"Tropical Storm Braz": {Wi: 40, L: 45, T: 5, WH: 39, LH: 43, TH: 8, WP: 44, LP: 42, TP: 4},
-		"Niptits": {Wi: 31, L: 51, T: 8, WH: 20, LH: 62, TH: 8, WP: 47, LP: 37, TP: 6},
-		"Irish Guinness07": {Wi: 24, L: 59, T: 7, WH: 27, LH: 56, TH: 7, WP: 24, LP: 56, TP: 10},
-		"Prospect Hoarders": {Wi: 19, L: 65, T: 6, WH: 35, LH: 45, TH: 10, WP: 17, LP: 66, TP: 7}
+		"BringDing Dingers": {Wi: 67, L: 24, T: 8, WH: 51, LH: 40, TH: 8, WP: 74, LP: 18, TP: 7},
+		"Colt .45s": {Wi: 68, L: 26, T: 5, WH: 54, LH: 37, TH: 8, WP: 54, LP: 33, TP: 12},
+		"Boguslaw's Barrelers": {Wi: 55, L: 36, T: 8, WH: 60, LH: 32, TH: 7, WP: 38, LP: 51, TP: 10},
+		"I Punt Cats": {Wi: 56, L: 39, T: 4, WH: 60, LH: 27, TH: 12, WP: 50, LP: 39, TP: 10},
+		"Irish Dawgs": {Wi: 52, L: 40, T: 7, WH: 38, LH: 47, TH: 14, WP: 55, LP: 35, TP: 9},
+		"Magic Mikes": {Wi: 43, L: 49, T: 7, WH: 55, LH: 37, TH: 7, WP: 39, LP: 54, TP: 6},
+		"Tropical Storm Braz": {Wi: 40, L: 53, T: 6, WH: 39, LH: 51, TH: 9, WP: 47, LP: 45, TP: 7},
+		"Niptits": {Wi: 31, L: 59, T: 9, WH: 20, LH: 70, TH: 9, WP: 48, LP: 42, TP: 9},
+		"Irish Guinness07": {Wi: 28, L: 64, T: 7, WH: 31, LH: 59, TH: 9, WP: 27, LP: 60, TP: 12},
+		"Prospect Hoarders": {Wi: 21, L: 71, T: 7, WH: 40, LH: 48, TH: 11, WP: 18, LP: 73, TP: 8}
 	};
 
 	var HIGHS_HIST = {
-		"R": {val: 57, teams: ["Irish Dawgs"], weeks: [8]},
+		"R": {val: 58, teams: ["Boguslaw's Barrelers"], weeks: [11]},
 		"HR": {val: 24, teams: ["BringDing Dingers"], weeks: [9]},
 		"RBI": {val: 62, teams: ["I Punt Cats"], weeks: [9]},
 		"SB": {val: 17, teams: ["Irish Guinness07"], weeks: [2]},
