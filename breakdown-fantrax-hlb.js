@@ -10,16 +10,16 @@ function bd(bMidWeek = false, bLongWeek = false) {
 	//each time you run this, a new version of this object will be printed last. The idea is for you to copy that
 	//and paste it here to keep a running total for breakdowns. The team names *will* need to match text on the site.
 	var BREAKDOWN_HIST = {
-		"Boguslaw's Barrelers": {Wi: 111, L: 54, T: 15, WH: 111, LH: 54, TH: 15, WP: 75, LP: 87, TP: 18},
-		"BringDing Dingers": {Wi: 110, L: 54, T: 16, WH: 86, LH: 81, TH: 13, WP: 131, LP: 30, TP: 19},
-		"Colt .45s": {Wi: 106, L: 60, T: 14, WH: 98, LH: 66, TH: 16, WP: 77, LP: 79, TP: 24},
-		"Irish Dawgs": {Wi: 89, L: 77, T: 14, WH: 72, LH: 88, TH: 20, WP: 92, LP: 71, TP: 17},
-		"I Punt Cats": {Wi: 83, L: 81, T: 16, WH: 91, LH: 68, TH: 21, WP: 83, LP: 73, TP: 24},
-		"Magic Mikes": {Wi: 78, L: 86, T: 16, WH: 95, LH: 74, TH: 11, WP: 76, LP: 89, TP: 15},
-		"Irish Guinness07": {Wi: 78, L: 88, T: 14, WH: 88, LH: 81, TH: 11, WP: 61, LP: 95, TP: 24},
-		"Tropical Storm Braz": {Wi: 65, L: 98, T: 17, WH: 63, LH: 101, TH: 16, WP: 78, LP: 85, TP: 17},
-		"Niptits": {Wi: 62, L: 104, T: 14, WH: 54, LH: 111, TH: 15, WP: 85, LP: 76, TP: 19},
-		"Prospect Hoarders": {Wi: 42, L: 122, T: 16, WH: 64, LH: 98, TH: 18, WP: 45, LP: 118, TP: 17}
+		"BringDing Dingers": {Wi: 119, L: 54, T: 16, WH: 93, LH: 81, TH: 15, WP: 140, LP: 30, TP: 19},
+		"Boguslaw's Barrelers": {Wi: 117, L: 56, T: 16, WH: 119, LH: 54, TH: 16, WP: 81, LP: 90, TP: 18},
+		"Colt .45s": {Wi: 107, L: 67, T: 15, WH: 101, LH: 70, TH: 18, WP: 77, LP: 86, TP: 26},
+		"Irish Dawgs": {Wi: 97, L: 78, T: 14, WH: 74, LH: 91, TH: 24, WP: 100, LP: 72, TP: 17},
+		"I Punt Cats": {Wi: 84, L: 88, T: 17, WH: 93, LH: 75, TH: 21, WP: 85, LP: 78, TP: 26},
+		"Irish Guinness07": {Wi: 82, L: 93, T: 14, WH: 92, LH: 85, TH: 12, WP: 63, LP: 100, TP: 26},
+		"Magic Mikes": {Wi: 78, L: 95, T: 16, WH: 95, LH: 83, TH: 11, WP: 79, LP: 93, TP: 17},
+		"Tropical Storm Braz": {Wi: 71, L: 100, T: 18, WH: 67, LH: 104, TH: 18, WP: 85, LP: 87, TP: 17},
+		"Niptits": {Wi: 65, L: 110, T: 14, WH: 55, LH: 118, TH: 16, WP: 88, LP: 81, TP: 20},
+		"Prospect Hoarders": {Wi: 47, L: 126, T: 16, WH: 71, LH: 99, TH: 19, WP: 45, LP: 126, TP: 18}
 	};
 
 	var HIGHS_HIST = {
