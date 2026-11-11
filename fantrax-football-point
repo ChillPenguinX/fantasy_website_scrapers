@@ -6,8 +6,9 @@ function ScoresSort(a, b) {
     return b - a;
 }
 function go() {
+    //console.log("GO GO GO");
     var year = $('div.content__headline').first().find('h3').text().split(" ")[0];
-    var week = $('mat-select.mat-select.ng-star-inserted').find('span.mat-select-value-text.ng-star-inserted').find('span.ng-star-inserted').first().text().split(" ")[1];
+    var week = $('mat-select.mat-select').find('span.mat-select-value-text').find('span.ng-star-inserted').first().text().split(" ")[1];
     var seasonDesc = (parseInt(week) > 14) ? "Playoffs" : "Regular Season";
     var teams = [];
     var scores = {};
@@ -16,8 +17,8 @@ function go() {
         "Taysom Hill": "QB,TE"
     };
 
-    $('div.scoring-table__head.ng-star-inserted').each(function(idx){
-       // console.log("step 1");
+    $('div.scoring-table__head').each(function(idx){
+       //console.log("step 1");
         var scoreStr = $(this).find('div.scoring-header__score-primary').find('h2.mat-tooltip-trigger').text();
         if (scoreStr.indexOf('Week') == 0)
             scoreStr = scoreStr.substring(4);
@@ -33,7 +34,7 @@ function go() {
     var lines = "";
     var bestBallDatas = [{}, {}];
     var multiPosFound = [[],[]];
-    $('div.scoring-table__cell.ng-star-inserted').each(function(sectionIdx){
+    $('div.scoring-table__cell').each(function(sectionIdx){
         var names = [];
         var positions = [];
         var points = [];
@@ -49,7 +50,7 @@ function go() {
             positions.push(playerPos);
             //console.log("found " + playerPos + " for team " + teams[sectionIdx % 2]);
         });
-        $(this).find('.scoring-table__cell__fpts.ng-star-inserted.color--orange').each(function(){
+        $(this).find('.scoring-table__cell__fpts.color--orange').each(function(){
             var thisPoints = parseFloat($(this).find('dt').first().text());
             if (isNaN(thisPoints))
                 thisPoints = 0;
